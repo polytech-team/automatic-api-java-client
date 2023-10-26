@@ -31,7 +31,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   PromptStyleItem.JSON_PROPERTY_PROMPT,
   PromptStyleItem.JSON_PROPERTY_NEGATIVE_PROMPT
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-27T01:31:55.639766089+03:00[Europe/Moscow]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-27T02:28:26.857180667+03:00[Europe/Moscow]")
 public class PromptStyleItem {
   public static final String JSON_PROPERTY_NAME = "name";
   private String name;

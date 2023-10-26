@@ -38,7 +38,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ModulesProgressProgressResponse.JSON_PROPERTY_TEXTINFO
 })
 @JsonTypeName("modules__progress__ProgressResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-27T01:31:55.639766089+03:00[Europe/Moscow]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-27T02:28:26.857180667+03:00[Europe/Moscow]")
 public class ModulesProgressProgressResponse {
   public static final String JSON_PROPERTY_ACTIVE = "active";
   private Boolean active;

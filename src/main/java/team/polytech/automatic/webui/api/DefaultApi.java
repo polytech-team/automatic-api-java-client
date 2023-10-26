@@ -62,7 +62,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-27T01:31:55.639766089+03:00[Europe/Moscow]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-27T02:28:26.857180667+03:00[Europe/Moscow]")
+@Component("team.polytech.automatic.webui.api.DefaultApi")
 public class DefaultApi {
     private ApiClient apiClient;
 
@@ -70,6 +71,7 @@ public class DefaultApi {
         this(new ApiClient());
     }
 
+    @Autowired
     public DefaultApi(ApiClient apiClient) {
         this.apiClient = apiClient;
     }

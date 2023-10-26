@@ -47,7 +47,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ExtrasBatchImagesRequest.JSON_PROPERTY_UPSCALE_FIRST,
   ExtrasBatchImagesRequest.JSON_PROPERTY_IMAGE_LIST
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-27T01:31:55.639766089+03:00[Europe/Moscow]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-27T02:28:26.857180667+03:00[Europe/Moscow]")
 public class ExtrasBatchImagesRequest {
   /**
    * Sets the resize mode: 0 to upscale by upscaling_resize amount, 1 to upscale up to upscaling_resize_h x upscaling_resize_w.

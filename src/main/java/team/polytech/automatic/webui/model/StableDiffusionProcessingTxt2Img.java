@@ -82,7 +82,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   StableDiffusionProcessingTxt2Img.JSON_PROPERTY_SAVE_IMAGES,
   StableDiffusionProcessingTxt2Img.JSON_PROPERTY_ALWAYSON_SCRIPTS
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-27T01:31:55.639766089+03:00[Europe/Moscow]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-27T02:28:26.857180667+03:00[Europe/Moscow]")
 public class StableDiffusionProcessingTxt2Img {
   public static final String JSON_PROPERTY_PROMPT = "prompt";
   private String prompt = "";

@@ -148,7 +148,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   Flags.JSON_PROPERTY_SCUNET_MODELS_PATH,
   Flags.JSON_PROPERTY_SWINIR_MODELS_PATH
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-27T01:31:55.639766089+03:00[Europe/Moscow]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-27T02:28:26.857180667+03:00[Europe/Moscow]")
 public class Flags {
   public static final String JSON_PROPERTY_F = "f";
   private Boolean f = false;

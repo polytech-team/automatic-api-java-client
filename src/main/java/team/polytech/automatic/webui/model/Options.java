@@ -283,7 +283,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   Options.JSON_PROPERTY_EXTRA_OPTIONS_COLS,
   Options.JSON_PROPERTY_EXTRA_OPTIONS_ACCORDION
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-27T01:31:55.639766089+03:00[Europe/Moscow]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-27T02:28:26.857180667+03:00[Europe/Moscow]")
 public class Options {
   public static final String JSON_PROPERTY_SAMPLES_SAVE = "samples_save";
   private Boolean samplesSave = true;

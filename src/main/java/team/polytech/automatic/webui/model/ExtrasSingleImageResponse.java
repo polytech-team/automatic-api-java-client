@@ -30,7 +30,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ExtrasSingleImageResponse.JSON_PROPERTY_HTML_INFO,
   ExtrasSingleImageResponse.JSON_PROPERTY_IMAGE
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-27T01:31:55.639766089+03:00[Europe/Moscow]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-27T02:28:26.857180667+03:00[Europe/Moscow]")
 public class ExtrasSingleImageResponse {
   public static final String JSON_PROPERTY_HTML_INFO = "html_info";
   private String htmlInfo;
