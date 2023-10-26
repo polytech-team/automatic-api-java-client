@@ -1,0 +1,5354 @@
+openapi: 3.0.2
+info:
+  title: FastAPI
+  version: 0.1.0
+servers:
+- url: /
+paths:
+  /user/:
+    get:
+      operationId: get_current_user_user__get
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                title: Response Get Current User User  Get
+                type: string
+          description: Successful Response
+      summary: Get Current User
+      x-accepts: application/json
+  /user:
+    get:
+      operationId: get_current_user_user_get
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                title: Response Get Current User User Get
+                type: string
+          description: Successful Response
+      summary: Get Current User
+      x-accepts: application/json
+  /login_check/:
+    get:
+      operationId: login_check_login_check__get
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+      summary: Login Check
+      x-accepts: application/json
+  /login_check:
+    get:
+      operationId: login_check_login_check_get
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+      summary: Login Check
+      x-accepts: application/json
+  /token/:
+    get:
+      operationId: get_token_token__get
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                title: Response Get Token Token  Get
+                type: object
+          description: Successful Response
+      summary: Get Token
+      x-accepts: application/json
+  /token:
+    get:
+      operationId: get_token_token_get
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                title: Response Get Token Token Get
+                type: object
+          description: Successful Response
+      summary: Get Token
+      x-accepts: application/json
+  /app_id/:
+    get:
+      operationId: app_id_app_id__get
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                title: Response App Id App Id  Get
+                type: object
+          description: Successful Response
+      summary: App Id
+      x-accepts: application/json
+  /app_id:
+    get:
+      operationId: app_id_app_id_get
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                title: Response App Id App Id Get
+                type: object
+          description: Successful Response
+      summary: App Id
+      x-accepts: application/json
+  /login/:
+    post:
+      operationId: login_login__post
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Body_login_login__post'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Login
+      x-content-type: application/x-www-form-urlencoded
+      x-accepts: application/json
+  /login:
+    post:
+      operationId: login_login_post
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Body_login_login_post'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Login
+      x-content-type: application/x-www-form-urlencoded
+      x-accepts: application/json
+  /:
+    get:
+      operationId: main__get
+      responses:
+        "200":
+          content:
+            text/html:
+              schema:
+                type: string
+          description: Successful Response
+      summary: Main
+      x-accepts: text/html
+    head:
+      operationId: main__head
+      responses:
+        "200":
+          content:
+            text/html:
+              schema:
+                type: string
+          description: Successful Response
+      summary: Main
+      x-accepts: text/html
+  /info:
+    get:
+      operationId: api_info_info_get
+      parameters:
+      - explode: true
+        in: query
+        name: serialize
+        required: false
+        schema:
+          default: true
+          title: Serialize
+          type: boolean
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Api Info
+      x-accepts: application/json
+  /info/:
+    get:
+      operationId: api_info_info__get
+      parameters:
+      - explode: true
+        in: query
+        name: serialize
+        required: false
+        schema:
+          default: true
+          title: Serialize
+          type: boolean
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Api Info
+      x-accepts: application/json
+  /config:
+    get:
+      operationId: get_config_config_get
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+      summary: Get Config
+      x-accepts: application/json
+  /config/:
+    get:
+      operationId: get_config_config__get
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+      summary: Get Config
+      x-accepts: application/json
+  /static/{path}:
+    get:
+      operationId: static_resource_static__path__get
+      parameters:
+      - explode: false
+        in: path
+        name: path
+        required: true
+        schema:
+          title: Path
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Static Resource
+      x-accepts: application/json
+  /assets/{path}:
+    get:
+      operationId: build_resource_assets__path__get
+      parameters:
+      - explode: false
+        in: path
+        name: path
+        required: true
+        schema:
+          title: Path
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Build Resource
+      x-accepts: application/json
+  /favicon.ico:
+    get:
+      operationId: favicon_favicon_ico_get
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+      summary: Favicon
+      x-accepts: application/json
+  /proxy={url_path}:
+    get:
+      operationId: reverse_proxy_proxy__url_path__get
+      parameters:
+      - explode: false
+        in: path
+        name: url_path
+        required: true
+        schema:
+          title: Url Path
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Reverse Proxy
+      x-accepts: application/json
+    head:
+      operationId: reverse_proxy_proxy__url_path__head
+      parameters:
+      - explode: false
+        in: path
+        name: url_path
+        required: true
+        schema:
+          title: Url Path
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Reverse Proxy
+      x-accepts: application/json
+  /file={path_or_url}:
+    get:
+      operationId: file_file__path_or_url__get
+      parameters:
+      - explode: false
+        in: path
+        name: path_or_url
+        required: true
+        schema:
+          title: Path Or Url
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: File
+      x-accepts: application/json
+    head:
+      operationId: file_file__path_or_url__head
+      parameters:
+      - explode: false
+        in: path
+        name: path_or_url
+        required: true
+        schema:
+          title: Path Or Url
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: File
+      x-accepts: application/json
+  /stream/{session_hash}/{run}/{component_id}:
+    get:
+      operationId: stream_stream__session_hash___run___component_id__get
+      parameters:
+      - explode: false
+        in: path
+        name: session_hash
+        required: true
+        schema:
+          title: Session Hash
+          type: string
+        style: simple
+      - explode: false
+        in: path
+        name: run
+        required: true
+        schema:
+          title: Run
+          type: integer
+        style: simple
+      - explode: false
+        in: path
+        name: component_id
+        required: true
+        schema:
+          title: Component Id
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Stream
+      x-accepts: application/json
+  /file/{path}:
+    get:
+      operationId: file_deprecated_file__path__get
+      parameters:
+      - explode: false
+        in: path
+        name: path
+        required: true
+        schema:
+          title: Path
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: File Deprecated
+      x-accepts: application/json
+  /reset:
+    post:
+      operationId: reset_iterator_reset_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ResetBody'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Reset Iterator
+      x-content-type: application/json
+      x-accepts: application/json
+  /reset/:
+    post:
+      operationId: reset_iterator_reset__post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ResetBody'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Reset Iterator
+      x-content-type: application/json
+      x-accepts: application/json
+  /api/{api_name}/:
+    post:
+      operationId: predict_api__api_name___post
+      parameters:
+      - explode: false
+        in: path
+        name: api_name
+        required: true
+        schema:
+          title: Api Name
+          type: string
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PredictBody'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Predict
+      x-content-type: application/json
+      x-accepts: application/json
+  /api/{api_name}:
+    post:
+      operationId: predict_api__api_name__post
+      parameters:
+      - explode: false
+        in: path
+        name: api_name
+        required: true
+        schema:
+          title: Api Name
+          type: string
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PredictBody'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Predict
+      x-content-type: application/json
+      x-accepts: application/json
+  /run/{api_name}/:
+    post:
+      operationId: predict_run__api_name___post
+      parameters:
+      - explode: false
+        in: path
+        name: api_name
+        required: true
+        schema:
+          title: Api Name
+          type: string
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PredictBody'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Predict
+      x-content-type: application/json
+      x-accepts: application/json
+  /run/{api_name}:
+    post:
+      operationId: predict_run__api_name__post
+      parameters:
+      - explode: false
+        in: path
+        name: api_name
+        required: true
+        schema:
+          title: Api Name
+          type: string
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PredictBody'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Predict
+      x-content-type: application/json
+      x-accepts: application/json
+  /queue/status:
+    get:
+      operationId: get_queue_status_queue_status_get
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Estimation'
+          description: Successful Response
+      summary: Get Queue Status
+      x-accepts: application/json
+  /upload:
+    post:
+      operationId: upload_file_upload_post
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Body_upload_file_upload_post'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Upload File
+      x-content-type: multipart/form-data
+      x-accepts: application/json
+  /startup-events:
+    get:
+      operationId: startup_events_startup_events_get
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+      summary: Startup Events
+      x-accepts: application/json
+  /theme.css:
+    get:
+      operationId: theme_css_theme_css_get
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                type: string
+          description: Successful Response
+      summary: Theme Css
+      x-accepts: text/plain
+  /robots.txt:
+    get:
+      operationId: robots_txt_robots_txt_get
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                type: string
+          description: Successful Response
+      summary: Robots Txt
+      x-accepts: text/plain
+  /internal/progress:
+    post:
+      operationId: progressapi_internal_progress_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProgressRequest'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/modules__progress__ProgressResponse'
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Progressapi
+      x-content-type: application/json
+      x-accepts: application/json
+  /internal/quicksettings-hint:
+    get:
+      operationId: quicksettings_hint_internal_quicksettings_hint_get
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/QuicksettingsHint'
+                title: Response Quicksettings Hint Internal Quicksettings Hint Get
+                type: array
+          description: Successful Response
+      summary: Quicksettings Hint
+      x-accepts: application/json
+  /internal/ping:
+    get:
+      operationId: _lambda__internal_ping_get
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+      summary: <Lambda>
+      x-accepts: application/json
+  /internal/profile-startup:
+    get:
+      operationId: _lambda__internal_profile_startup_get
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+      summary: <Lambda>
+      x-accepts: application/json
+  /internal/sysinfo:
+    get:
+      operationId: download_sysinfo_internal_sysinfo_get
+      parameters:
+      - explode: true
+        in: query
+        name: attachment
+        required: false
+        schema:
+          default: false
+          title: Attachment
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Download Sysinfo
+      x-accepts: application/json
+  /internal/sysinfo-download:
+    get:
+      operationId: _lambda__internal_sysinfo_download_get
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+      summary: <Lambda>
+      x-accepts: application/json
+  /sdapi/v1/txt2img:
+    post:
+      operationId: text2imgapi_sdapi_v1_txt2img_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StableDiffusionProcessingTxt2Img'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TextToImageResponse'
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Text2Imgapi
+      x-content-type: application/json
+      x-accepts: application/json
+  /sdapi/v1/img2img:
+    post:
+      operationId: img2imgapi_sdapi_v1_img2img_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StableDiffusionProcessingImg2Img'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ImageToImageResponse'
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Img2Imgapi
+      x-content-type: application/json
+      x-accepts: application/json
+  /sdapi/v1/extra-single-image:
+    post:
+      operationId: extras_single_image_api_sdapi_v1_extra_single_image_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExtrasSingleImageRequest'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExtrasSingleImageResponse'
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Extras Single Image Api
+      x-content-type: application/json
+      x-accepts: application/json
+  /sdapi/v1/extra-batch-images:
+    post:
+      operationId: extras_batch_images_api_sdapi_v1_extra_batch_images_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExtrasBatchImagesRequest'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExtrasBatchImagesResponse'
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Extras Batch Images Api
+      x-content-type: application/json
+      x-accepts: application/json
+  /sdapi/v1/png-info:
+    post:
+      operationId: pnginfoapi_sdapi_v1_png_info_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PNGInfoRequest'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PNGInfoResponse'
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Pnginfoapi
+      x-content-type: application/json
+      x-accepts: application/json
+  /sdapi/v1/progress:
+    get:
+      operationId: progressapi_sdapi_v1_progress_get
+      parameters:
+      - explode: true
+        in: query
+        name: skip_current_image
+        required: false
+        schema:
+          default: false
+          title: Skip Current Image
+          type: boolean
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/modules__api__models__ProgressResponse'
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Progressapi
+      x-accepts: application/json
+  /sdapi/v1/interrogate:
+    post:
+      operationId: interrogateapi_sdapi_v1_interrogate_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/InterrogateRequest'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Interrogateapi
+      x-content-type: application/json
+      x-accepts: application/json
+  /sdapi/v1/interrupt:
+    post:
+      operationId: interruptapi_sdapi_v1_interrupt_post
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+      summary: Interruptapi
+      x-accepts: application/json
+  /sdapi/v1/skip:
+    post:
+      operationId: skip_sdapi_v1_skip_post
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+      summary: Skip
+      x-accepts: application/json
+  /sdapi/v1/options:
+    get:
+      operationId: get_config_sdapi_v1_options_get
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Options'
+          description: Successful Response
+      summary: Get Config
+      x-accepts: application/json
+    post:
+      operationId: set_config_sdapi_v1_options_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              title: Req
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Set Config
+      x-content-type: application/json
+      x-accepts: application/json
+  /sdapi/v1/cmd-flags:
+    get:
+      operationId: get_cmd_flags_sdapi_v1_cmd_flags_get
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Flags'
+          description: Successful Response
+      summary: Get Cmd Flags
+      x-accepts: application/json
+  /sdapi/v1/samplers:
+    get:
+      operationId: get_samplers_sdapi_v1_samplers_get
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/SamplerItem'
+                title: Response Get Samplers Sdapi V1 Samplers Get
+                type: array
+          description: Successful Response
+      summary: Get Samplers
+      x-accepts: application/json
+  /sdapi/v1/upscalers:
+    get:
+      operationId: get_upscalers_sdapi_v1_upscalers_get
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UpscalerItem'
+                title: Response Get Upscalers Sdapi V1 Upscalers Get
+                type: array
+          description: Successful Response
+      summary: Get Upscalers
+      x-accepts: application/json
+  /sdapi/v1/latent-upscale-modes:
+    get:
+      operationId: get_latent_upscale_modes_sdapi_v1_latent_upscale_modes_get
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/LatentUpscalerModeItem'
+                title: Response Get Latent Upscale Modes Sdapi V1 Latent Upscale Modes
+                  Get
+                type: array
+          description: Successful Response
+      summary: Get Latent Upscale Modes
+      x-accepts: application/json
+  /sdapi/v1/sd-models:
+    get:
+      operationId: get_sd_models_sdapi_v1_sd_models_get
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/SDModelItem'
+                title: Response Get Sd Models Sdapi V1 Sd Models Get
+                type: array
+          description: Successful Response
+      summary: Get Sd Models
+      x-accepts: application/json
+  /sdapi/v1/sd-vae:
+    get:
+      operationId: get_sd_vaes_sdapi_v1_sd_vae_get
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/SDVaeItem'
+                title: Response Get Sd Vaes Sdapi V1 Sd Vae Get
+                type: array
+          description: Successful Response
+      summary: Get Sd Vaes
+      x-accepts: application/json
+  /sdapi/v1/hypernetworks:
+    get:
+      operationId: get_hypernetworks_sdapi_v1_hypernetworks_get
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/HypernetworkItem'
+                title: Response Get Hypernetworks Sdapi V1 Hypernetworks Get
+                type: array
+          description: Successful Response
+      summary: Get Hypernetworks
+      x-accepts: application/json
+  /sdapi/v1/face-restorers:
+    get:
+      operationId: get_face_restorers_sdapi_v1_face_restorers_get
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/FaceRestorerItem'
+                title: Response Get Face Restorers Sdapi V1 Face Restorers Get
+                type: array
+          description: Successful Response
+      summary: Get Face Restorers
+      x-accepts: application/json
+  /sdapi/v1/realesrgan-models:
+    get:
+      operationId: get_realesrgan_models_sdapi_v1_realesrgan_models_get
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/RealesrganItem'
+                title: Response Get Realesrgan Models Sdapi V1 Realesrgan Models Get
+                type: array
+          description: Successful Response
+      summary: Get Realesrgan Models
+      x-accepts: application/json
+  /sdapi/v1/prompt-styles:
+    get:
+      operationId: get_prompt_styles_sdapi_v1_prompt_styles_get
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/PromptStyleItem'
+                title: Response Get Prompt Styles Sdapi V1 Prompt Styles Get
+                type: array
+          description: Successful Response
+      summary: Get Prompt Styles
+      x-accepts: application/json
+  /sdapi/v1/embeddings:
+    get:
+      operationId: get_embeddings_sdapi_v1_embeddings_get
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EmbeddingsResponse'
+          description: Successful Response
+      summary: Get Embeddings
+      x-accepts: application/json
+  /sdapi/v1/refresh-checkpoints:
+    post:
+      operationId: refresh_checkpoints_sdapi_v1_refresh_checkpoints_post
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+      summary: Refresh Checkpoints
+      x-accepts: application/json
+  /sdapi/v1/refresh-vae:
+    post:
+      operationId: refresh_vae_sdapi_v1_refresh_vae_post
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+      summary: Refresh Vae
+      x-accepts: application/json
+  /sdapi/v1/create/embedding:
+    post:
+      operationId: create_embedding_sdapi_v1_create_embedding_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              title: Args
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateResponse'
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Create Embedding
+      x-content-type: application/json
+      x-accepts: application/json
+  /sdapi/v1/create/hypernetwork:
+    post:
+      operationId: create_hypernetwork_sdapi_v1_create_hypernetwork_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              title: Args
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateResponse'
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Create Hypernetwork
+      x-content-type: application/json
+      x-accepts: application/json
+  /sdapi/v1/preprocess:
+    post:
+      operationId: preprocess_sdapi_v1_preprocess_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              title: Args
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PreprocessResponse'
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Preprocess
+      x-content-type: application/json
+      x-accepts: application/json
+  /sdapi/v1/train/embedding:
+    post:
+      operationId: train_embedding_sdapi_v1_train_embedding_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              title: Args
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TrainResponse'
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Train Embedding
+      x-content-type: application/json
+      x-accepts: application/json
+  /sdapi/v1/train/hypernetwork:
+    post:
+      operationId: train_hypernetwork_sdapi_v1_train_hypernetwork_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              title: Args
+              type: object
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TrainResponse'
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Train Hypernetwork
+      x-content-type: application/json
+      x-accepts: application/json
+  /sdapi/v1/memory:
+    get:
+      operationId: get_memory_sdapi_v1_memory_get
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MemoryResponse'
+          description: Successful Response
+      summary: Get Memory
+      x-accepts: application/json
+  /sdapi/v1/unload-checkpoint:
+    post:
+      operationId: unloadapi_sdapi_v1_unload_checkpoint_post
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+      summary: Unloadapi
+      x-accepts: application/json
+  /sdapi/v1/reload-checkpoint:
+    post:
+      operationId: reloadapi_sdapi_v1_reload_checkpoint_post
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+      summary: Reloadapi
+      x-accepts: application/json
+  /sdapi/v1/scripts:
+    get:
+      operationId: get_scripts_list_sdapi_v1_scripts_get
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ScriptsList'
+          description: Successful Response
+      summary: Get Scripts List
+      x-accepts: application/json
+  /sdapi/v1/script-info:
+    get:
+      operationId: get_script_info_sdapi_v1_script_info_get
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/ScriptInfo'
+                title: Response Get Script Info Sdapi V1 Script Info Get
+                type: array
+          description: Successful Response
+      summary: Get Script Info
+      x-accepts: application/json
+  /sd_extra_networks/thumb:
+    get:
+      operationId: fetch_file_sd_extra_networks_thumb_get
+      parameters:
+      - explode: true
+        in: query
+        name: filename
+        required: false
+        schema:
+          default: ""
+          title: Filename
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Fetch File
+      x-accepts: application/json
+  /sd_extra_networks/metadata:
+    get:
+      operationId: get_metadata_sd_extra_networks_metadata_get
+      parameters:
+      - explode: true
+        in: query
+        name: page
+        required: false
+        schema:
+          default: ""
+          title: Page
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: item
+        required: false
+        schema:
+          default: ""
+          title: Item
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Get Metadata
+      x-accepts: application/json
+  /sd_extra_networks/get-single-card:
+    get:
+      operationId: get_single_card_sd_extra_networks_get_single_card_get
+      parameters:
+      - explode: true
+        in: query
+        name: page
+        required: false
+        schema:
+          default: ""
+          title: Page
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: tabname
+        required: false
+        schema:
+          default: ""
+          title: Tabname
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: name
+        required: false
+        schema:
+          default: ""
+          title: Name
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Get Single Card
+      x-accepts: application/json
+  /sdapi/v1/loras:
+    get:
+      operationId: get_loras_sdapi_v1_loras_get
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+      summary: Get Loras
+      x-accepts: application/json
+  /sdapi/v1/refresh-loras:
+    post:
+      operationId: refresh_loras_sdapi_v1_refresh_loras_post
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+      summary: Refresh Loras
+      x-accepts: application/json
+components:
+  schemas:
+    Body_login_login__post:
+      properties:
+        grant_type:
+          pattern: password
+          title: Grant Type
+          type: string
+        username:
+          title: Username
+          type: string
+        password:
+          title: Password
+          type: string
+        scope:
+          default: ""
+          title: Scope
+          type: string
+        client_id:
+          title: Client Id
+          type: string
+        client_secret:
+          title: Client Secret
+          type: string
+      required:
+      - password
+      - username
+      title: Body_login_login__post
+      type: object
+    Body_login_login_post:
+      properties:
+        grant_type:
+          pattern: password
+          title: Grant Type
+          type: string
+        username:
+          title: Username
+          type: string
+        password:
+          title: Password
+          type: string
+        scope:
+          default: ""
+          title: Scope
+          type: string
+        client_id:
+          title: Client Id
+          type: string
+        client_secret:
+          title: Client Secret
+          type: string
+      required:
+      - password
+      - username
+      title: Body_login_login_post
+      type: object
+    Body_upload_file_upload_post:
+      properties:
+        files:
+          items:
+            format: binary
+            type: string
+          title: Files
+          type: array
+      required:
+      - files
+      title: Body_upload_file_upload_post
+      type: object
+    CreateResponse:
+      example:
+        info: info
+      properties:
+        info:
+          description: Response string from create embedding or hypernetwork task.
+          title: Create info
+          type: string
+      required:
+      - info
+      title: CreateResponse
+      type: object
+    EmbeddingItem:
+      example:
+        sd_checkpoint: sd_checkpoint
+        vectors: 1
+        shape: 6
+        step: 0
+        sd_checkpoint_name: sd_checkpoint_name
+      properties:
+        step:
+          description: "The number of steps that were used to train this embedding,\
+            \ if available"
+          title: Step
+          type: integer
+        sd_checkpoint:
+          description: "The hash of the checkpoint this embedding was trained on,\
+            \ if available"
+          title: SD Checkpoint
+          type: string
+        sd_checkpoint_name:
+          description: "The name of the checkpoint this embedding was trained on,\
+            \ if available. Note that this is the name that was used by the trainer;\
+            \ for a stable identifier, use `sd_checkpoint` instead"
+          title: SD Checkpoint Name
+          type: string
+        shape:
+          description: The length of each individual vector in the embedding
+          title: Shape
+          type: integer
+        vectors:
+          description: The number of vectors in the embedding
+          title: Vectors
+          type: integer
+      required:
+      - shape
+      - vectors
+      title: EmbeddingItem
+      type: object
+    EmbeddingsResponse:
+      example:
+        loaded:
+          key:
+            sd_checkpoint: sd_checkpoint
+            vectors: 1
+            shape: 6
+            step: 0
+            sd_checkpoint_name: sd_checkpoint_name
+        skipped:
+          key:
+            sd_checkpoint: sd_checkpoint
+            vectors: 1
+            shape: 6
+            step: 0
+            sd_checkpoint_name: sd_checkpoint_name
+      properties:
+        loaded:
+          additionalProperties:
+            $ref: '#/components/schemas/EmbeddingItem'
+          description: Embeddings loaded for the current model
+          title: Loaded
+          type: object
+        skipped:
+          additionalProperties:
+            $ref: '#/components/schemas/EmbeddingItem'
+          description: Embeddings skipped for the current model (likely due to architecture
+            incompatibility)
+          title: Skipped
+          type: object
+      required:
+      - loaded
+      - skipped
+      title: EmbeddingsResponse
+      type: object
+    Estimation:
+      example:
+        msg: estimation
+        avg_event_concurrent_process_time: 5.962133916683182
+        queue_eta: 2.3021358869347655
+        queue_size: 6
+        rank_eta: 5.637376656633329
+        rank: 0
+        avg_event_process_time: 1.4658129805029452
+      properties:
+        msg:
+          default: estimation
+          title: Msg
+          type: string
+        rank:
+          title: Rank
+          type: integer
+        queue_size:
+          title: Queue Size
+          type: integer
+        avg_event_process_time:
+          title: Avg Event Process Time
+          type: number
+        avg_event_concurrent_process_time:
+          title: Avg Event Concurrent Process Time
+          type: number
+        rank_eta:
+          title: Rank Eta
+          type: number
+        queue_eta:
+          title: Queue Eta
+          type: number
+      required:
+      - queue_eta
+      - queue_size
+      title: Estimation
+      type: object
+    ExtrasBatchImagesRequest:
+      example:
+        extras_upscaler_2_visibility: 0.9301444243932576
+        show_extras_results: true
+        resize_mode: 0
+        upscaling_resize_w: 1
+        upscale_first: false
+        upscaling_resize_h: 1
+        upscaler_1: None
+        gfpgan_visibility: 0.6027456183070403
+        upscaler_2: None
+        codeformer_visibility: 0.14658129805029452
+        upscaling_crop: true
+        upscaling_resize: 4.94616365964333
+        codeformer_weight: 0.5962133916683182
+        imageList:
+        - data: data
+          name: name
+        - data: data
+          name: name
+      properties:
+        resize_mode:
+          default: 0
+          description: "Sets the resize mode: 0 to upscale by upscaling_resize amount,\
+            \ 1 to upscale up to upscaling_resize_h x upscaling_resize_w."
+          enum:
+          - 0
+          - 1
+          title: Resize Mode
+          type: integer
+        show_extras_results:
+          default: true
+          description: Should the backend return the generated image?
+          title: Show results
+          type: boolean
+        gfpgan_visibility:
+          default: 0
+          description: "Sets the visibility of GFPGAN, values should be between 0\
+            \ and 1."
+          maximum: 1.0
+          minimum: 0.0
+          title: GFPGAN Visibility
+          type: number
+        codeformer_visibility:
+          default: 0
+          description: "Sets the visibility of CodeFormer, values should be between\
+            \ 0 and 1."
+          maximum: 1.0
+          minimum: 0.0
+          title: CodeFormer Visibility
+          type: number
+        codeformer_weight:
+          default: 0
+          description: "Sets the weight of CodeFormer, values should be between 0\
+            \ and 1."
+          maximum: 1.0
+          minimum: 0.0
+          title: CodeFormer Weight
+          type: number
+        upscaling_resize:
+          default: 2
+          description: "By how much to upscale the image, only used when resize_mode=0."
+          maximum: 8.0
+          minimum: 1.0
+          title: Upscaling Factor
+          type: number
+        upscaling_resize_w:
+          default: 512
+          description: Target width for the upscaler to hit. Only used when resize_mode=1.
+          minimum: 1.0
+          title: Target Width
+          type: integer
+        upscaling_resize_h:
+          default: 512
+          description: Target height for the upscaler to hit. Only used when resize_mode=1.
+          minimum: 1.0
+          title: Target Height
+          type: integer
+        upscaling_crop:
+          default: true
+          description: Should the upscaler crop the image to fit in the chosen size?
+          title: Crop to fit
+          type: boolean
+        upscaler_1:
+          default: None
+          description: "The name of the main upscaler to use, it has to be one of\
+            \ this list: None , Lanczos , Nearest , ESRGAN_4x , LDSR , R-ESRGAN 4x+\
+            \ , R-ESRGAN 4x+ Anime6B , ScuNET GAN , ScuNET PSNR , SwinIR 4x"
+          title: Main upscaler
+          type: string
+        upscaler_2:
+          default: None
+          description: "The name of the secondary upscaler to use, it has to be one\
+            \ of this list: None , Lanczos , Nearest , ESRGAN_4x , LDSR , R-ESRGAN\
+            \ 4x+ , R-ESRGAN 4x+ Anime6B , ScuNET GAN , ScuNET PSNR , SwinIR 4x"
+          title: Secondary upscaler
+          type: string
+        extras_upscaler_2_visibility:
+          default: 0
+          description: "Sets the visibility of secondary upscaler, values should be\
+            \ between 0 and 1."
+          maximum: 1.0
+          minimum: 0.0
+          title: Secondary upscaler visibility
+          type: number
+        upscale_first:
+          default: false
+          description: Should the upscaler run before restoring faces?
+          title: Upscale first
+          type: boolean
+        imageList:
+          description: List of images to work on. Must be Base64 strings
+          items:
+            $ref: '#/components/schemas/FileData'
+          title: Images
+          type: array
+      required:
+      - imageList
+      title: ExtrasBatchImagesRequest
+      type: object
+    ExtrasBatchImagesResponse:
+      example:
+        images:
+        - images
+        - images
+        html_info: html_info
+      properties:
+        html_info:
+          description: A series of HTML tags containing the process info.
+          title: HTML info
+          type: string
+        images:
+          description: The generated images in base64 format.
+          items:
+            type: string
+          title: Images
+          type: array
+      required:
+      - html_info
+      - images
+      title: ExtrasBatchImagesResponse
+      type: object
+    ExtrasSingleImageRequest:
+      example:
+        extras_upscaler_2_visibility: 0.9301444243932576
+        image: ""
+        show_extras_results: true
+        resize_mode: 0
+        upscaling_resize_w: 1
+        upscale_first: false
+        upscaling_resize_h: 1
+        upscaler_1: None
+        gfpgan_visibility: 0.6027456183070403
+        upscaler_2: None
+        codeformer_visibility: 0.14658129805029452
+        upscaling_crop: true
+        upscaling_resize: 4.94616365964333
+        codeformer_weight: 0.5962133916683182
+      properties:
+        resize_mode:
+          default: 0
+          description: "Sets the resize mode: 0 to upscale by upscaling_resize amount,\
+            \ 1 to upscale up to upscaling_resize_h x upscaling_resize_w."
+          enum:
+          - 0
+          - 1
+          title: Resize Mode
+          type: integer
+        show_extras_results:
+          default: true
+          description: Should the backend return the generated image?
+          title: Show results
+          type: boolean
+        gfpgan_visibility:
+          default: 0
+          description: "Sets the visibility of GFPGAN, values should be between 0\
+            \ and 1."
+          maximum: 1.0
+          minimum: 0.0
+          title: GFPGAN Visibility
+          type: number
+        codeformer_visibility:
+          default: 0
+          description: "Sets the visibility of CodeFormer, values should be between\
+            \ 0 and 1."
+          maximum: 1.0
+          minimum: 0.0
+          title: CodeFormer Visibility
+          type: number
+        codeformer_weight:
+          default: 0
+          description: "Sets the weight of CodeFormer, values should be between 0\
+            \ and 1."
+          maximum: 1.0
+          minimum: 0.0
+          title: CodeFormer Weight
+          type: number
+        upscaling_resize:
+          default: 2
+          description: "By how much to upscale the image, only used when resize_mode=0."
+          maximum: 8.0
+          minimum: 1.0
+          title: Upscaling Factor
+          type: number
+        upscaling_resize_w:
+          default: 512
+          description: Target width for the upscaler to hit. Only used when resize_mode=1.
+          minimum: 1.0
+          title: Target Width
+          type: integer
+        upscaling_resize_h:
+          default: 512
+          description: Target height for the upscaler to hit. Only used when resize_mode=1.
+          minimum: 1.0
+          title: Target Height
+          type: integer
+        upscaling_crop:
+          default: true
+          description: Should the upscaler crop the image to fit in the chosen size?
+          title: Crop to fit
+          type: boolean
+        upscaler_1:
+          default: None
+          description: "The name of the main upscaler to use, it has to be one of\
+            \ this list: None , Lanczos , Nearest , ESRGAN_4x , LDSR , R-ESRGAN 4x+\
+            \ , R-ESRGAN 4x+ Anime6B , ScuNET GAN , ScuNET PSNR , SwinIR 4x"
+          title: Main upscaler
+          type: string
+        upscaler_2:
+          default: None
+          description: "The name of the secondary upscaler to use, it has to be one\
+            \ of this list: None , Lanczos , Nearest , ESRGAN_4x , LDSR , R-ESRGAN\
+            \ 4x+ , R-ESRGAN 4x+ Anime6B , ScuNET GAN , ScuNET PSNR , SwinIR 4x"
+          title: Secondary upscaler
+          type: string
+        extras_upscaler_2_visibility:
+          default: 0
+          description: "Sets the visibility of secondary upscaler, values should be\
+            \ between 0 and 1."
+          maximum: 1.0
+          minimum: 0.0
+          title: Secondary upscaler visibility
+          type: number
+        upscale_first:
+          default: false
+          description: Should the upscaler run before restoring faces?
+          title: Upscale first
+          type: boolean
+        image:
+          default: ""
+          description: "Image to work on, must be a Base64 string containing the image's\
+            \ data."
+          title: Image
+          type: string
+      title: ExtrasSingleImageRequest
+      type: object
+    ExtrasSingleImageResponse:
+      example:
+        image: image
+        html_info: html_info
+      properties:
+        html_info:
+          description: A series of HTML tags containing the process info.
+          title: HTML info
+          type: string
+        image:
+          description: The generated image in base64 format.
+          title: Image
+          type: string
+      required:
+      - html_info
+      title: ExtrasSingleImageResponse
+      type: object
+    FaceRestorerItem:
+      example:
+        name: name
+        cmd_dir: cmd_dir
+      properties:
+        name:
+          title: Name
+          type: string
+        cmd_dir:
+          title: Path
+          type: string
+      required:
+      - name
+      title: FaceRestorerItem
+      type: object
+    FileData:
+      example:
+        data: data
+        name: name
+      properties:
+        data:
+          description: Base64 representation of the file
+          title: File data
+          type: string
+        name:
+          title: File name
+          type: string
+      required:
+      - data
+      - name
+      title: FileData
+      type: object
+    Flags:
+      example:
+        realesrgan_models_path: D:\stable diffusion\stable-diffusion-webui\models\RealESRGAN
+        tls_certfile: tls_certfile
+        reinstall_torch: false
+        api_auth: api_auth
+        gfpgan_models_path: D:\stable diffusion\stable-diffusion-webui\models\GFPGAN
+        esrgan_models_path: D:\stable diffusion\stable-diffusion-webui\models\ESRGAN
+        no_progressbar_hiding: false
+        api: false
+        opt_sdp_no_mem_attention: false
+        freeze_settings: false
+        lora_dir: D:\stable diffusion\stable-diffusion-webui\models\Lora
+        ui_config_file: D:\stable diffusion\stable-diffusion-webui\ui-config.json
+        device_id: device_id
+        gradio_auth_path: gradio_auth_path
+        always_batch_cond_uncond: false
+        no_half: false
+        hypernetwork_dir: D:\stable diffusion\stable-diffusion-webui\models\hypernetworks
+        disable_model_loading_ram_optimization: false
+        opt_sdp_attention: false
+        ui_settings_file: D:\stable diffusion\stable-diffusion-webui\config.json
+        tls_keyfile: tls_keyfile
+        sub_quad_kv_chunk_size: sub_quad_kv_chunk_size
+        test_server: false
+        ckpt: D:\stable diffusion\stable-diffusion-webui\model.ckpt
+        disable_console_progressbars: false
+        add_stop_route: false
+        lyco_dir_backcompat: D:\stable diffusion\stable-diffusion-webui\models\LyCORIS
+        codeformer_models_path: D:\stable diffusion\stable-diffusion-webui\models\Codeformer
+        api_server_stop: false
+        ngrok: ngrok
+        show_negative_prompt: false
+        disable_all_extensions: false
+        upcast_sampling: false
+        cors_allow_origins_regex: cors_allow_origins_regex
+        skip_torch_cuda_test: false
+        share: false
+        theme: theme
+        styles_file: D:\stable diffusion\stable-diffusion-webui\styles.csv
+        enable_insecure_extension_access: false
+        xformers_flash_attention: false
+        f: false
+        no_gradio_queue: false
+        update_check: false
+        skip_install: false
+        update_all_extensions: false
+        opt_sub_quad_attention: false
+        gradio_allowed_path:
+        - ""
+        - ""
+        reinstall_xformers: false
+        unload_gfpgan: false
+        ui_debug_mode: false
+        ngrok_region: ""
+        lowvram: false
+        loglevel: loglevel
+        no_download_sd_model: false
+        disable_safe_unpickle: false
+        skip_version_check: false
+        config: D:\stable diffusion\stable-diffusion-webui\configs\v1-inference.yaml
+        gfpgan_model: gfpgan_model
+        no_half_vae: false
+        xformers: false
+        cors_allow_origins: cors_allow_origins
+        precision: autocast
+        sub_quad_chunk_threshold: sub_quad_chunk_threshold
+        vae_dir: vae_dir
+        deepdanbooru: false
+        force_enable_xformers: false
+        use_textbox_seed: false
+        disable_nan_check: false
+        listen: false
+        skip_python_version_check: false
+        gradio_debug: false
+        do_not_download_clip: false
+        gradio_queue: true
+        hide_ui_dir_config: false
+        clip_models_path: clip_models_path
+        gfpgan_dir: ./GFPGAN
+        disable_tls_verify: disable_tls_verify
+        gradio_inpaint_tool: gradio_inpaint_tool
+        textual_inversion_templates_dir: D:\stable diffusion\stable-diffusion-webui\textual_inversion_templates
+        dump_sysinfo: false
+        gradio_img2img_tool: gradio_img2img_tool
+        medvram: false
+        bsrgan_models_path: D:\stable diffusion\stable-diffusion-webui\models\BSRGAN
+        embeddings_dir: D:\stable diffusion\stable-diffusion-webui\embeddings
+        sub_quad_q_chunk_size: 6
+        port: port
+        medvram_sdxl: false
+        server_name: server_name
+        use_cpu:
+        - ""
+        - ""
+        ckpt_dir: ckpt_dir
+        subpath: subpath
+        no_hashing: false
+        gradio_auth: gradio_auth
+        ldsr_models_path: D:\stable diffusion\stable-diffusion-webui\models\LDSR
+        api_log: false
+        administrator: false
+        nowebui: false
+        log_startup: false
+        lowram: false
+        allow_code: false
+        data_dir: D:\stable diffusion\stable-diffusion-webui
+        max_batch_count: 0
+        localizations_dir: D:\stable diffusion\stable-diffusion-webui\localizations
+        disable_extra_extensions: false
+        swinir_models_path: D:\stable diffusion\stable-diffusion-webui\models\SwinIR
+        skip_prepare_environment: false
+        vae_path: vae_path
+        opt_split_attention_invokeai: false
+        autolaunch: false
+        opt_channelslast: false
+        disable_opt_split_attention: false
+        ngrok_options: "{}"
+        opt_split_attention_v1: false
+        timeout_keep_alive: 1
+        enable_console_prompts: false
+        scunet_models_path: D:\stable diffusion\stable-diffusion-webui\models\ScuNET
+        opt_split_attention: false
+      properties:
+        f:
+          default: false
+          description: ==SUPPRESS==
+          title: F
+          type: boolean
+        update_all_extensions:
+          default: false
+          description: "launch.py argument: download updates for all extensions when\
+            \ starting the program"
+          title: Update All Extensions
+          type: boolean
+        skip_python_version_check:
+          default: false
+          description: "launch.py argument: do not check python version"
+          title: Skip Python Version Check
+          type: boolean
+        skip_torch_cuda_test:
+          default: false
+          description: "launch.py argument: do not check if CUDA is able to work properly"
+          title: Skip Torch Cuda Test
+          type: boolean
+        reinstall_xformers:
+          default: false
+          description: "launch.py argument: install the appropriate version of xformers\
+            \ even if you have some version already installed"
+          title: Reinstall Xformers
+          type: boolean
+        reinstall_torch:
+          default: false
+          description: "launch.py argument: install the appropriate version of torch\
+            \ even if you have some version already installed"
+          title: Reinstall Torch
+          type: boolean
+        update_check:
+          default: false
+          description: "launch.py argument: check for updates at startup"
+          title: Update Check
+          type: boolean
+        test_server:
+          default: false
+          description: "launch.py argument: configure server for testing"
+          title: Test Server
+          type: boolean
+        log_startup:
+          default: false
+          description: "launch.py argument: print a detailed log of what's happening\
+            \ at startup"
+          title: Log Startup
+          type: boolean
+        skip_prepare_environment:
+          default: false
+          description: "launch.py argument: skip all environment preparation"
+          title: Skip Prepare Environment
+          type: boolean
+        skip_install:
+          default: false
+          description: "launch.py argument: skip installation of packages"
+          title: Skip Install
+          type: boolean
+        dump_sysinfo:
+          default: false
+          description: "launch.py argument: dump limited sysinfo file (without information\
+            \ about extensions, options) to disk and quit"
+          title: Dump Sysinfo
+          type: boolean
+        loglevel:
+          description: "log level; one of: CRITICAL, ERROR, WARNING, INFO, DEBUG"
+          title: Loglevel
+          type: string
+        do_not_download_clip:
+          default: false
+          description: do not download CLIP model even if it's not included in the
+            checkpoint
+          title: Do Not Download Clip
+          type: boolean
+        data_dir:
+          default: D:\stable diffusion\stable-diffusion-webui
+          description: base path where all user data is stored
+          title: Data Dir
+          type: string
+        config:
+          default: D:\stable diffusion\stable-diffusion-webui\configs\v1-inference.yaml
+          description: path to config which constructs model
+          title: Config
+          type: string
+        ckpt:
+          default: D:\stable diffusion\stable-diffusion-webui\model.ckpt
+          description: "path to checkpoint of stable diffusion model; if specified,\
+            \ this checkpoint will be added to the list of checkpoints and loaded"
+          title: Ckpt
+          type: string
+        ckpt_dir:
+          description: Path to directory with stable diffusion checkpoints
+          title: Ckpt Dir
+          type: string
+        vae_dir:
+          description: Path to directory with VAE files
+          title: Vae Dir
+          type: string
+        gfpgan_dir:
+          default: ./GFPGAN
+          description: GFPGAN directory
+          title: Gfpgan Dir
+          type: string
+        gfpgan_model:
+          description: GFPGAN model file name
+          title: Gfpgan Model
+          type: string
+        no_half:
+          default: false
+          description: do not switch the model to 16-bit floats
+          title: No Half
+          type: boolean
+        no_half_vae:
+          default: false
+          description: do not switch the VAE model to 16-bit floats
+          title: No Half Vae
+          type: boolean
+        no_progressbar_hiding:
+          default: false
+          description: do not hide progressbar in gradio UI (we hide it because it
+            slows down ML if you have hardware acceleration in browser)
+          title: No Progressbar Hiding
+          type: boolean
+        max_batch_count:
+          default: 16
+          description: maximum batch count value for the UI
+          title: Max Batch Count
+          type: integer
+        embeddings_dir:
+          default: D:\stable diffusion\stable-diffusion-webui\embeddings
+          description: "embeddings directory for textual inversion (default: embeddings)"
+          title: Embeddings Dir
+          type: string
+        textual_inversion_templates_dir:
+          default: D:\stable diffusion\stable-diffusion-webui\textual_inversion_templates
+          description: directory with textual inversion templates
+          title: Textual Inversion Templates Dir
+          type: string
+        hypernetwork_dir:
+          default: D:\stable diffusion\stable-diffusion-webui\models\hypernetworks
+          description: hypernetwork directory
+          title: Hypernetwork Dir
+          type: string
+        localizations_dir:
+          default: D:\stable diffusion\stable-diffusion-webui\localizations
+          description: localizations directory
+          title: Localizations Dir
+          type: string
+        allow_code:
+          default: false
+          description: allow custom script execution from webui
+          title: Allow Code
+          type: boolean
+        medvram:
+          default: false
+          description: enable stable diffusion model optimizations for sacrificing
+            a little speed for low VRM usage
+          title: Medvram
+          type: boolean
+        medvram_sdxl:
+          default: false
+          description: enable --medvram optimization just for SDXL models
+          title: Medvram Sdxl
+          type: boolean
+        lowvram:
+          default: false
+          description: enable stable diffusion model optimizations for sacrificing
+            a lot of speed for very low VRM usage
+          title: Lowvram
+          type: boolean
+        lowram:
+          default: false
+          description: load stable diffusion checkpoint weights to VRAM instead of
+            RAM
+          title: Lowram
+          type: boolean
+        always_batch_cond_uncond:
+          default: false
+          description: does not do anything
+          title: Always Batch Cond Uncond
+          type: boolean
+        unload_gfpgan:
+          default: false
+          description: does not do anything.
+          title: Unload Gfpgan
+          type: boolean
+        precision:
+          default: autocast
+          description: evaluate at this precision
+          title: Precision
+          type: string
+        upcast_sampling:
+          default: false
+          description: upcast sampling. No effect with --no-half. Usually produces
+            similar results to --no-half with better performance while using less
+            memory.
+          title: Upcast Sampling
+          type: boolean
+        share:
+          default: false
+          description: use share=True for gradio and make the UI accessible through
+            their site
+          title: Share
+          type: boolean
+        ngrok:
+          description: "ngrok authtoken, alternative to gradio --share"
+          title: Ngrok
+          type: string
+        ngrok_region:
+          default: ""
+          description: does not do anything.
+          title: Ngrok Region
+          type: string
+        ngrok_options:
+          default: {}
+          description: "The options to pass to ngrok in JSON format, e.g.: '{\"authtoken_from_env\"\
+            :true, \"basic_auth\":\"user:password\", \"oauth_provider\":\"google\"\
+            , \"oauth_allow_emails\":\"user@asdf.com\"}'"
+          title: Ngrok Options
+          type: object
+        enable_insecure_extension_access:
+          default: false
+          description: enable extensions tab regardless of other options
+          title: Enable Insecure Extension Access
+          type: boolean
+        codeformer_models_path:
+          default: D:\stable diffusion\stable-diffusion-webui\models\Codeformer
+          description: Path to directory with codeformer model file(s).
+          title: Codeformer Models Path
+          type: string
+        gfpgan_models_path:
+          default: D:\stable diffusion\stable-diffusion-webui\models\GFPGAN
+          description: Path to directory with GFPGAN model file(s).
+          title: Gfpgan Models Path
+          type: string
+        esrgan_models_path:
+          default: D:\stable diffusion\stable-diffusion-webui\models\ESRGAN
+          description: Path to directory with ESRGAN model file(s).
+          title: Esrgan Models Path
+          type: string
+        bsrgan_models_path:
+          default: D:\stable diffusion\stable-diffusion-webui\models\BSRGAN
+          description: Path to directory with BSRGAN model file(s).
+          title: Bsrgan Models Path
+          type: string
+        realesrgan_models_path:
+          default: D:\stable diffusion\stable-diffusion-webui\models\RealESRGAN
+          description: Path to directory with RealESRGAN model file(s).
+          title: Realesrgan Models Path
+          type: string
+        clip_models_path:
+          description: Path to directory with CLIP model file(s).
+          title: Clip Models Path
+          type: string
+        xformers:
+          default: false
+          description: enable xformers for cross attention layers
+          title: Xformers
+          type: boolean
+        force_enable_xformers:
+          default: false
+          description: enable xformers for cross attention layers regardless of whether
+            the checking code thinks you can run it; do not make bug reports if this
+            fails to work
+          title: Force Enable Xformers
+          type: boolean
+        xformers_flash_attention:
+          default: false
+          description: enable xformers with Flash Attention to improve reproducibility
+            (supported for SD2.x or variant only)
+          title: Xformers Flash Attention
+          type: boolean
+        deepdanbooru:
+          default: false
+          description: does not do anything
+          title: Deepdanbooru
+          type: boolean
+        opt_split_attention:
+          default: false
+          description: prefer Doggettx's cross-attention layer optimization for automatic
+            choice of optimization
+          title: Opt Split Attention
+          type: boolean
+        opt_sub_quad_attention:
+          default: false
+          description: prefer memory efficient sub-quadratic cross-attention layer
+            optimization for automatic choice of optimization
+          title: Opt Sub Quad Attention
+          type: boolean
+        sub_quad_q_chunk_size:
+          default: 1024
+          description: query chunk size for the sub-quadratic cross-attention layer
+            optimization to use
+          title: Sub Quad Q Chunk Size
+          type: integer
+        sub_quad_kv_chunk_size:
+          description: kv chunk size for the sub-quadratic cross-attention layer optimization
+            to use
+          title: Sub Quad Kv Chunk Size
+          type: string
+        sub_quad_chunk_threshold:
+          description: the percentage of VRAM threshold for the sub-quadratic cross-attention
+            layer optimization to use chunking
+          title: Sub Quad Chunk Threshold
+          type: string
+        opt_split_attention_invokeai:
+          default: false
+          description: prefer InvokeAI's cross-attention layer optimization for automatic
+            choice of optimization
+          title: Opt Split Attention Invokeai
+          type: boolean
+        opt_split_attention_v1:
+          default: false
+          description: prefer older version of split attention optimization for automatic
+            choice of optimization
+          title: Opt Split Attention V1
+          type: boolean
+        opt_sdp_attention:
+          default: false
+          description: prefer scaled dot product cross-attention layer optimization
+            for automatic choice of optimization; requires PyTorch 2.*
+          title: Opt Sdp Attention
+          type: boolean
+        opt_sdp_no_mem_attention:
+          default: false
+          description: "prefer scaled dot product cross-attention layer optimization\
+            \ without memory efficient attention for automatic choice of optimization,\
+            \ makes image generation deterministic; requires PyTorch 2.*"
+          title: Opt Sdp No Mem Attention
+          type: boolean
+        disable_opt_split_attention:
+          default: false
+          description: prefer no cross-attention layer optimization for automatic
+            choice of optimization
+          title: Disable Opt Split Attention
+          type: boolean
+        disable_nan_check:
+          default: false
+          description: do not check if produced images/latent spaces have nans; useful
+            for running without a checkpoint in CI
+          title: Disable Nan Check
+          type: boolean
+        use_cpu:
+          default: []
+          description: use CPU as torch device for specified modules
+          items: {}
+          title: Use Cpu
+          type: array
+        disable_model_loading_ram_optimization:
+          default: false
+          description: disable an optimization that reduces RAM use when loading a
+            model
+          title: Disable Model Loading Ram Optimization
+          type: boolean
+        listen:
+          default: false
+          description: "launch gradio with 0.0.0.0 as server name, allowing to respond\
+            \ to network requests"
+          title: Listen
+          type: boolean
+        port:
+          description: "launch gradio with given server port, you need root/admin\
+            \ rights for ports < 1024, defaults to 7860 if available"
+          title: Port
+          type: string
+        show_negative_prompt:
+          default: false
+          description: does not do anything
+          title: Show Negative Prompt
+          type: boolean
+        ui_config_file:
+          default: D:\stable diffusion\stable-diffusion-webui\ui-config.json
+          description: filename to use for ui configuration
+          title: Ui Config File
+          type: string
+        hide_ui_dir_config:
+          default: false
+          description: hide directory configuration from webui
+          title: Hide Ui Dir Config
+          type: boolean
+        freeze_settings:
+          default: false
+          description: disable editing settings
+          title: Freeze Settings
+          type: boolean
+        ui_settings_file:
+          default: D:\stable diffusion\stable-diffusion-webui\config.json
+          description: filename to use for ui settings
+          title: Ui Settings File
+          type: string
+        gradio_debug:
+          default: false
+          description: launch gradio with --debug option
+          title: Gradio Debug
+          type: boolean
+        gradio_auth:
+          description: "set gradio authentication like \"username:password\"; or comma-delimit\
+            \ multiple like \"u1:p1,u2:p2,u3:p3\""
+          title: Gradio Auth
+          type: string
+        gradio_auth_path:
+          description: set gradio authentication file path ex. "/path/to/auth/file"
+            same auth format as --gradio-auth
+          title: Gradio Auth Path
+          type: string
+        gradio_img2img_tool:
+          description: does not do anything
+          title: Gradio Img2Img Tool
+          type: string
+        gradio_inpaint_tool:
+          description: does not do anything
+          title: Gradio Inpaint Tool
+          type: string
+        gradio_allowed_path:
+          default:
+          - D:\stable diffusion\stable-diffusion-webui
+          description: "add path to gradio's allowed_paths, make it possible to serve\
+            \ files from it"
+          items: {}
+          title: Gradio Allowed Path
+          type: array
+        opt_channelslast:
+          default: false
+          description: change memory type for stable diffusion to channels last
+          title: Opt Channelslast
+          type: boolean
+        styles_file:
+          default: D:\stable diffusion\stable-diffusion-webui\styles.csv
+          description: filename to use for styles
+          title: Styles File
+          type: string
+        autolaunch:
+          default: false
+          description: open the webui URL in the system's default browser upon launch
+          title: Autolaunch
+          type: boolean
+        theme:
+          description: launches the UI with light or dark theme
+          title: Theme
+          type: string
+        use_textbox_seed:
+          default: false
+          description: "use textbox for seeds in UI (no up/down, but possible to input\
+            \ long seeds)"
+          title: Use Textbox Seed
+          type: boolean
+        disable_console_progressbars:
+          default: false
+          description: do not output progressbars to console
+          title: Disable Console Progressbars
+          type: boolean
+        enable_console_prompts:
+          default: false
+          description: print prompts to console when generating with txt2img and img2img
+          title: Enable Console Prompts
+          type: boolean
+        vae_path:
+          description: Checkpoint to use as VAE; setting this argument disables all
+            settings related to VAE
+          title: Vae Path
+          type: string
+        disable_safe_unpickle:
+          default: false
+          description: disable checking pytorch models for malicious code
+          title: Disable Safe Unpickle
+          type: boolean
+        api:
+          default: false
+          description: use api=True to launch the API together with the webui (use
+            --nowebui instead for only the API)
+          title: Api
+          type: boolean
+        api_auth:
+          description: "Set authentication for API like \"username:password\"; or\
+            \ comma-delimit multiple like \"u1:p1,u2:p2,u3:p3\""
+          title: Api Auth
+          type: string
+        api_log:
+          default: false
+          description: use api-log=True to enable logging of all API requests
+          title: Api Log
+          type: boolean
+        nowebui:
+          default: false
+          description: use api=True to launch the API instead of the webui
+          title: Nowebui
+          type: boolean
+        ui_debug_mode:
+          default: false
+          description: Don't load model to quickly launch UI
+          title: Ui Debug Mode
+          type: boolean
+        device_id:
+          description: "Select the default CUDA device to use (export CUDA_VISIBLE_DEVICES=0,1,etc\
+            \ might be needed before)"
+          title: Device Id
+          type: string
+        administrator:
+          default: false
+          description: Administrator rights
+          title: Administrator
+          type: boolean
+        cors_allow_origins:
+          description: Allowed CORS origin(s) in the form of a comma-separated list
+            (no spaces)
+          title: Cors Allow Origins
+          type: string
+        cors_allow_origins_regex:
+          description: Allowed CORS origin(s) in the form of a single regular expression
+          title: Cors Allow Origins Regex
+          type: string
+        tls_keyfile:
+          description: "Partially enables TLS, requires --tls-certfile to fully function"
+          title: Tls Keyfile
+          type: string
+        tls_certfile:
+          description: "Partially enables TLS, requires --tls-keyfile to fully function"
+          title: Tls Certfile
+          type: string
+        disable_tls_verify:
+          description: "When passed, enables the use of self-signed certificates."
+          title: Disable Tls Verify
+          type: string
+        server_name:
+          description: Sets hostname of server
+          title: Server Name
+          type: string
+        gradio_queue:
+          default: true
+          description: does not do anything
+          title: Gradio Queue
+          type: boolean
+        no_gradio_queue:
+          default: false
+          description: Disables gradio queue; causes the webpage to use http requests
+            instead of websockets; was the defaul in earlier versions
+          title: No Gradio Queue
+          type: boolean
+        skip_version_check:
+          default: false
+          description: Do not check versions of torch and xformers
+          title: Skip Version Check
+          type: boolean
+        no_hashing:
+          default: false
+          description: disable sha256 hashing of checkpoints to help loading performance
+          title: No Hashing
+          type: boolean
+        no_download_sd_model:
+          default: false
+          description: don't download SD1.5 model even if no model is found in --ckpt-dir
+          title: No Download Sd Model
+          type: boolean
+        subpath:
+          description: "customize the subpath for gradio, use with reverse proxy"
+          title: Subpath
+          type: string
+        add_stop_route:
+          default: false
+          description: add /_stop route to stop server
+          title: Add Stop Route
+          type: boolean
+        api_server_stop:
+          default: false
+          description: enable server stop/restart/kill via api
+          title: Api Server Stop
+          type: boolean
+        timeout_keep_alive:
+          default: 30
+          description: set timeout_keep_alive for uvicorn
+          title: Timeout Keep Alive
+          type: integer
+        disable_all_extensions:
+          default: false
+          description: prevent all extensions from running regardless of any other
+            settings
+          title: Disable All Extensions
+          type: boolean
+        disable_extra_extensions:
+          default: false
+          description: ' prevent all extensions except built-in from running regardless
+            of any other settings'
+          title: Disable Extra Extensions
+          type: boolean
+        ldsr_models_path:
+          default: D:\stable diffusion\stable-diffusion-webui\models\LDSR
+          description: Path to directory with LDSR model file(s).
+          title: Ldsr Models Path
+          type: string
+        lora_dir:
+          default: D:\stable diffusion\stable-diffusion-webui\models\Lora
+          description: Path to directory with Lora networks.
+          title: Lora Dir
+          type: string
+        lyco_dir_backcompat:
+          default: D:\stable diffusion\stable-diffusion-webui\models\LyCORIS
+          description: Path to directory with LyCORIS networks (for backawards compatibility;
+            can also use --lyco-dir).
+          title: Lyco Dir Backcompat
+          type: string
+        scunet_models_path:
+          default: D:\stable diffusion\stable-diffusion-webui\models\ScuNET
+          description: Path to directory with ScuNET model file(s).
+          title: Scunet Models Path
+          type: string
+        swinir_models_path:
+          default: D:\stable diffusion\stable-diffusion-webui\models\SwinIR
+          description: Path to directory with SwinIR model file(s).
+          title: Swinir Models Path
+          type: string
+      title: Flags
+      type: object
+    HTTPValidationError:
+      properties:
+        detail:
+          items:
+            $ref: '#/components/schemas/ValidationError'
+          title: Detail
+          type: array
+      title: HTTPValidationError
+      type: object
+    HypernetworkItem:
+      example:
+        path: path
+        name: name
+      properties:
+        name:
+          title: Name
+          type: string
+        path:
+          title: Path
+          type: string
+      required:
+      - name
+      title: HypernetworkItem
+      type: object
+    ImageToImageResponse:
+      example:
+        images:
+        - images
+        - images
+        parameters: "{}"
+        info: info
+      properties:
+        images:
+          description: The generated image in base64 format.
+          items:
+            type: string
+          title: Image
+          type: array
+        parameters:
+          title: Parameters
+          type: object
+        info:
+          title: Info
+          type: string
+      required:
+      - info
+      - parameters
+      title: ImageToImageResponse
+      type: object
+    InterrogateRequest:
+      example:
+        image: ""
+        model: clip
+      properties:
+        image:
+          default: ""
+          description: "Image to work on, must be a Base64 string containing the image's\
+            \ data."
+          title: Image
+          type: string
+        model:
+          default: clip
+          description: The interrogate model used.
+          title: Model
+          type: string
+      title: InterrogateRequest
+      type: object
+    LatentUpscalerModeItem:
+      example:
+        name: name
+      properties:
+        name:
+          title: Name
+          type: string
+      required:
+      - name
+      title: LatentUpscalerModeItem
+      type: object
+    MemoryResponse:
+      example:
+        cuda: "{}"
+        ram: "{}"
+      properties:
+        ram:
+          description: System memory stats
+          title: RAM
+          type: object
+        cuda:
+          description: nVidia CUDA memory stats
+          title: CUDA
+          type: object
+      required:
+      - cuda
+      - ram
+      title: MemoryResponse
+      type: object
+    Options:
+      example:
+        s_min_uncond: ""
+        s_tmin: ""
+        samples_format: png
+        tiling: ""
+        sdxl_refiner_low_aesthetic_score: 7.457744773683766
+        interrogate_keep_models_in_memory: ""
+        save_to_dirs: true
+        extra_networks_card_text_scale: 6.965117697638846
+        ESRGAN_tile_overlap: 9.301444243932576
+        quicksettings_list:
+        - ""
+        - ""
+        lora_add_hashes_to_infotext: true
+        grid_extended_filename: ""
+        sd_checkpoint_hash: ""
+        gradio_themes_cache: true
+        enable_pnginfo: true
+        img2img_inpaint_sketch_default_brush_color: '#ffffff'
+        keyedit_precision_extra: 6.778324963048013
+        img2img_background_color: '#ffffff'
+        realesrgan_enabled_models:
+        - ""
+        - ""
+        upscaler_for_img2img: ""
+        n_rows: 0.8008281904610115
+        extra_options_txt2img: ""
+        show_warnings: ""
+        CLIP_stop_at_last_layers: 6.84685269835264
+        api_forbid_local_requests: true
+        keyedit_delimiters: ".,\\/!?%^*;:{}=`~()"
+        eta_noise_seed_delta: ""
+        lora_show_all: ""
+        uni_pc_variant: bh1
+        outdir_grids: ""
+        hires_fix_show_sampler: ""
+        extra_options_accordion: ""
+        cross_attention_optimization: Automatic
+        interrogate_clip_skip_categories: ""
+        no_dpmpp_sde_batch_determinism: ""
+        dont_fix_second_order_samplers_schedule: ""
+        grid_only_if_multiple: true
+        auto_launch_browser: Local
+        outdir_img2img_grids: outputs/img2img-grids
+        interrogate_deepbooru_score_threshold: 6.438423552598547
+        use_old_hires_fix_width_height: ""
+        save_optimizer_state: ""
+        gallery_height: ""
+        extra_networks_show_hidden_directories: true
+        save_init_img: ""
+        img2img_extra_noise: ""
+        sdxl_crop_left: ""
+        sigma_max: ""
+        sd_model_checkpoint: ""
+        sd_vae_checkpoint_cache: ""
+        font: ""
+        extra_networks_card_show_desc: true
+        grid_save: true
+        upcast_attn: ""
+        api_useragent: ""
+        extra_options_cols: 0.8851374739011653
+        use_old_emphasis_implementation: ""
+        textual_inversion_add_hashes_to_infotext: true
+        save_mask_composite: ""
+        temp_dir: ""
+        sdxl_refiner_high_aesthetic_score: 1.1730742509559433
+        interrogate_clip_max_length: 8.762042012749001
+        save_mask: ""
+        face_restoration: ""
+        show_progress_every_n_steps: 6.878052220127876
+        show_progressbar: true
+        training_xattention_optimizations: ""
+        add_model_name_to_info: true
+        img2img_fix_steps: ""
+        uni_pc_lower_order_final: true
+        interrogate_clip_num_beams: 9.369310271410669
+        save_images_before_color_correction: ""
+        hires_fix_use_firstpass_conds: ""
+        interrogate_clip_min_length: 6.683562403749608
+        add_model_hash_to_info: true
+        save_incomplete_images: ""
+        sd_checkpoints_keep_in_cpu: true
+        api_enable_requests: true
+        always_discard_next_to_last_sigma: ""
+        pin_memory: ""
+        live_previews_image_format: png
+        canvas_hotkey_overlap: O
+        dimensions_and_batch_together: true
+        save_txt: ""
+        token_merging_ratio_img2img: ""
+        webp_lossless: ""
+        enable_quantization: ""
+        memmon_poll_rate: 2.027123023002322
+        save_images_before_face_restoration: ""
+        live_preview_allow_lowvram_full: ""
+        live_previews_enable: true
+        outdir_txt2img_samples: outputs/txt2img-images
+        list_hidden_files: true
+        img2img_color_correction: ""
+        js_modal_lightbox: true
+        outdir_init_images: outputs/init-images
+        save_training_settings_to_txt: true
+        do_not_show_images: ""
+        lora_functional: ""
+        rho: ""
+        enable_emphasis: true
+        extra_networks_default_multiplier: 3.5571952270680973
+        randn_source: GPU
+        outdir_extras_samples: outputs/extras-images
+        initial_noise_multiplier: 5.025004791520295
+        localization: None
+        grid_background_color: '#ffffff'
+        gradio_theme: Default
+        return_mask_composite: ""
+        use_original_name_batch: true
+        sigma_min: ""
+        s_churn: ""
+        clean_temp_dir_at_start: ""
+        sdxl_crop_top: ""
+        outdir_img2img_samples: outputs/img2img-images
+        face_restoration_unload: ""
+        s_tmax: ""
+        export_for_4chan: true
+        disabled_extensions: ""
+        ui_tab_order: ""
+        interrogate_return_ranks: ""
+        img2img_editor_height: 9.965781217890562
+        canvas_auto_expand: true
+        img_max_size_mp: 5.637376656633329
+        sd_vae_overrides_per_model_preferences: true
+        outdir_save: log/images
+        lora_in_memory_limit: ""
+        eta_ddim: ""
+        live_preview_fast_interrupt: ""
+        show_progress_in_title: true
+        keyedit_precision_attention: 2.8841621266687802
+        save_images_before_highres_fix: ""
+        sd_hypernetwork: None
+        use_upscaler_name_as_suffix: ""
+        canvas_disabled_functions:
+        - ""
+        - ""
+        canvas_hotkey_adjust: Ctrl
+        training_enable_tensorboard: ""
+        training_write_csv_every: 7.386281948385884
+        training_tensorboard_flush_every: 1.2315135367772556
+        samplers_in_dropdown: true
+        infotext_styles: Apply if any
+        save_images_add_number: true
+        hide_samplers: ""
+        hidden_tabs: ""
+        interrogate_clip_dict_limit: 9.018348186070783
+        target_side_length: 5.962133916683182
+        hires_fix_refiner_pass: second pass
+        upscaling_max_images_in_cache: 7.143538047012306
+        img2img_sketch_default_brush_color: '#ffffff'
+        pad_cond_uncond: ""
+        uni_pc_skip_type: time_uniform
+        directories_filename_pattern: "[date]"
+        canvas_blur_prompt: ""
+        disable_all_extensions: none
+        sd_vae_decode_method: Full
+        disable_weights_auto_swap: true
+        jpeg_quality: 6.027456183070403
+        save_selected_only: true
+        sd_lora: None
+        send_seed: true
+        disable_mmap_load_safetensors: ""
+        sd_vae_explanation: |-
+          <abbr title='Variational autoencoder'>VAE</abbr> is a neural network that transforms a standard <abbr title='red/green/blue'>RGB</abbr>
+          image into latent space representation and back. Latent space representation is what stable diffusion is working on during sampling
+          (i.e. when the progress bar is between empty and full). For txt2img, VAE is used to create a resulting image after the sampling is finished.
+          For img2img, VAE is used to process user's input image before the sampling, and to create an image after sampling.
+        token_merging_ratio_hr: ""
+        sd_checkpoint_cache: ""
+        hires_fix_show_prompts: ""
+        ui_reorder_list: ""
+        grid_zip_filename_pattern: ""
+        grid_text_inactive_color: '#999999'
+        ESRGAN_tile: 7.061401241503109
+        live_preview_content: Prompt
+        canvas_hotkey_reset: R
+        use_save_to_dirs_for_ui: ""
+        eta_ancestral: 6.704019297950036
+        deepbooru_escape: true
+        sd_checkpoints_limit: 1.0246457001441578
+        outdir_samples: ""
+        show_gradio_deprecation_warnings: true
+        s_noise: 3.353193347011243
+        uni_pc_order: 3.0937452626664474
+        js_modal_lightbox_gamepad: ""
+        canvas_show_tooltip: true
+        sgm_noise_multiplier: ""
+        auto_vae_precision: true
+        keyedit_move: true
+        canvas_hotkey_zoom: Alt
+        return_grid: true
+        add_version_to_infotext: true
+        postprocessing_operation_order: ""
+        token_merging_ratio: ""
+        grid_format: png
+        canvas_hotkey_move: F
+        unload_models_when_training: ""
+        textual_inversion_print_at_load: ""
+        js_modal_lightbox_initially_zoomed: true
+        deepbooru_sort_alpha: true
+        multiple_tqdm: true
+        outdir_txt2img_grids: outputs/txt2img-grids
+        training_tensorboard_save_images: ""
+        training_image_repeats_per_epoch: 4.145608029883936
+        sd_unet: Automatic
+        ddim_discretize: uniform
+        dataset_filename_word_regex: ""
+        extra_options_img2img: ""
+        postprocessing_enable_in_main_ui: ""
+        samples_filename_pattern: ""
+        sd_vae_encode_method: Full
+        persistent_cond_cache: true
+        extra_networks_card_width: ""
+        enable_batch_seeds: true
+        use_old_karras_scheduler_sigmas: ""
+        restore_config_state_file: ""
+        img_downscale_threshold: 1.4658129805029452
+        lora_preferred_name: Alias from file
+        dataset_filename_join_string: ' '
+        sd_vae: Automatic
+        extra_networks_add_text_separator: ' '
+        comma_padding_backtrack: 1.4894159098541704
+        deepbooru_use_spaces: true
+        inpainting_mask_weight: 4.965218492984954
+        deepbooru_filter_tags: ""
+        send_size: true
+        use_old_scheduling: ""
+        canvas_hotkey_fullscreen: S
+        extra_networks_hidden_models: When searched
+        directories_max_prompt_words: 2.3021358869347655
+        hide_ldm_prints: true
+        face_restoration_model: CodeFormer
+        samples_save: true
+        live_preview_refresh_period: 5.944895607614016
+        add_user_name_to_info: ""
+        grid_prevent_empty_spots: ""
+        lora_hide_unknown_for_versions: ""
+        show_progress_type: Approx NN
+        batch_cond_uncond: true
+        ui_extra_networks_tab_reorder: ""
+        k_sched_type: Automatic
+        extra_networks_card_height: ""
+        samples_log_stdout: ""
+        grid_save_to_dirs: true
+        js_modal_lightbox_gamepad_repeat: 1.284659006116532
+        show_progress_grid: true
+        grid_text_active_color: '#000000'
+        img2img_inpaint_mask_brush_color: '#ffffff'
+        disable_token_counters: ""
+        print_hypernet_extra: ""
+        return_mask: ""
+        code_former_weight: 3.616076749251911
+      properties:
+        samples_save:
+          default: true
+          description: Always save all generated images
+          title: Samples Save
+          type: boolean
+        samples_format:
+          default: png
+          description: File format for images
+          title: Samples Format
+          type: string
+        samples_filename_pattern:
+          default: ""
+          description: Images filename pattern
+          title: Samples Filename Pattern
+        save_images_add_number:
+          default: true
+          description: Add number to filename when saving
+          title: Save Images Add Number
+          type: boolean
+        grid_save:
+          default: true
+          description: Always save all generated image grids
+          title: Grid Save
+          type: boolean
+        grid_format:
+          default: png
+          description: File format for grids
+          title: Grid Format
+          type: string
+        grid_extended_filename:
+          default: false
+          description: "Add extended info (seed, prompt) to filename when saving grid"
+          title: Grid Extended Filename
+        grid_only_if_multiple:
+          default: true
+          description: Do not save grids consisting of one picture
+          title: Grid Only If Multiple
+          type: boolean
+        grid_prevent_empty_spots:
+          default: false
+          description: Prevent empty spots in grid (when set to autodetect)
+          title: Grid Prevent Empty Spots
+        grid_zip_filename_pattern:
+          default: ""
+          description: Archive filename pattern
+          title: Grid Zip Filename Pattern
+        n_rows:
+          default: -1
+          description: Grid row count; use -1 for autodetect and 0 for it to be same
+            as batch size
+          title: N Rows
+          type: number
+        font:
+          default: ""
+          description: Font for image grids that have text
+          title: Font
+        grid_text_active_color:
+          default: '#000000'
+          description: Text color for image grids
+          title: Grid Text Active Color
+          type: string
+        grid_text_inactive_color:
+          default: '#999999'
+          description: Inactive text color for image grids
+          title: Grid Text Inactive Color
+          type: string
+        grid_background_color:
+          default: '#ffffff'
+          description: Background color for image grids
+          title: Grid Background Color
+          type: string
+        enable_pnginfo:
+          default: true
+          description: Save text information about generation parameters as chunks
+            to png files
+          title: Enable Pnginfo
+          type: boolean
+        save_txt:
+          default: false
+          description: Create a text file next to every image with generation parameters.
+          title: Save Txt
+        save_images_before_face_restoration:
+          default: false
+          description: Save a copy of image before doing face restoration.
+          title: Save Images Before Face Restoration
+        save_images_before_highres_fix:
+          default: false
+          description: Save a copy of image before applying highres fix.
+          title: Save Images Before Highres Fix
+        save_images_before_color_correction:
+          default: false
+          description: Save a copy of image before applying color correction to img2img
+            results
+          title: Save Images Before Color Correction
+        save_mask:
+          default: false
+          description: "For inpainting, save a copy of the greyscale mask"
+          title: Save Mask
+        save_mask_composite:
+          default: false
+          description: "For inpainting, save a masked composite"
+          title: Save Mask Composite
+        jpeg_quality:
+          default: 80
+          description: Quality for saved jpeg images
+          title: Jpeg Quality
+          type: number
+        webp_lossless:
+          default: false
+          description: Use lossless compression for webp images
+          title: Webp Lossless
+        export_for_4chan:
+          default: true
+          description: Save copy of large images as JPG
+          title: Export For 4Chan
+          type: boolean
+        img_downscale_threshold:
+          default: 4.0
+          description: "File size limit for the above option, MB"
+          title: Img Downscale Threshold
+          type: number
+        target_side_length:
+          default: 4000
+          description: "Width/height limit for the above option, in pixels"
+          title: Target Side Length
+          type: number
+        img_max_size_mp:
+          default: 200
+          description: Maximum image size
+          title: Img Max Size Mp
+          type: number
+        use_original_name_batch:
+          default: true
+          description: Use original name for output filename during batch process
+            in extras tab
+          title: Use Original Name Batch
+          type: boolean
+        use_upscaler_name_as_suffix:
+          default: false
+          description: Use upscaler name as filename suffix in the extras tab
+          title: Use Upscaler Name As Suffix
+        save_selected_only:
+          default: true
+          description: "When using 'Save' button, only save a single selected image"
+          title: Save Selected Only
+          type: boolean
+        save_init_img:
+          default: false
+          description: Save init images when using img2img
+          title: Save Init Img
+        temp_dir:
+          default: ""
+          description: Directory for temporary images; leave empty for default
+          title: Temp Dir
+        clean_temp_dir_at_start:
+          default: false
+          description: Cleanup non-default temporary directory when starting webui
+          title: Clean Temp Dir At Start
+        save_incomplete_images:
+          default: false
+          description: Save incomplete images
+          title: Save Incomplete Images
+        outdir_samples:
+          default: ""
+          description: "Output directory for images; if empty, defaults to three directories\
+            \ below"
+          title: Outdir Samples
+        outdir_txt2img_samples:
+          default: outputs/txt2img-images
+          description: Output directory for txt2img images
+          title: Outdir Txt2Img Samples
+          type: string
+        outdir_img2img_samples:
+          default: outputs/img2img-images
+          description: Output directory for img2img images
+          title: Outdir Img2Img Samples
+          type: string
+        outdir_extras_samples:
+          default: outputs/extras-images
+          description: Output directory for images from extras tab
+          title: Outdir Extras Samples
+          type: string
+        outdir_grids:
+          default: ""
+          description: "Output directory for grids; if empty, defaults to two directories\
+            \ below"
+          title: Outdir Grids
+        outdir_txt2img_grids:
+          default: outputs/txt2img-grids
+          description: Output directory for txt2img grids
+          title: Outdir Txt2Img Grids
+          type: string
+        outdir_img2img_grids:
+          default: outputs/img2img-grids
+          description: Output directory for img2img grids
+          title: Outdir Img2Img Grids
+          type: string
+        outdir_save:
+          default: log/images
+          description: Directory for saving images using the Save button
+          title: Outdir Save
+          type: string
+        outdir_init_images:
+          default: outputs/init-images
+          description: Directory for saving init images when using img2img
+          title: Outdir Init Images
+          type: string
+        save_to_dirs:
+          default: true
+          description: Save images to a subdirectory
+          title: Save To Dirs
+          type: boolean
+        grid_save_to_dirs:
+          default: true
+          description: Save grids to a subdirectory
+          title: Grid Save To Dirs
+          type: boolean
+        use_save_to_dirs_for_ui:
+          default: false
+          description: "When using \"Save\" button, save images to a subdirectory"
+          title: Use Save To Dirs For Ui
+        directories_filename_pattern:
+          default: "[date]"
+          description: Directory name pattern
+          title: Directories Filename Pattern
+          type: string
+        directories_max_prompt_words:
+          default: 8
+          description: "Max prompt words for [prompt_words] pattern"
+          title: Directories Max Prompt Words
+          type: number
+        ESRGAN_tile:
+          default: 192
+          description: Tile size for ESRGAN upscalers.
+          title: Esrgan Tile
+          type: number
+        ESRGAN_tile_overlap:
+          default: 8
+          description: Tile overlap for ESRGAN upscalers.
+          title: Esrgan Tile Overlap
+          type: number
+        realesrgan_enabled_models:
+          default:
+          - R-ESRGAN 4x+
+          - R-ESRGAN 4x+ Anime6B
+          description: Select which Real-ESRGAN models to show in the web UI.
+          items: {}
+          title: Realesrgan Enabled Models
+          type: array
+        upscaler_for_img2img:
+          description: Upscaler for img2img
+          title: Upscaler For Img2Img
+        face_restoration:
+          default: false
+          description: Restore faces
+          title: Face Restoration
+        face_restoration_model:
+          default: CodeFormer
+          description: Face restoration model
+          title: Face Restoration Model
+          type: string
+        code_former_weight:
+          default: 0.5
+          description: CodeFormer weight
+          title: Code Former Weight
+          type: number
+        face_restoration_unload:
+          default: false
+          description: Move face restoration model from VRAM into RAM after processing
+          title: Face Restoration Unload
+        auto_launch_browser:
+          default: Local
+          description: Automatically open webui in browser on startup
+          title: Auto Launch Browser
+          type: string
+        show_warnings:
+          default: false
+          description: Show warnings in console.
+          title: Show Warnings
+        show_gradio_deprecation_warnings:
+          default: true
+          description: Show gradio deprecation warnings in console.
+          title: Show Gradio Deprecation Warnings
+          type: boolean
+        memmon_poll_rate:
+          default: 8
+          description: VRAM usage polls per second during generation.
+          title: Memmon Poll Rate
+          type: number
+        samples_log_stdout:
+          default: false
+          description: Always print all generation info to standard output
+          title: Samples Log Stdout
+        multiple_tqdm:
+          default: true
+          description: Add a second progress bar to the console that shows progress
+            for an entire job.
+          title: Multiple Tqdm
+          type: boolean
+        print_hypernet_extra:
+          default: false
+          description: Print extra hypernetwork information to console.
+          title: Print Hypernet Extra
+        list_hidden_files:
+          default: true
+          description: Load models/files in hidden directories
+          title: List Hidden Files
+          type: boolean
+        disable_mmap_load_safetensors:
+          default: false
+          description: Disable memmapping for loading .safetensors files.
+          title: Disable Mmap Load Safetensors
+        hide_ldm_prints:
+          default: true
+          description: Prevent Stability-AI's ldm/sgm modules from printing noise
+            to console.
+          title: Hide Ldm Prints
+          type: boolean
+        api_enable_requests:
+          default: true
+          description: Allow http:// and https:// URLs for input images in API
+          title: Api Enable Requests
+          type: boolean
+        api_forbid_local_requests:
+          default: true
+          description: Forbid URLs to local resources
+          title: Api Forbid Local Requests
+          type: boolean
+        api_useragent:
+          default: ""
+          description: User agent for requests
+          title: Api Useragent
+        unload_models_when_training:
+          default: false
+          description: Move VAE and CLIP to RAM when training if possible. Saves VRAM.
+          title: Unload Models When Training
+        pin_memory:
+          default: false
+          description: Turn on pin_memory for DataLoader. Makes training slightly
+            faster but can increase memory usage.
+          title: Pin Memory
+        save_optimizer_state:
+          default: false
+          description: Saves Optimizer state as separate *.optim file. Training of
+            embedding or HN can be resumed with the matching optim file.
+          title: Save Optimizer State
+        save_training_settings_to_txt:
+          default: true
+          description: Save textual inversion and hypernet settings to a text file
+            whenever training starts.
+          title: Save Training Settings To Txt
+          type: boolean
+        dataset_filename_word_regex:
+          default: ""
+          description: Filename word regex
+          title: Dataset Filename Word Regex
+        dataset_filename_join_string:
+          default: ' '
+          description: Filename join string
+          title: Dataset Filename Join String
+          type: string
+        training_image_repeats_per_epoch:
+          default: 1
+          description: Number of repeats for a single input image per epoch; used
+            only for displaying epoch number
+          title: Training Image Repeats Per Epoch
+          type: number
+        training_write_csv_every:
+          default: 500
+          description: "Save an csv containing the loss to log directory every N steps,\
+            \ 0 to disable"
+          title: Training Write Csv Every
+          type: number
+        training_xattention_optimizations:
+          default: false
+          description: Use cross attention optimizations while training
+          title: Training Xattention Optimizations
+        training_enable_tensorboard:
+          default: false
+          description: Enable tensorboard logging.
+          title: Training Enable Tensorboard
+        training_tensorboard_save_images:
+          default: false
+          description: Save generated images within tensorboard.
+          title: Training Tensorboard Save Images
+        training_tensorboard_flush_every:
+          default: 120
+          description: "How often, in seconds, to flush the pending tensorboard events\
+            \ and summaries to disk."
+          title: Training Tensorboard Flush Every
+          type: number
+        sd_model_checkpoint:
+          description: Stable Diffusion checkpoint
+          title: Sd Model Checkpoint
+        sd_checkpoints_limit:
+          default: 1
+          description: Maximum number of checkpoints loaded at the same time
+          title: Sd Checkpoints Limit
+          type: number
+        sd_checkpoints_keep_in_cpu:
+          default: true
+          description: Only keep one model on device
+          title: Sd Checkpoints Keep In Cpu
+          type: boolean
+        sd_checkpoint_cache:
+          default: 0
+          description: Checkpoints to cache in RAM
+          title: Sd Checkpoint Cache
+        sd_unet:
+          default: Automatic
+          description: SD Unet
+          title: Sd Unet
+          type: string
+        enable_quantization:
+          default: false
+          description: Enable quantization in K samplers for sharper and cleaner results.
+            This may change existing seeds
+          title: Enable Quantization
+        enable_emphasis:
+          default: true
+          description: Enable emphasis
+          title: Enable Emphasis
+          type: boolean
+        enable_batch_seeds:
+          default: true
+          description: Make K-diffusion samplers produce same images in a batch as
+            when making a single image
+          title: Enable Batch Seeds
+          type: boolean
+        comma_padding_backtrack:
+          default: 20
+          description: Prompt word wrap length limit
+          title: Comma Padding Backtrack
+          type: number
+        CLIP_stop_at_last_layers:
+          default: 1
+          description: Clip skip
+          title: Clip Stop At Last Layers
+          type: number
+        upcast_attn:
+          default: false
+          description: Upcast cross attention layer to float32
+          title: Upcast Attn
+        randn_source:
+          default: GPU
+          description: Random number generator source.
+          title: Randn Source
+          type: string
+        tiling:
+          default: false
+          description: Tiling
+          title: Tiling
+        hires_fix_refiner_pass:
+          default: second pass
+          description: "Hires fix: which pass to enable refiner for"
+          title: Hires Fix Refiner Pass
+          type: string
+        sdxl_crop_top:
+          default: 0
+          description: crop top coordinate
+          title: Sdxl Crop Top
+        sdxl_crop_left:
+          default: 0
+          description: crop left coordinate
+          title: Sdxl Crop Left
+        sdxl_refiner_low_aesthetic_score:
+          default: 2.5
+          description: SDXL low aesthetic score
+          title: Sdxl Refiner Low Aesthetic Score
+          type: number
+        sdxl_refiner_high_aesthetic_score:
+          default: 6.0
+          description: SDXL high aesthetic score
+          title: Sdxl Refiner High Aesthetic Score
+          type: number
+        sd_vae_explanation:
+          default: |-
+            <abbr title='Variational autoencoder'>VAE</abbr> is a neural network that transforms a standard <abbr title='red/green/blue'>RGB</abbr>
+            image into latent space representation and back. Latent space representation is what stable diffusion is working on during sampling
+            (i.e. when the progress bar is between empty and full). For txt2img, VAE is used to create a resulting image after the sampling is finished.
+            For img2img, VAE is used to process user's input image before the sampling, and to create an image after sampling.
+          title: Sd Vae Explanation
+          type: string
+        sd_vae_checkpoint_cache:
+          default: 0
+          description: VAE Checkpoints to cache in RAM
+          title: Sd Vae Checkpoint Cache
+        sd_vae:
+          default: Automatic
+          description: SD VAE
+          title: Sd Vae
+          type: string
+        sd_vae_overrides_per_model_preferences:
+          default: true
+          description: Selected VAE overrides per-model preferences
+          title: Sd Vae Overrides Per Model Preferences
+          type: boolean
+        auto_vae_precision:
+          default: true
+          description: Automatically revert VAE to 32-bit floats
+          title: Auto Vae Precision
+          type: boolean
+        sd_vae_encode_method:
+          default: Full
+          description: VAE type for encode
+          title: Sd Vae Encode Method
+          type: string
+        sd_vae_decode_method:
+          default: Full
+          description: VAE type for decode
+          title: Sd Vae Decode Method
+          type: string
+        inpainting_mask_weight:
+          default: 1.0
+          description: Inpainting conditioning mask strength
+          title: Inpainting Mask Weight
+          type: number
+        initial_noise_multiplier:
+          default: 1.0
+          description: Noise multiplier for img2img
+          title: Initial Noise Multiplier
+          type: number
+        img2img_extra_noise:
+          default: 0.0
+          description: Extra noise multiplier for img2img and hires fix
+          title: Img2Img Extra Noise
+        img2img_color_correction:
+          default: false
+          description: Apply color correction to img2img results to match original
+            colors.
+          title: Img2Img Color Correction
+        img2img_fix_steps:
+          default: false
+          description: "With img2img, do exactly the amount of steps the slider specifies."
+          title: Img2Img Fix Steps
+        img2img_background_color:
+          default: '#ffffff'
+          description: "With img2img, fill transparent parts of the input image with\
+            \ this color."
+          title: Img2Img Background Color
+          type: string
+        img2img_editor_height:
+          default: 720
+          description: Height of the image editor
+          title: Img2Img Editor Height
+          type: number
+        img2img_sketch_default_brush_color:
+          default: '#ffffff'
+          description: Sketch initial brush color
+          title: Img2Img Sketch Default Brush Color
+          type: string
+        img2img_inpaint_mask_brush_color:
+          default: '#ffffff'
+          description: Inpaint mask brush color
+          title: Img2Img Inpaint Mask Brush Color
+          type: string
+        img2img_inpaint_sketch_default_brush_color:
+          default: '#ffffff'
+          description: Inpaint sketch initial brush color
+          title: Img2Img Inpaint Sketch Default Brush Color
+          type: string
+        return_mask:
+          default: false
+          description: "For inpainting, include the greyscale mask in results for\
+            \ web"
+          title: Return Mask
+        return_mask_composite:
+          default: false
+          description: "For inpainting, include masked composite in results for web"
+          title: Return Mask Composite
+        cross_attention_optimization:
+          default: Automatic
+          description: Cross attention optimization
+          title: Cross Attention Optimization
+          type: string
+        s_min_uncond:
+          default: 0.0
+          description: Negative Guidance minimum sigma
+          title: S Min Uncond
+        token_merging_ratio:
+          default: 0.0
+          description: Token merging ratio
+          title: Token Merging Ratio
+        token_merging_ratio_img2img:
+          default: 0.0
+          description: Token merging ratio for img2img
+          title: Token Merging Ratio Img2Img
+        token_merging_ratio_hr:
+          default: 0.0
+          description: Token merging ratio for high-res pass
+          title: Token Merging Ratio Hr
+        pad_cond_uncond:
+          default: false
+          description: Pad prompt/negative prompt to be same length
+          title: Pad Cond Uncond
+        persistent_cond_cache:
+          default: true
+          description: Persistent cond cache
+          title: Persistent Cond Cache
+          type: boolean
+        batch_cond_uncond:
+          default: true
+          description: Batch cond/uncond
+          title: Batch Cond Uncond
+          type: boolean
+        use_old_emphasis_implementation:
+          default: false
+          description: Use old emphasis implementation. Can be useful to reproduce
+            old seeds.
+          title: Use Old Emphasis Implementation
+        use_old_karras_scheduler_sigmas:
+          default: false
+          description: Use old karras scheduler sigmas (0.1 to 10).
+          title: Use Old Karras Scheduler Sigmas
+        no_dpmpp_sde_batch_determinism:
+          default: false
+          description: Do not make DPM++ SDE deterministic across different batch
+            sizes.
+          title: No Dpmpp Sde Batch Determinism
+        use_old_hires_fix_width_height:
+          default: false
+          description: "For hires fix, use width/height sliders to set final resolution\
+            \ rather than first pass (disables Upscale by, Resize width/height to)."
+          title: Use Old Hires Fix Width Height
+        dont_fix_second_order_samplers_schedule:
+          default: false
+          description: Do not fix prompt schedule for second order samplers.
+          title: Dont Fix Second Order Samplers Schedule
+        hires_fix_use_firstpass_conds:
+          default: false
+          description: "For hires fix, calculate conds of second pass using extra\
+            \ networks of first pass."
+          title: Hires Fix Use Firstpass Conds
+        use_old_scheduling:
+          default: false
+          description: Use old prompt editing timelines.
+          title: Use Old Scheduling
+        interrogate_keep_models_in_memory:
+          default: false
+          description: Keep models in VRAM
+          title: Interrogate Keep Models In Memory
+        interrogate_return_ranks:
+          default: false
+          description: Include ranks of model tags matches in results.
+          title: Interrogate Return Ranks
+        interrogate_clip_num_beams:
+          default: 1
+          description: "BLIP: num_beams"
+          title: Interrogate Clip Num Beams
+          type: number
+        interrogate_clip_min_length:
+          default: 24
+          description: "BLIP: minimum description length"
+          title: Interrogate Clip Min Length
+          type: number
+        interrogate_clip_max_length:
+          default: 48
+          description: "BLIP: maximum description length"
+          title: Interrogate Clip Max Length
+          type: number
+        interrogate_clip_dict_limit:
+          default: 1500
+          description: "CLIP: maximum number of lines in text file"
+          title: Interrogate Clip Dict Limit
+          type: number
+        interrogate_clip_skip_categories:
+          default: []
+          description: "CLIP: skip inquire categories"
+          title: Interrogate Clip Skip Categories
+        interrogate_deepbooru_score_threshold:
+          default: 0.5
+          description: "deepbooru: score threshold"
+          title: Interrogate Deepbooru Score Threshold
+          type: number
+        deepbooru_sort_alpha:
+          default: true
+          description: "deepbooru: sort tags alphabetically"
+          title: Deepbooru Sort Alpha
+          type: boolean
+        deepbooru_use_spaces:
+          default: true
+          description: "deepbooru: use spaces in tags"
+          title: Deepbooru Use Spaces
+          type: boolean
+        deepbooru_escape:
+          default: true
+          description: "deepbooru: escape (\\) brackets"
+          title: Deepbooru Escape
+          type: boolean
+        deepbooru_filter_tags:
+          default: ""
+          description: "deepbooru: filter out those tags"
+          title: Deepbooru Filter Tags
+        extra_networks_show_hidden_directories:
+          default: true
+          description: Show hidden directories
+          title: Extra Networks Show Hidden Directories
+          type: boolean
+        extra_networks_hidden_models:
+          default: When searched
+          description: Show cards for models in hidden directories
+          title: Extra Networks Hidden Models
+          type: string
+        extra_networks_default_multiplier:
+          default: 1.0
+          description: Default multiplier for extra networks
+          title: Extra Networks Default Multiplier
+          type: number
+        extra_networks_card_width:
+          default: 0
+          description: Card width for Extra Networks
+          title: Extra Networks Card Width
+        extra_networks_card_height:
+          default: 0
+          description: Card height for Extra Networks
+          title: Extra Networks Card Height
+        extra_networks_card_text_scale:
+          default: 1.0
+          description: Card text scale
+          title: Extra Networks Card Text Scale
+          type: number
+        extra_networks_card_show_desc:
+          default: true
+          description: Show description on card
+          title: Extra Networks Card Show Desc
+          type: boolean
+        extra_networks_add_text_separator:
+          default: ' '
+          description: Extra networks separator
+          title: Extra Networks Add Text Separator
+          type: string
+        ui_extra_networks_tab_reorder:
+          default: ""
+          description: Extra networks tab order
+          title: Ui Extra Networks Tab Reorder
+        textual_inversion_print_at_load:
+          default: false
+          description: Print a list of Textual Inversion embeddings when loading model
+          title: Textual Inversion Print At Load
+        textual_inversion_add_hashes_to_infotext:
+          default: true
+          description: Add Textual Inversion hashes to infotext
+          title: Textual Inversion Add Hashes To Infotext
+          type: boolean
+        sd_hypernetwork:
+          default: None
+          description: Add hypernetwork to prompt
+          title: Sd Hypernetwork
+          type: string
+        localization:
+          default: None
+          description: Localization
+          title: Localization
+          type: string
+        gradio_theme:
+          default: Default
+          description: Gradio theme
+          title: Gradio Theme
+          type: string
+        gradio_themes_cache:
+          default: true
+          description: Cache gradio themes locally
+          title: Gradio Themes Cache
+          type: boolean
+        gallery_height:
+          default: ""
+          description: Gallery height
+          title: Gallery Height
+        return_grid:
+          default: true
+          description: Show grid in results for web
+          title: Return Grid
+          type: boolean
+        do_not_show_images:
+          default: false
+          description: Do not show any images in results for web
+          title: Do Not Show Images
+        send_seed:
+          default: true
+          description: Send seed when sending prompt or image to other interface
+          title: Send Seed
+          type: boolean
+        send_size:
+          default: true
+          description: Send size when sending prompt or image to another interface
+          title: Send Size
+          type: boolean
+        js_modal_lightbox:
+          default: true
+          description: Enable full page image viewer
+          title: Js Modal Lightbox
+          type: boolean
+        js_modal_lightbox_initially_zoomed:
+          default: true
+          description: Show images zoomed in by default in full page image viewer
+          title: Js Modal Lightbox Initially Zoomed
+          type: boolean
+        js_modal_lightbox_gamepad:
+          default: false
+          description: Navigate image viewer with gamepad
+          title: Js Modal Lightbox Gamepad
+        js_modal_lightbox_gamepad_repeat:
+          default: 250
+          description: "Gamepad repeat period, in milliseconds"
+          title: Js Modal Lightbox Gamepad Repeat
+          type: number
+        show_progress_in_title:
+          default: true
+          description: Show generation progress in window title.
+          title: Show Progress In Title
+          type: boolean
+        samplers_in_dropdown:
+          default: true
+          description: Use dropdown for sampler selection instead of radio group
+          title: Samplers In Dropdown
+          type: boolean
+        dimensions_and_batch_together:
+          default: true
+          description: Show Width/Height and Batch sliders in same row
+          title: Dimensions And Batch Together
+          type: boolean
+        keyedit_precision_attention:
+          default: 0.1
+          description: Ctrl+up/down precision when editing (attention:1.1)
+          title: Keyedit Precision Attention
+          type: number
+        keyedit_precision_extra:
+          default: 0.05
+          description: Ctrl+up/down precision when editing <extra networks:0.9>
+          title: Keyedit Precision Extra
+          type: number
+        keyedit_delimiters:
+          default: ".,\\/!?%^*;:{}=`~()"
+          description: Ctrl+up/down word delimiters
+          title: Keyedit Delimiters
+          type: string
+        keyedit_move:
+          default: true
+          description: Alt+left/right moves prompt elements
+          title: Keyedit Move
+          type: boolean
+        quicksettings_list:
+          default:
+          - sd_model_checkpoint
+          description: Quicksettings list
+          items: {}
+          title: Quicksettings List
+          type: array
+        ui_tab_order:
+          default: []
+          description: UI tab order
+          title: Ui Tab Order
+        hidden_tabs:
+          default: []
+          description: Hidden UI tabs
+          title: Hidden Tabs
+        ui_reorder_list:
+          default: []
+          description: txt2img/img2img UI item order
+          title: Ui Reorder List
+        hires_fix_show_sampler:
+          default: false
+          description: "Hires fix: show hires checkpoint and sampler selection"
+          title: Hires Fix Show Sampler
+        hires_fix_show_prompts:
+          default: false
+          description: "Hires fix: show hires prompt and negative prompt"
+          title: Hires Fix Show Prompts
+        disable_token_counters:
+          default: false
+          description: Disable prompt token counters
+          title: Disable Token Counters
+        add_model_hash_to_info:
+          default: true
+          description: Add model hash to generation information
+          title: Add Model Hash To Info
+          type: boolean
+        add_model_name_to_info:
+          default: true
+          description: Add model name to generation information
+          title: Add Model Name To Info
+          type: boolean
+        add_user_name_to_info:
+          default: false
+          description: Add user name to generation information when authenticated
+          title: Add User Name To Info
+        add_version_to_infotext:
+          default: true
+          description: Add program version to generation information
+          title: Add Version To Infotext
+          type: boolean
+        disable_weights_auto_swap:
+          default: true
+          description: Disregard checkpoint information from pasted infotext
+          title: Disable Weights Auto Swap
+          type: boolean
+        infotext_styles:
+          default: Apply if any
+          description: Infer styles from prompts of pasted infotext
+          title: Infotext Styles
+          type: string
+        show_progressbar:
+          default: true
+          description: Show progressbar
+          title: Show Progressbar
+          type: boolean
+        live_previews_enable:
+          default: true
+          description: Show live previews of the created image
+          title: Live Previews Enable
+          type: boolean
+        live_previews_image_format:
+          default: png
+          description: Live preview file format
+          title: Live Previews Image Format
+          type: string
+        show_progress_grid:
+          default: true
+          description: Show previews of all images generated in a batch as a grid
+          title: Show Progress Grid
+          type: boolean
+        show_progress_every_n_steps:
+          default: 10
+          description: Live preview display period
+          title: Show Progress Every N Steps
+          type: number
+        show_progress_type:
+          default: Approx NN
+          description: Live preview method
+          title: Show Progress Type
+          type: string
+        live_preview_allow_lowvram_full:
+          default: false
+          description: Allow Full live preview method with lowvram/medvram
+          title: Live Preview Allow Lowvram Full
+        live_preview_content:
+          default: Prompt
+          description: Live preview subject
+          title: Live Preview Content
+          type: string
+        live_preview_refresh_period:
+          default: 1000
+          description: Progressbar and preview update period
+          title: Live Preview Refresh Period
+          type: number
+        live_preview_fast_interrupt:
+          default: false
+          description: Return image with chosen live preview method on interrupt
+          title: Live Preview Fast Interrupt
+        hide_samplers:
+          default: []
+          description: Hide samplers in user interface
+          title: Hide Samplers
+        eta_ddim:
+          default: 0.0
+          description: Eta for DDIM
+          title: Eta Ddim
+        eta_ancestral:
+          default: 1.0
+          description: Eta for k-diffusion samplers
+          title: Eta Ancestral
+          type: number
+        ddim_discretize:
+          default: uniform
+          description: img2img DDIM discretize
+          title: Ddim Discretize
+          type: string
+        s_churn:
+          default: 0.0
+          description: sigma churn
+          title: S Churn
+        s_tmin:
+          default: 0.0
+          description: sigma tmin
+          title: S Tmin
+        s_tmax:
+          default: 0.0
+          description: sigma tmax
+          title: S Tmax
+        s_noise:
+          default: 1.0
+          description: sigma noise
+          title: S Noise
+          type: number
+        k_sched_type:
+          default: Automatic
+          description: Scheduler type
+          title: K Sched Type
+          type: string
+        sigma_min:
+          default: 0.0
+          description: sigma min
+          title: Sigma Min
+        sigma_max:
+          default: 0.0
+          description: sigma max
+          title: Sigma Max
+        rho:
+          default: 0.0
+          description: rho
+          title: Rho
+        eta_noise_seed_delta:
+          default: 0
+          description: Eta noise seed delta
+          title: Eta Noise Seed Delta
+        always_discard_next_to_last_sigma:
+          default: false
+          description: Always discard next-to-last sigma
+          title: Always Discard Next To Last Sigma
+        sgm_noise_multiplier:
+          default: false
+          description: SGM noise multiplier
+          title: Sgm Noise Multiplier
+        uni_pc_variant:
+          default: bh1
+          description: UniPC variant
+          title: Uni Pc Variant
+          type: string
+        uni_pc_skip_type:
+          default: time_uniform
+          description: UniPC skip type
+          title: Uni Pc Skip Type
+          type: string
+        uni_pc_order:
+          default: 3
+          description: UniPC order
+          title: Uni Pc Order
+          type: number
+        uni_pc_lower_order_final:
+          default: true
+          description: UniPC lower order final
+          title: Uni Pc Lower Order Final
+          type: boolean
+        postprocessing_enable_in_main_ui:
+          default: []
+          description: Enable postprocessing operations in txt2img and img2img tabs
+          title: Postprocessing Enable In Main Ui
+        postprocessing_operation_order:
+          default: []
+          description: Postprocessing operation order
+          title: Postprocessing Operation Order
+        upscaling_max_images_in_cache:
+          default: 5
+          description: Maximum number of images in upscaling cache
+          title: Upscaling Max Images In Cache
+          type: number
+        disabled_extensions:
+          default: []
+          description: Disable these extensions
+          title: Disabled Extensions
+        disable_all_extensions:
+          default: none
+          description: Disable all extensions (preserves the list of disabled extensions)
+          title: Disable All Extensions
+          type: string
+        restore_config_state_file:
+          default: ""
+          description: "Config state file to restore from, under 'config-states/'\
+            \ folder"
+          title: Restore Config State File
+        sd_checkpoint_hash:
+          default: ""
+          description: SHA256 hash of the current checkpoint
+          title: Sd Checkpoint Hash
+        sd_lora:
+          default: None
+          description: Add network to prompt
+          title: Sd Lora
+          type: string
+        lora_preferred_name:
+          default: Alias from file
+          description: "When adding to prompt, refer to Lora by"
+          title: Lora Preferred Name
+          type: string
+        lora_add_hashes_to_infotext:
+          default: true
+          description: Add Lora hashes to infotext
+          title: Lora Add Hashes To Infotext
+          type: boolean
+        lora_show_all:
+          default: false
+          description: Always show all networks on the Lora page
+          title: Lora Show All
+        lora_hide_unknown_for_versions:
+          default: []
+          description: Hide networks of unknown versions for model versions
+          title: Lora Hide Unknown For Versions
+        lora_in_memory_limit:
+          default: 0
+          description: Number of Lora networks to keep cached in memory
+          title: Lora In Memory Limit
+        lora_functional:
+          default: false
+          description: "Lora/Networks: use old method that takes longer when you have\
+            \ multiple Loras active and produces same results as kohya-ss/sd-webui-additional-networks\
+            \ extension"
+          title: Lora Functional
+        canvas_hotkey_zoom:
+          default: Alt
+          description: Zoom canvas
+          title: Canvas Hotkey Zoom
+          type: string
+        canvas_hotkey_adjust:
+          default: Ctrl
+          description: Adjust brush size
+          title: Canvas Hotkey Adjust
+          type: string
+        canvas_hotkey_move:
+          default: F
+          description: Moving the canvas
+          title: Canvas Hotkey Move
+          type: string
+        canvas_hotkey_fullscreen:
+          default: S
+          description: "Fullscreen Mode, maximizes the picture so that it fits into\
+            \ the screen and stretches it to its full width "
+          title: Canvas Hotkey Fullscreen
+          type: string
+        canvas_hotkey_reset:
+          default: R
+          description: Reset zoom and canvas positon
+          title: Canvas Hotkey Reset
+          type: string
+        canvas_hotkey_overlap:
+          default: O
+          description: Toggle overlap
+          title: Canvas Hotkey Overlap
+          type: string
+        canvas_show_tooltip:
+          default: true
+          description: Enable tooltip on the canvas
+          title: Canvas Show Tooltip
+          type: boolean
+        canvas_auto_expand:
+          default: true
+          description: "Automatically expands an image that does not fit completely\
+            \ in the canvas area, similar to manually pressing the S and R buttons"
+          title: Canvas Auto Expand
+          type: boolean
+        canvas_blur_prompt:
+          default: false
+          description: Take the focus off the prompt when working with a canvas
+          title: Canvas Blur Prompt
+        canvas_disabled_functions:
+          default:
+          - Overlap
+          description: Disable function that you don't use
+          items: {}
+          title: Canvas Disabled Functions
+          type: array
+        extra_options_txt2img:
+          default: []
+          description: Options in main UI - txt2img
+          title: Extra Options Txt2Img
+        extra_options_img2img:
+          default: []
+          description: Options in main UI - img2img
+          title: Extra Options Img2Img
+        extra_options_cols:
+          default: 1
+          description: Options in main UI - number of columns
+          title: Extra Options Cols
+          type: number
+        extra_options_accordion:
+          default: false
+          description: Options in main UI - place into an accordion
+          title: Extra Options Accordion
+      title: Options
+      type: object
+    PNGInfoRequest:
+      example:
+        image: image
+      properties:
+        image:
+          description: The base64 encoded PNG image
+          title: Image
+          type: string
+      required:
+      - image
+      title: PNGInfoRequest
+      type: object
+    PNGInfoResponse:
+      example:
+        items: "{}"
+        info: info
+      properties:
+        info:
+          description: A string with the parameters used to generate the image
+          title: Image info
+          type: string
+        items:
+          description: An object containing all the info the image had
+          title: Items
+          type: object
+      required:
+      - info
+      - items
+      title: PNGInfoResponse
+      type: object
+    PredictBody:
+      example:
+        batched: false
+        request: null
+        event_id: event_id
+        session_hash: session_hash
+        data:
+        - ""
+        - ""
+        fn_index: 0
+        event_data: ""
+      properties:
+        session_hash:
+          title: Session Hash
+          type: string
+        event_id:
+          title: Event Id
+          type: string
+        data:
+          items: {}
+          title: Data
+          type: array
+        event_data:
+          title: Event Data
+        fn_index:
+          title: Fn Index
+          type: integer
+        batched:
+          default: false
+          title: Batched
+          type: boolean
+        request:
+          $ref: '#/components/schemas/Request'
+      required:
+      - data
+      title: PredictBody
+      type: object
+    PreprocessResponse:
+      example:
+        info: info
+      properties:
+        info:
+          description: Response string from preprocessing task.
+          title: Preprocess info
+          type: string
+      required:
+      - info
+      title: PreprocessResponse
+      type: object
+    ProgressRequest:
+      example:
+        live_preview: true
+        id_task: id_task
+        id_live_preview: 0
+      properties:
+        id_task:
+          description: id of the task to get progress for
+          title: Task ID
+          type: string
+        id_live_preview:
+          default: -1
+          description: id of last received last preview image
+          title: Live preview image ID
+          type: integer
+        live_preview:
+          default: true
+          description: boolean flag indicating whether to include the live preview
+            image
+          title: Include live preview
+          type: boolean
+      title: ProgressRequest
+      type: object
+    PromptStyleItem:
+      example:
+        negative_prompt: negative_prompt
+        name: name
+        prompt: prompt
+      properties:
+        name:
+          title: Name
+          type: string
+        prompt:
+          title: Prompt
+          type: string
+        negative_prompt:
+          title: Negative Prompt
+          type: string
+      required:
+      - name
+      title: PromptStyleItem
+      type: object
+    QuicksettingsHint:
+      example:
+        name: name
+        label: label
+      properties:
+        name:
+          title: Name of the quicksettings field
+          type: string
+        label:
+          title: Label of the quicksettings field
+          type: string
+      required:
+      - label
+      - name
+      title: QuicksettingsHint
+      type: object
+    RealesrganItem:
+      example:
+        path: path
+        name: name
+        scale: 0
+      properties:
+        name:
+          title: Name
+          type: string
+        path:
+          title: Path
+          type: string
+        scale:
+          title: Scale
+          type: integer
+      required:
+      - name
+      title: RealesrganItem
+      type: object
+    ResetBody:
+      example:
+        session_hash: session_hash
+        fn_index: 0
+      properties:
+        session_hash:
+          title: Session Hash
+          type: string
+        fn_index:
+          title: Fn Index
+          type: integer
+      required:
+      - fn_index
+      - session_hash
+      title: ResetBody
+      type: object
+    SDModelItem:
+      example:
+        filename: filename
+        model_name: model_name
+        sha256: sha256
+        title: title
+        config: config
+        hash: hash
+      properties:
+        title:
+          title: Title
+          type: string
+        model_name:
+          title: Model Name
+          type: string
+        hash:
+          title: Short hash
+          type: string
+        sha256:
+          title: sha256 hash
+          type: string
+        filename:
+          title: Filename
+          type: string
+        config:
+          title: Config file
+          type: string
+      required:
+      - filename
+      - model_name
+      - title
+      title: SDModelItem
+      type: object
+    SDVaeItem:
+      example:
+        filename: filename
+        model_name: model_name
+      properties:
+        model_name:
+          title: Model Name
+          type: string
+        filename:
+          title: Filename
+          type: string
+      required:
+      - filename
+      - model_name
+      title: SDVaeItem
+      type: object
+    SamplerItem:
+      example:
+        aliases:
+        - aliases
+        - aliases
+        name: name
+        options:
+          key: options
+      properties:
+        name:
+          title: Name
+          type: string
+        aliases:
+          items:
+            type: string
+          title: Aliases
+          type: array
+        options:
+          additionalProperties:
+            type: string
+          title: Options
+          type: object
+      required:
+      - aliases
+      - name
+      - options
+      title: SamplerItem
+      type: object
+    ScriptArg:
+      example:
+        maximum: ""
+        step: ""
+        label: label
+        choices:
+        - choices
+        - choices
+        value: ""
+        minimum: ""
+      properties:
+        label:
+          description: Name of the argument in UI
+          title: Label
+          type: string
+        value:
+          description: Default value of the argument
+          title: Value
+        minimum:
+          description: Minimum allowed value for the argumentin UI
+          title: Minimum
+        maximum:
+          description: Maximum allowed value for the argumentin UI
+          title: Minimum
+        step:
+          description: Step for changing value of the argumentin UI
+          title: Minimum
+        choices:
+          description: Possible values for the argument
+          items:
+            type: string
+          title: Choices
+          type: array
+      title: ScriptArg
+      type: object
+    ScriptInfo:
+      example:
+        is_alwayson: true
+        is_img2img: true
+        args:
+        - maximum: ""
+          step: ""
+          label: label
+          choices:
+          - choices
+          - choices
+          value: ""
+          minimum: ""
+        - maximum: ""
+          step: ""
+          label: label
+          choices:
+          - choices
+          - choices
+          value: ""
+          minimum: ""
+        name: name
+      properties:
+        name:
+          description: Script name
+          title: Name
+          type: string
+        is_alwayson:
+          description: Flag specifying whether this script is an alwayson script
+          title: IsAlwayson
+          type: boolean
+        is_img2img:
+          description: Flag specifying whether this script is an img2img script
+          title: IsImg2img
+          type: boolean
+        args:
+          description: List of script's arguments
+          items:
+            $ref: '#/components/schemas/ScriptArg'
+          title: Arguments
+          type: array
+      required:
+      - args
+      title: ScriptInfo
+      type: object
+    ScriptsList:
+      example:
+        txt2img:
+        - ""
+        - ""
+        img2img:
+        - ""
+        - ""
+      properties:
+        txt2img:
+          description: Titles of scripts (txt2img)
+          items: {}
+          title: Txt2img
+          type: array
+        img2img:
+          description: Titles of scripts (img2img)
+          items: {}
+          title: Img2img
+          type: array
+      title: ScriptsList
+      type: object
+    StableDiffusionProcessingImg2Img:
+      example:
+        initial_noise_multiplier: 6.965117697638846
+        s_min_uncond: 1.0246457001441578
+        s_tmin: 7.457744773683766
+        override_settings_restore_afterwards: true
+        s_noise: 1.1730742509559433
+        tiling: true
+        s_churn: 1.4894159098541704
+        inpainting_mask_invert: 3
+        s_tmax: 6.84685269835264
+        eta: 7.386281948385884
+        override_settings: "{}"
+        sampler_name: sampler_name
+        alwayson_scripts: "{}"
+        subseed: 6
+        height: 4
+        resize_mode: 5
+        do_not_save_samples: false
+        latent_mask: latent_mask
+        steps: 9
+        mask_blur_x: 9
+        subseed_strength: 1.4658129805029452
+        inpaint_full_res_padding: 6
+        mask_blur_y: 6
+        styles:
+        - styles
+        - styles
+        mask_blur: 8
+        do_not_save_grid: false
+        image_cfg_scale: 9.965781217890562
+        seed: 0
+        save_images: false
+        init_images:
+        - ""
+        - ""
+        send_images: true
+        negative_prompt: ""
+        denoising_strength: 1.2315135367772556
+        inpainting_fill: 9
+        sampler_index: Euler
+        script_args:
+        - ""
+        - ""
+        cfg_scale: 3.616076749251911
+        mask: mask
+        batch_size: 2
+        comments: "{}"
+        seed_resize_from_h: 5
+        restore_faces: true
+        inpaint_full_res: true
+        include_init_images: false
+        n_iter: 7
+        seed_resize_from_w: 5
+        script_name: script_name
+        disable_extra_networks: false
+        width: 2
+        refiner_checkpoint: refiner_checkpoint
+        refiner_switch_at: 4.965218492984954
+        prompt: ""
+      properties:
+        prompt:
+          default: ""
+          title: Prompt
+          type: string
+        negative_prompt:
+          default: ""
+          title: Negative Prompt
+          type: string
+        styles:
+          items:
+            type: string
+          title: Styles
+          type: array
+        seed:
+          default: -1
+          title: Seed
+          type: integer
+        subseed:
+          default: -1
+          title: Subseed
+          type: integer
+        subseed_strength:
+          default: 0
+          title: Subseed Strength
+          type: number
+        seed_resize_from_h:
+          default: -1
+          title: Seed Resize From H
+          type: integer
+        seed_resize_from_w:
+          default: -1
+          title: Seed Resize From W
+          type: integer
+        sampler_name:
+          title: Sampler Name
+          type: string
+        batch_size:
+          default: 1
+          title: Batch Size
+          type: integer
+        n_iter:
+          default: 1
+          title: N Iter
+          type: integer
+        steps:
+          default: 50
+          title: Steps
+          type: integer
+        cfg_scale:
+          default: 7.0
+          title: Cfg Scale
+          type: number
+        width:
+          default: 512
+          title: Width
+          type: integer
+        height:
+          default: 512
+          title: Height
+          type: integer
+        restore_faces:
+          title: Restore Faces
+          type: boolean
+        tiling:
+          title: Tiling
+          type: boolean
+        do_not_save_samples:
+          default: false
+          title: Do Not Save Samples
+          type: boolean
+        do_not_save_grid:
+          default: false
+          title: Do Not Save Grid
+          type: boolean
+        eta:
+          title: Eta
+          type: number
+        denoising_strength:
+          default: 0.75
+          title: Denoising Strength
+          type: number
+        s_min_uncond:
+          title: S Min Uncond
+          type: number
+        s_churn:
+          title: S Churn
+          type: number
+        s_tmax:
+          title: S Tmax
+          type: number
+        s_tmin:
+          title: S Tmin
+          type: number
+        s_noise:
+          title: S Noise
+          type: number
+        override_settings:
+          title: Override Settings
+          type: object
+        override_settings_restore_afterwards:
+          default: true
+          title: Override Settings Restore Afterwards
+          type: boolean
+        refiner_checkpoint:
+          title: Refiner Checkpoint
+          type: string
+        refiner_switch_at:
+          title: Refiner Switch At
+          type: number
+        disable_extra_networks:
+          default: false
+          title: Disable Extra Networks
+          type: boolean
+        comments:
+          title: Comments
+          type: object
+        init_images:
+          items: {}
+          title: Init Images
+          type: array
+        resize_mode:
+          default: 0
+          title: Resize Mode
+          type: integer
+        image_cfg_scale:
+          title: Image Cfg Scale
+          type: number
+        mask:
+          title: Mask
+          type: string
+        mask_blur_x:
+          default: 4
+          title: Mask Blur X
+          type: integer
+        mask_blur_y:
+          default: 4
+          title: Mask Blur Y
+          type: integer
+        mask_blur:
+          title: Mask Blur
+          type: integer
+        inpainting_fill:
+          default: 0
+          title: Inpainting Fill
+          type: integer
+        inpaint_full_res:
+          default: true
+          title: Inpaint Full Res
+          type: boolean
+        inpaint_full_res_padding:
+          default: 0
+          title: Inpaint Full Res Padding
+          type: integer
+        inpainting_mask_invert:
+          default: 0
+          title: Inpainting Mask Invert
+          type: integer
+        initial_noise_multiplier:
+          title: Initial Noise Multiplier
+          type: number
+        latent_mask:
+          title: Latent Mask
+          type: string
+        sampler_index:
+          default: Euler
+          title: Sampler Index
+          type: string
+        include_init_images:
+          default: false
+          title: Include Init Images
+          type: boolean
+        script_name:
+          title: Script Name
+          type: string
+        script_args:
+          default: []
+          items: {}
+          title: Script Args
+          type: array
+        send_images:
+          default: true
+          title: Send Images
+          type: boolean
+        save_images:
+          default: false
+          title: Save Images
+          type: boolean
+        alwayson_scripts:
+          default: {}
+          title: Alwayson Scripts
+          type: object
+      title: StableDiffusionProcessingImg2Img
+      type: object
+    StableDiffusionProcessingTxt2Img:
+      example:
+        s_min_uncond: 1.0246457001441578
+        s_tmin: 7.457744773683766
+        override_settings_restore_afterwards: true
+        s_noise: 1.1730742509559433
+        tiling: true
+        hr_sampler_name: hr_sampler_name
+        s_churn: 1.4894159098541704
+        s_tmax: 6.84685269835264
+        eta: 7.386281948385884
+        override_settings: "{}"
+        sampler_name: sampler_name
+        hr_resize_y: 9
+        hr_resize_x: 8
+        alwayson_scripts: "{}"
+        subseed: 6
+        height: 4
+        enable_hr: false
+        hr_prompt: ""
+        do_not_save_samples: false
+        steps: 9
+        subseed_strength: 1.4658129805029452
+        firstphase_width: 5
+        styles:
+        - styles
+        - styles
+        do_not_save_grid: false
+        seed: 0
+        save_images: false
+        send_images: true
+        hr_second_pass_steps: 6
+        negative_prompt: ""
+        denoising_strength: 1.2315135367772556
+        hr_upscaler: hr_upscaler
+        sampler_index: Euler
+        hr_checkpoint_name: hr_checkpoint_name
+        script_args:
+        - ""
+        - ""
+        cfg_scale: 3.616076749251911
+        batch_size: 2
+        comments: "{}"
+        seed_resize_from_h: 5
+        restore_faces: true
+        n_iter: 7
+        seed_resize_from_w: 5
+        script_name: script_name
+        firstphase_height: 9
+        hr_scale: 9.369310271410669
+        disable_extra_networks: false
+        width: 2
+        refiner_checkpoint: refiner_checkpoint
+        refiner_switch_at: 4.965218492984954
+        hr_negative_prompt: ""
+        prompt: ""
+      properties:
+        prompt:
+          default: ""
+          title: Prompt
+          type: string
+        negative_prompt:
+          default: ""
+          title: Negative Prompt
+          type: string
+        styles:
+          items:
+            type: string
+          title: Styles
+          type: array
+        seed:
+          default: -1
+          title: Seed
+          type: integer
+        subseed:
+          default: -1
+          title: Subseed
+          type: integer
+        subseed_strength:
+          default: 0
+          title: Subseed Strength
+          type: number
+        seed_resize_from_h:
+          default: -1
+          title: Seed Resize From H
+          type: integer
+        seed_resize_from_w:
+          default: -1
+          title: Seed Resize From W
+          type: integer
+        sampler_name:
+          title: Sampler Name
+          type: string
+        batch_size:
+          default: 1
+          title: Batch Size
+          type: integer
+        n_iter:
+          default: 1
+          title: N Iter
+          type: integer
+        steps:
+          default: 50
+          title: Steps
+          type: integer
+        cfg_scale:
+          default: 7.0
+          title: Cfg Scale
+          type: number
+        width:
+          default: 512
+          title: Width
+          type: integer
+        height:
+          default: 512
+          title: Height
+          type: integer
+        restore_faces:
+          title: Restore Faces
+          type: boolean
+        tiling:
+          title: Tiling
+          type: boolean
+        do_not_save_samples:
+          default: false
+          title: Do Not Save Samples
+          type: boolean
+        do_not_save_grid:
+          default: false
+          title: Do Not Save Grid
+          type: boolean
+        eta:
+          title: Eta
+          type: number
+        denoising_strength:
+          default: 0
+          title: Denoising Strength
+          type: number
+        s_min_uncond:
+          title: S Min Uncond
+          type: number
+        s_churn:
+          title: S Churn
+          type: number
+        s_tmax:
+          title: S Tmax
+          type: number
+        s_tmin:
+          title: S Tmin
+          type: number
+        s_noise:
+          title: S Noise
+          type: number
+        override_settings:
+          title: Override Settings
+          type: object
+        override_settings_restore_afterwards:
+          default: true
+          title: Override Settings Restore Afterwards
+          type: boolean
+        refiner_checkpoint:
+          title: Refiner Checkpoint
+          type: string
+        refiner_switch_at:
+          title: Refiner Switch At
+          type: number
+        disable_extra_networks:
+          default: false
+          title: Disable Extra Networks
+          type: boolean
+        comments:
+          title: Comments
+          type: object
+        enable_hr:
+          default: false
+          title: Enable Hr
+          type: boolean
+        firstphase_width:
+          default: 0
+          title: Firstphase Width
+          type: integer
+        firstphase_height:
+          default: 0
+          title: Firstphase Height
+          type: integer
+        hr_scale:
+          default: 2.0
+          title: Hr Scale
+          type: number
+        hr_upscaler:
+          title: Hr Upscaler
+          type: string
+        hr_second_pass_steps:
+          default: 0
+          title: Hr Second Pass Steps
+          type: integer
+        hr_resize_x:
+          default: 0
+          title: Hr Resize X
+          type: integer
+        hr_resize_y:
+          default: 0
+          title: Hr Resize Y
+          type: integer
+        hr_checkpoint_name:
+          title: Hr Checkpoint Name
+          type: string
+        hr_sampler_name:
+          title: Hr Sampler Name
+          type: string
+        hr_prompt:
+          default: ""
+          title: Hr Prompt
+          type: string
+        hr_negative_prompt:
+          default: ""
+          title: Hr Negative Prompt
+          type: string
+        sampler_index:
+          default: Euler
+          title: Sampler Index
+          type: string
+        script_name:
+          title: Script Name
+          type: string
+        script_args:
+          default: []
+          items: {}
+          title: Script Args
+          type: array
+        send_images:
+          default: true
+          title: Send Images
+          type: boolean
+        save_images:
+          default: false
+          title: Save Images
+          type: boolean
+        alwayson_scripts:
+          default: {}
+          title: Alwayson Scripts
+          type: object
+      title: StableDiffusionProcessingTxt2Img
+      type: object
+    TextToImageResponse:
+      example:
+        images:
+        - images
+        - images
+        parameters: "{}"
+        info: info
+      properties:
+        images:
+          description: The generated image in base64 format.
+          items:
+            type: string
+          title: Image
+          type: array
+        parameters:
+          title: Parameters
+          type: object
+        info:
+          title: Info
+          type: string
+      required:
+      - info
+      - parameters
+      title: TextToImageResponse
+      type: object
+    TrainResponse:
+      example:
+        info: info
+      properties:
+        info:
+          description: Response string from train embedding or hypernetwork task.
+          title: Train info
+          type: string
+      required:
+      - info
+      title: TrainResponse
+      type: object
+    UpscalerItem:
+      example:
+        model_name: model_name
+        model_url: model_url
+        name: name
+        scale: 0.8008281904610115
+        model_path: model_path
+      properties:
+        name:
+          title: Name
+          type: string
+        model_name:
+          title: Model Name
+          type: string
+        model_path:
+          title: Path
+          type: string
+        model_url:
+          title: URL
+          type: string
+        scale:
+          title: Scale
+          type: number
+      required:
+      - name
+      title: UpscalerItem
+      type: object
+    ValidationError:
+      properties:
+        loc:
+          items:
+            $ref: '#/components/schemas/Location_inner'
+          title: Location
+          type: array
+        msg:
+          title: Message
+          type: string
+        type:
+          title: Error Type
+          type: string
+      required:
+      - loc
+      - msg
+      - type
+      title: ValidationError
+      type: object
+    modules__api__models__ProgressResponse:
+      example:
+        current_image: current_image
+        progress: 0.8008281904610115
+        state: "{}"
+        textinfo: textinfo
+        eta_relative: 6.027456183070403
+      properties:
+        progress:
+          description: The progress with a range of 0 to 1
+          title: Progress
+          type: number
+        eta_relative:
+          title: ETA in secs
+          type: number
+        state:
+          description: The current state snapshot
+          title: State
+          type: object
+        current_image:
+          description: The current image in base64 format. opts.show_progress_every_n_steps
+            is required for this to work.
+          title: Current image
+          type: string
+        textinfo:
+          description: Info text used by WebUI.
+          title: Info text
+          type: string
+      required:
+      - eta_relative
+      - progress
+      - state
+      title: ProgressResponse
+      type: object
+    modules__progress__ProgressResponse:
+      example:
+        eta: 6.027456183070403
+        live_preview: live_preview
+        queued: true
+        active: true
+        progress: 0.8008281904610115
+        completed: true
+        id_live_preview: 1
+        textinfo: textinfo
+      properties:
+        active:
+          title: Whether the task is being worked on right now
+          type: boolean
+        queued:
+          title: Whether the task is in queue
+          type: boolean
+        completed:
+          title: Whether the task has already finished
+          type: boolean
+        progress:
+          description: The progress with a range of 0 to 1
+          title: Progress
+          type: number
+        eta:
+          title: ETA in secs
+          type: number
+        live_preview:
+          description: "Current live preview; a data: uri"
+          title: Live preview image
+          type: string
+        id_live_preview:
+          description: Send this together with next request to prevent receiving same
+            image
+          title: Live preview image ID
+          type: integer
+        textinfo:
+          description: Info text used by WebUI.
+          title: Info text
+          type: string
+      required:
+      - active
+      - completed
+      - queued
+      title: ProgressResponse
+      type: object
+    Request:
+      anyOf:
+      - type: object
+      - items:
+          type: object
+        type: array
+      title: Request
+    Location_inner:
+      anyOf:
+      - type: string
+      - type: integer
+
