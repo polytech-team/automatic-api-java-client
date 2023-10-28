@@ -13,6 +13,7 @@
 
 package team.polytech.automatic.webui.model;
 
+import java.util.Collections;
 import java.util.Objects;
 import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -292,7 +293,7 @@ public class Options {
   private String samplesFormat = "png";
 
   public static final String JSON_PROPERTY_SAMPLES_FILENAME_PATTERN = "samples_filename_pattern";
-  private JsonNullable<Object> samplesFilenamePattern = JsonNullable.<Object>of();
+  private JsonNullable<Object> samplesFilenamePattern = JsonNullable.<Object>of(null);
 
   public static final String JSON_PROPERTY_SAVE_IMAGES_ADD_NUMBER = "save_images_add_number";
   private Boolean saveImagesAddNumber = true;
@@ -313,13 +314,13 @@ public class Options {
   private JsonNullable<Object> gridPreventEmptySpots = JsonNullable.<Object>of(false);
 
   public static final String JSON_PROPERTY_GRID_ZIP_FILENAME_PATTERN = "grid_zip_filename_pattern";
-  private JsonNullable<Object> gridZipFilenamePattern = JsonNullable.<Object>of();
+  private JsonNullable<Object> gridZipFilenamePattern = JsonNullable.<Object>of(null);
 
   public static final String JSON_PROPERTY_N_ROWS = "n_rows";
   private BigDecimal nRows = new BigDecimal("-1");
 
   public static final String JSON_PROPERTY_FONT = "font";
-  private JsonNullable<Object> font = JsonNullable.<Object>of();
+  private JsonNullable<Object> font = JsonNullable.<Object>of(null);
 
   public static final String JSON_PROPERTY_GRID_TEXT_ACTIVE_COLOR = "grid_text_active_color";
   private String gridTextActiveColor = "#000000";
@@ -382,7 +383,7 @@ public class Options {
   private JsonNullable<Object> saveInitImg = JsonNullable.<Object>of(false);
 
   public static final String JSON_PROPERTY_TEMP_DIR = "temp_dir";
-  private JsonNullable<Object> tempDir = JsonNullable.<Object>of();
+  private JsonNullable<Object> tempDir = JsonNullable.<Object>of(null);
 
   public static final String JSON_PROPERTY_CLEAN_TEMP_DIR_AT_START = "clean_temp_dir_at_start";
   private JsonNullable<Object> cleanTempDirAtStart = JsonNullable.<Object>of(false);
@@ -391,7 +392,7 @@ public class Options {
   private JsonNullable<Object> saveIncompleteImages = JsonNullable.<Object>of(false);
 
   public static final String JSON_PROPERTY_OUTDIR_SAMPLES = "outdir_samples";
-  private JsonNullable<Object> outdirSamples = JsonNullable.<Object>of();
+  private JsonNullable<Object> outdirSamples = JsonNullable.<Object>of(null);
 
   public static final String JSON_PROPERTY_OUTDIR_TXT2IMG_SAMPLES = "outdir_txt2img_samples";
   private String outdirTxt2imgSamples = "outputs/txt2img-images";
@@ -403,7 +404,7 @@ public class Options {
   private String outdirExtrasSamples = "outputs/extras-images";
 
   public static final String JSON_PROPERTY_OUTDIR_GRIDS = "outdir_grids";
-  private JsonNullable<Object> outdirGrids = JsonNullable.<Object>of();
+  private JsonNullable<Object> outdirGrids = JsonNullable.<Object>of(null);
 
   public static final String JSON_PROPERTY_OUTDIR_TXT2IMG_GRIDS = "outdir_txt2img_grids";
   private String outdirTxt2imgGrids = "outputs/txt2img-grids";
@@ -439,7 +440,7 @@ public class Options {
   private BigDecimal esRGANTileOverlap = new BigDecimal("8");
 
   public static final String JSON_PROPERTY_REALESRGAN_ENABLED_MODELS = "realesrgan_enabled_models";
-  private List<Object> realesrganEnabledModels = new ArrayList<>(Arrays.asList(R-ESRGAN 4x+, R-ESRGAN 4x+ Anime6B));
+  private List<Object> realesrganEnabledModels = new ArrayList<>(Collections.emptyList());
 
   public static final String JSON_PROPERTY_UPSCALER_FOR_IMG2IMG = "upscaler_for_img2img";
   private JsonNullable<Object> upscalerForImg2img = JsonNullable.<Object>of(null);
@@ -493,7 +494,7 @@ public class Options {
   private Boolean apiForbidLocalRequests = true;
 
   public static final String JSON_PROPERTY_API_USERAGENT = "api_useragent";
-  private JsonNullable<Object> apiUseragent = JsonNullable.<Object>of();
+  private JsonNullable<Object> apiUseragent = JsonNullable.<Object>of(null);
 
   public static final String JSON_PROPERTY_UNLOAD_MODELS_WHEN_TRAINING = "unload_models_when_training";
   private JsonNullable<Object> unloadModelsWhenTraining = JsonNullable.<Object>of(false);
@@ -508,7 +509,7 @@ public class Options {
   private Boolean saveTrainingSettingsToTxt = true;
 
   public static final String JSON_PROPERTY_DATASET_FILENAME_WORD_REGEX = "dataset_filename_word_regex";
-  private JsonNullable<Object> datasetFilenameWordRegex = JsonNullable.<Object>of();
+  private JsonNullable<Object> datasetFilenameWordRegex = JsonNullable.<Object>of(null);
 
   public static final String JSON_PROPERTY_DATASET_FILENAME_JOIN_STRING = "dataset_filename_join_string";
   private String datasetFilenameJoinString = " ";
@@ -706,7 +707,7 @@ public class Options {
   private BigDecimal interrogateClipDictLimit = new BigDecimal("1500");
 
   public static final String JSON_PROPERTY_INTERROGATE_CLIP_SKIP_CATEGORIES = "interrogate_clip_skip_categories";
-  private JsonNullable<Object> interrogateClipSkipCategories = JsonNullable.<Object>of([]);
+  private JsonNullable<Object> interrogateClipSkipCategories = JsonNullable.<Object>of(null);
 
   public static final String JSON_PROPERTY_INTERROGATE_DEEPBOORU_SCORE_THRESHOLD = "interrogate_deepbooru_score_threshold";
   private BigDecimal interrogateDeepbooruScoreThreshold = new BigDecimal("0.5");
@@ -721,7 +722,7 @@ public class Options {
   private Boolean deepbooruEscape = true;
 
   public static final String JSON_PROPERTY_DEEPBOORU_FILTER_TAGS = "deepbooru_filter_tags";
-  private JsonNullable<Object> deepbooruFilterTags = JsonNullable.<Object>of();
+  private JsonNullable<Object> deepbooruFilterTags = JsonNullable.<Object>of(null);
 
   public static final String JSON_PROPERTY_EXTRA_NETWORKS_SHOW_HIDDEN_DIRECTORIES = "extra_networks_show_hidden_directories";
   private Boolean extraNetworksShowHiddenDirectories = true;
@@ -748,7 +749,7 @@ public class Options {
   private String extraNetworksAddTextSeparator = " ";
 
   public static final String JSON_PROPERTY_UI_EXTRA_NETWORKS_TAB_REORDER = "ui_extra_networks_tab_reorder";
-  private JsonNullable<Object> uiExtraNetworksTabReorder = JsonNullable.<Object>of();
+  private JsonNullable<Object> uiExtraNetworksTabReorder = JsonNullable.<Object>of(null);
 
   public static final String JSON_PROPERTY_TEXTUAL_INVERSION_PRINT_AT_LOAD = "textual_inversion_print_at_load";
   private JsonNullable<Object> textualInversionPrintAtLoad = JsonNullable.<Object>of(false);
@@ -769,7 +770,7 @@ public class Options {
   private Boolean gradioThemesCache = true;
 
   public static final String JSON_PROPERTY_GALLERY_HEIGHT = "gallery_height";
-  private JsonNullable<Object> galleryHeight = JsonNullable.<Object>of();
+  private JsonNullable<Object> galleryHeight = JsonNullable.<Object>of(null);
 
   public static final String JSON_PROPERTY_RETURN_GRID = "return_grid";
   private Boolean returnGrid = true;
@@ -817,16 +818,16 @@ public class Options {
   private Boolean keyeditMove = true;
 
   public static final String JSON_PROPERTY_QUICKSETTINGS_LIST = "quicksettings_list";
-  private List<Object> quicksettingsList = new ArrayList<>(Arrays.asList(sd_model_checkpoint));
+  private List<Object> quicksettingsList = new ArrayList<>(Collections.emptyList());
 
   public static final String JSON_PROPERTY_UI_TAB_ORDER = "ui_tab_order";
-  private JsonNullable<Object> uiTabOrder = JsonNullable.<Object>of([]);
+  private JsonNullable<Object> uiTabOrder = JsonNullable.<Object>of(null);
 
   public static final String JSON_PROPERTY_HIDDEN_TABS = "hidden_tabs";
-  private JsonNullable<Object> hiddenTabs = JsonNullable.<Object>of([]);
+  private JsonNullable<Object> hiddenTabs = JsonNullable.<Object>of(null);
 
   public static final String JSON_PROPERTY_UI_REORDER_LIST = "ui_reorder_list";
-  private JsonNullable<Object> uiReorderList = JsonNullable.<Object>of([]);
+  private JsonNullable<Object> uiReorderList = JsonNullable.<Object>of(null);
 
   public static final String JSON_PROPERTY_HIRES_FIX_SHOW_SAMPLER = "hires_fix_show_sampler";
   private JsonNullable<Object> hiresFixShowSampler = JsonNullable.<Object>of(false);
@@ -886,7 +887,7 @@ public class Options {
   private JsonNullable<Object> livePreviewFastInterrupt = JsonNullable.<Object>of(false);
 
   public static final String JSON_PROPERTY_HIDE_SAMPLERS = "hide_samplers";
-  private JsonNullable<Object> hideSamplers = JsonNullable.<Object>of([]);
+  private JsonNullable<Object> hideSamplers = JsonNullable.<Object>of(null);
 
   public static final String JSON_PROPERTY_ETA_DDIM = "eta_ddim";
   private JsonNullable<Object> etaDdim = JsonNullable.<Object>of(0.0);
@@ -943,25 +944,25 @@ public class Options {
   private Boolean uniPcLowerOrderFinal = true;
 
   public static final String JSON_PROPERTY_POSTPROCESSING_ENABLE_IN_MAIN_UI = "postprocessing_enable_in_main_ui";
-  private JsonNullable<Object> postprocessingEnableInMainUi = JsonNullable.<Object>of([]);
+  private JsonNullable<Object> postprocessingEnableInMainUi = JsonNullable.<Object>of(null);
 
   public static final String JSON_PROPERTY_POSTPROCESSING_OPERATION_ORDER = "postprocessing_operation_order";
-  private JsonNullable<Object> postprocessingOperationOrder = JsonNullable.<Object>of([]);
+  private JsonNullable<Object> postprocessingOperationOrder = JsonNullable.<Object>of(null);
 
   public static final String JSON_PROPERTY_UPSCALING_MAX_IMAGES_IN_CACHE = "upscaling_max_images_in_cache";
   private BigDecimal upscalingMaxImagesInCache = new BigDecimal("5");
 
   public static final String JSON_PROPERTY_DISABLED_EXTENSIONS = "disabled_extensions";
-  private JsonNullable<Object> disabledExtensions = JsonNullable.<Object>of([]);
+  private JsonNullable<Object> disabledExtensions = JsonNullable.<Object>of(null);
 
   public static final String JSON_PROPERTY_DISABLE_ALL_EXTENSIONS = "disable_all_extensions";
   private String disableAllExtensions = "none";
 
   public static final String JSON_PROPERTY_RESTORE_CONFIG_STATE_FILE = "restore_config_state_file";
-  private JsonNullable<Object> restoreConfigStateFile = JsonNullable.<Object>of();
+  private JsonNullable<Object> restoreConfigStateFile = JsonNullable.<Object>of(null);
 
   public static final String JSON_PROPERTY_SD_CHECKPOINT_HASH = "sd_checkpoint_hash";
-  private JsonNullable<Object> sdCheckpointHash = JsonNullable.<Object>of();
+  private JsonNullable<Object> sdCheckpointHash = JsonNullable.<Object>of(null);
 
   public static final String JSON_PROPERTY_SD_LORA = "sd_lora";
   private String sdLora = "None";
@@ -976,7 +977,7 @@ public class Options {
   private JsonNullable<Object> loraShowAll = JsonNullable.<Object>of(false);
 
   public static final String JSON_PROPERTY_LORA_HIDE_UNKNOWN_FOR_VERSIONS = "lora_hide_unknown_for_versions";
-  private JsonNullable<Object> loraHideUnknownForVersions = JsonNullable.<Object>of([]);
+  private JsonNullable<Object> loraHideUnknownForVersions = JsonNullable.<Object>of(null);
 
   public static final String JSON_PROPERTY_LORA_IN_MEMORY_LIMIT = "lora_in_memory_limit";
   private JsonNullable<Object> loraInMemoryLimit = JsonNullable.<Object>of(0);
@@ -1012,13 +1013,13 @@ public class Options {
   private JsonNullable<Object> canvasBlurPrompt = JsonNullable.<Object>of(false);
 
   public static final String JSON_PROPERTY_CANVAS_DISABLED_FUNCTIONS = "canvas_disabled_functions";
-  private List<Object> canvasDisabledFunctions = new ArrayList<>(Arrays.asList(Overlap));
+  private List<Object> canvasDisabledFunctions = new ArrayList<>(Collections.emptyList());
 
   public static final String JSON_PROPERTY_EXTRA_OPTIONS_TXT2IMG = "extra_options_txt2img";
-  private JsonNullable<Object> extraOptionsTxt2img = JsonNullable.<Object>of([]);
+  private JsonNullable<Object> extraOptionsTxt2img = JsonNullable.<Object>of(null);
 
   public static final String JSON_PROPERTY_EXTRA_OPTIONS_IMG2IMG = "extra_options_img2img";
-  private JsonNullable<Object> extraOptionsImg2img = JsonNullable.<Object>of([]);
+  private JsonNullable<Object> extraOptionsImg2img = JsonNullable.<Object>of(null);
 
   public static final String JSON_PROPERTY_EXTRA_OPTIONS_COLS = "extra_options_cols";
   private BigDecimal extraOptionsCols = new BigDecimal("1");
@@ -2523,7 +2524,7 @@ public class Options {
 
   public Options addRealesrganEnabledModelsItem(Object realesrganEnabledModelsItem) {
     if (this.realesrganEnabledModels == null) {
-      this.realesrganEnabledModels = new ArrayList<>(Arrays.asList(R-ESRGAN 4x+, R-ESRGAN 4x+ Anime6B));
+      this.realesrganEnabledModels = new ArrayList<>(Collections.emptyList());
     }
     this.realesrganEnabledModels.add(realesrganEnabledModelsItem);
     return this;
@@ -6215,7 +6216,7 @@ public class Options {
 
   public Options addQuicksettingsListItem(Object quicksettingsListItem) {
     if (this.quicksettingsList == null) {
-      this.quicksettingsList = new ArrayList<>(Arrays.asList(sd_model_checkpoint));
+      this.quicksettingsList = new ArrayList<>(Collections.emptyList());
     }
     this.quicksettingsList.add(quicksettingsListItem);
     return this;
@@ -8153,7 +8154,7 @@ public class Options {
 
   public Options addCanvasDisabledFunctionsItem(Object canvasDisabledFunctionsItem) {
     if (this.canvasDisabledFunctions == null) {
-      this.canvasDisabledFunctions = new ArrayList<>(Arrays.asList(Overlap));
+      this.canvasDisabledFunctions = new ArrayList<>(Collections.emptyList());
     }
     this.canvasDisabledFunctions.add(canvasDisabledFunctionsItem);
     return this;

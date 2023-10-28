@@ -240,7 +240,7 @@ public class StableDiffusionProcessingImg2Img {
   private Boolean saveImages = false;
 
   public static final String JSON_PROPERTY_ALWAYSON_SCRIPTS = "alwayson_scripts";
-  private Object alwaysonScripts = {};
+  private Object alwaysonScripts = null;
 
   public StableDiffusionProcessingImg2Img() {
   }

@@ -18,6 +18,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
+
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -29,7 +31,7 @@ import org.junit.Test;
  * Model tests for Flags
  */
 public class FlagsTest {
-    private final Flags model = new Flags();
+    private final Flags model = new Flags(Path.of(""));
 
     /**
      * Model tests for Flags

@@ -13,6 +13,7 @@
 
 package team.polytech.automatic.webui.model;
 
+import java.nio.file.Path;
 import java.util.Objects;
 import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -150,6 +151,12 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 })
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-27T02:28:26.857180667+03:00[Europe/Moscow]")
 public class Flags {
+  private Path toDiffusion = Path.of("");
+
+  public Flags(Path toDiffusion) {
+    this.toDiffusion = toDiffusion;
+  }
+
   public static final String JSON_PROPERTY_F = "f";
   private Boolean f = false;
 
@@ -193,13 +200,13 @@ public class Flags {
   private Boolean doNotDownloadClip = false;
 
   public static final String JSON_PROPERTY_DATA_DIR = "data_dir";
-  private String dataDir = "D:\\stable diffusion\\stable-diffusion-webui";
+  private String dataDir = toDiffusion.toString();
 
   public static final String JSON_PROPERTY_CONFIG = "config";
-  private String config = "D:\\stable diffusion\\stable-diffusion-webui\\configs\\v1-inference.yaml";
+  private String config = dataDir + "configs\\v1-inference.yaml";
 
   public static final String JSON_PROPERTY_CKPT = "ckpt";
-  private String ckpt = "D:\\stable diffusion\\stable-diffusion-webui\\model.ckpt";
+  private String ckpt = dataDir + "model.ckpt";
 
   public static final String JSON_PROPERTY_CKPT_DIR = "ckpt_dir";
   private String ckptDir;
@@ -226,16 +233,16 @@ public class Flags {
   private Integer maxBatchCount = 16;
 
   public static final String JSON_PROPERTY_EMBEDDINGS_DIR = "embeddings_dir";
-  private String embeddingsDir = "D:\\stable diffusion\\stable-diffusion-webui\\embeddings";
+  private String embeddingsDir = dataDir + "embeddings";
 
   public static final String JSON_PROPERTY_TEXTUAL_INVERSION_TEMPLATES_DIR = "textual_inversion_templates_dir";
-  private String textualInversionTemplatesDir = "D:\\stable diffusion\\stable-diffusion-webui\\textual_inversion_templates";
+  private String textualInversionTemplatesDir = dataDir + "textual_inversion_templates";
 
   public static final String JSON_PROPERTY_HYPERNETWORK_DIR = "hypernetwork_dir";
-  private String hypernetworkDir = "D:\\stable diffusion\\stable-diffusion-webui\\models\\hypernetworks";
+  private String hypernetworkDir = dataDir + "models\\hypernetworks";
 
   public static final String JSON_PROPERTY_LOCALIZATIONS_DIR = "localizations_dir";
-  private String localizationsDir = "D:\\stable diffusion\\stable-diffusion-webui\\localizations";
+  private String localizationsDir = dataDir + "localizations";
 
   public static final String JSON_PROPERTY_ALLOW_CODE = "allow_code";
   private Boolean allowCode = false;
@@ -274,25 +281,25 @@ public class Flags {
   private String ngrokRegion = "";
 
   public static final String JSON_PROPERTY_NGROK_OPTIONS = "ngrok_options";
-  private Object ngrokOptions = {};
+  private Object ngrokOptions = null;
 
   public static final String JSON_PROPERTY_ENABLE_INSECURE_EXTENSION_ACCESS = "enable_insecure_extension_access";
   private Boolean enableInsecureExtensionAccess = false;
 
   public static final String JSON_PROPERTY_CODEFORMER_MODELS_PATH = "codeformer_models_path";
-  private String codeformerModelsPath = "D:\\stable diffusion\\stable-diffusion-webui\\models\\Codeformer";
+  private String codeformerModelsPath = dataDir + "models\\Codeformer";
 
   public static final String JSON_PROPERTY_GFPGAN_MODELS_PATH = "gfpgan_models_path";
-  private String gfpganModelsPath = "D:\\stable diffusion\\stable-diffusion-webui\\models\\GFPGAN";
+  private String gfpganModelsPath = dataDir + "models\\GFPGAN";
 
   public static final String JSON_PROPERTY_ESRGAN_MODELS_PATH = "esrgan_models_path";
-  private String esrganModelsPath = "D:\\stable diffusion\\stable-diffusion-webui\\models\\ESRGAN";
+  private String esrganModelsPath = dataDir + "models\\ESRGAN";
 
   public static final String JSON_PROPERTY_BSRGAN_MODELS_PATH = "bsrgan_models_path";
-  private String bsrganModelsPath = "D:\\stable diffusion\\stable-diffusion-webui\\models\\BSRGAN";
+  private String bsrganModelsPath = dataDir + "models\\BSRGAN";
 
   public static final String JSON_PROPERTY_REALESRGAN_MODELS_PATH = "realesrgan_models_path";
-  private String realesrganModelsPath = "D:\\stable diffusion\\stable-diffusion-webui\\models\\RealESRGAN";
+  private String realesrganModelsPath = dataDir + "models\\RealESRGAN";
 
   public static final String JSON_PROPERTY_CLIP_MODELS_PATH = "clip_models_path";
   private String clipModelsPath;
@@ -358,7 +365,7 @@ public class Flags {
   private Boolean showNegativePrompt = false;
 
   public static final String JSON_PROPERTY_UI_CONFIG_FILE = "ui_config_file";
-  private String uiConfigFile = "D:\\stable diffusion\\stable-diffusion-webui\\ui-config.json";
+  private String uiConfigFile = dataDir + "ui-config.json";
 
   public static final String JSON_PROPERTY_HIDE_UI_DIR_CONFIG = "hide_ui_dir_config";
   private Boolean hideUiDirConfig = false;
@@ -367,7 +374,7 @@ public class Flags {
   private Boolean freezeSettings = false;
 
   public static final String JSON_PROPERTY_UI_SETTINGS_FILE = "ui_settings_file";
-  private String uiSettingsFile = "D:\\stable diffusion\\stable-diffusion-webui\\config.json";
+  private String uiSettingsFile = dataDir + "config.json";
 
   public static final String JSON_PROPERTY_GRADIO_DEBUG = "gradio_debug";
   private Boolean gradioDebug = false;
@@ -385,13 +392,13 @@ public class Flags {
   private String gradioInpaintTool;
 
   public static final String JSON_PROPERTY_GRADIO_ALLOWED_PATH = "gradio_allowed_path";
-  private List<Object> gradioAllowedPath = new ArrayList<>(Arrays.asList(D:\stable diffusion\stable-diffusion-webui));
+  private List<Object> gradioAllowedPath = new ArrayList<>(Arrays.asList(toDiffusion));
 
   public static final String JSON_PROPERTY_OPT_CHANNELSLAST = "opt_channelslast";
   private Boolean optChannelslast = false;
 
   public static final String JSON_PROPERTY_STYLES_FILE = "styles_file";
-  private String stylesFile = "D:\\stable diffusion\\stable-diffusion-webui\\styles.csv";
+  private String stylesFile = dataDir + "styles.csv";
 
   public static final String JSON_PROPERTY_AUTOLAUNCH = "autolaunch";
   private Boolean autolaunch = false;
@@ -487,22 +494,19 @@ public class Flags {
   private Boolean disableExtraExtensions = false;
 
   public static final String JSON_PROPERTY_LDSR_MODELS_PATH = "ldsr_models_path";
-  private String ldsrModelsPath = "D:\\stable diffusion\\stable-diffusion-webui\\models\\LDSR";
+  private String ldsrModelsPath = dataDir + "models\\LDSR";
 
   public static final String JSON_PROPERTY_LORA_DIR = "lora_dir";
-  private String loraDir = "D:\\stable diffusion\\stable-diffusion-webui\\models\\Lora";
+  private String loraDir = dataDir + "models\\Lora";
 
   public static final String JSON_PROPERTY_LYCO_DIR_BACKCOMPAT = "lyco_dir_backcompat";
-  private String lycoDirBackcompat = "D:\\stable diffusion\\stable-diffusion-webui\\models\\LyCORIS";
+  private String lycoDirBackcompat = dataDir + "models\\LyCORIS";
 
   public static final String JSON_PROPERTY_SCUNET_MODELS_PATH = "scunet_models_path";
-  private String scunetModelsPath = "D:\\stable diffusion\\stable-diffusion-webui\\models\\ScuNET";
+  private String scunetModelsPath = dataDir + "models\\ScuNET";
 
   public static final String JSON_PROPERTY_SWINIR_MODELS_PATH = "swinir_models_path";
-  private String swinirModelsPath = "D:\\stable diffusion\\stable-diffusion-webui\\models\\SwinIR";
-
-  public Flags() {
-  }
+  private String swinirModelsPath = dataDir + "models\\SwinIR";
 
   public Flags f(Boolean f) {
     
@@ -2548,7 +2552,7 @@ public class Flags {
 
   public Flags addGradioAllowedPathItem(Object gradioAllowedPathItem) {
     if (this.gradioAllowedPath == null) {
-      this.gradioAllowedPath = new ArrayList<>(Arrays.asList(D:\stable diffusion\stable-diffusion-webui));
+      this.gradioAllowedPath = new ArrayList<>(Arrays.asList(toDiffusion));
     }
     this.gradioAllowedPath.add(gradioAllowedPathItem);
     return this;
