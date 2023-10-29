@@ -13,6 +13,7 @@
 
 package team.polytech.automatic.webui.model;
 
+import java.util.Collections;
 import java.util.Objects;
 import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -240,7 +241,7 @@ public class StableDiffusionProcessingImg2Img {
   private Boolean saveImages = false;
 
   public static final String JSON_PROPERTY_ALWAYSON_SCRIPTS = "alwayson_scripts";
-  private Object alwaysonScripts = null;
+  private Object alwaysonScripts = Collections.EMPTY_LIST;
 
   public StableDiffusionProcessingImg2Img() {
   }
