@@ -416,6 +416,7 @@ Create Embedding
 import team.polytech.automatic.webui.invoker.ApiClient;
 import team.polytech.automatic.webui.invoker.ApiException;
 import team.polytech.automatic.webui.invoker.Configuration;
+import team.polytech.automatic.webui.invoker.auth.*;
 import team.polytech.automatic.webui.invoker.models.*;
 import team.polytech.automatic.webui.api.DefaultApi;
 
@@ -423,6 +424,11 @@ public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost");
+        
+        // Configure HTTP basic authorization: HTTPBasic
+        HttpBasicAuth HTTPBasic = (HttpBasicAuth) defaultClient.getAuthentication("HTTPBasic");
+        HTTPBasic.setUsername("YOUR USERNAME");
+        HTTPBasic.setPassword("YOUR PASSWORD");
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         Object body = null; // Object | 
@@ -453,7 +459,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[HTTPBasic](../README.md#HTTPBasic)
 
 ### HTTP request headers
 
@@ -481,6 +487,7 @@ Create Hypernetwork
 import team.polytech.automatic.webui.invoker.ApiClient;
 import team.polytech.automatic.webui.invoker.ApiException;
 import team.polytech.automatic.webui.invoker.Configuration;
+import team.polytech.automatic.webui.invoker.auth.*;
 import team.polytech.automatic.webui.invoker.models.*;
 import team.polytech.automatic.webui.api.DefaultApi;
 
@@ -488,6 +495,11 @@ public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost");
+        
+        // Configure HTTP basic authorization: HTTPBasic
+        HttpBasicAuth HTTPBasic = (HttpBasicAuth) defaultClient.getAuthentication("HTTPBasic");
+        HTTPBasic.setUsername("YOUR USERNAME");
+        HTTPBasic.setPassword("YOUR PASSWORD");
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         Object body = null; // Object | 
@@ -518,7 +530,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[HTTPBasic](../README.md#HTTPBasic)
 
 ### HTTP request headers
 
@@ -611,6 +623,7 @@ Extras Batch Images Api
 import team.polytech.automatic.webui.invoker.ApiClient;
 import team.polytech.automatic.webui.invoker.ApiException;
 import team.polytech.automatic.webui.invoker.Configuration;
+import team.polytech.automatic.webui.invoker.auth.*;
 import team.polytech.automatic.webui.invoker.models.*;
 import team.polytech.automatic.webui.api.DefaultApi;
 
@@ -618,6 +631,11 @@ public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost");
+        
+        // Configure HTTP basic authorization: HTTPBasic
+        HttpBasicAuth HTTPBasic = (HttpBasicAuth) defaultClient.getAuthentication("HTTPBasic");
+        HTTPBasic.setUsername("YOUR USERNAME");
+        HTTPBasic.setPassword("YOUR PASSWORD");
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         ExtrasBatchImagesRequest extrasBatchImagesRequest = new ExtrasBatchImagesRequest(); // ExtrasBatchImagesRequest | 
@@ -648,7 +666,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[HTTPBasic](../README.md#HTTPBasic)
 
 ### HTTP request headers
 
@@ -676,6 +694,7 @@ Extras Single Image Api
 import team.polytech.automatic.webui.invoker.ApiClient;
 import team.polytech.automatic.webui.invoker.ApiException;
 import team.polytech.automatic.webui.invoker.Configuration;
+import team.polytech.automatic.webui.invoker.auth.*;
 import team.polytech.automatic.webui.invoker.models.*;
 import team.polytech.automatic.webui.api.DefaultApi;
 
@@ -683,6 +702,11 @@ public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost");
+        
+        // Configure HTTP basic authorization: HTTPBasic
+        HttpBasicAuth HTTPBasic = (HttpBasicAuth) defaultClient.getAuthentication("HTTPBasic");
+        HTTPBasic.setUsername("YOUR USERNAME");
+        HTTPBasic.setPassword("YOUR PASSWORD");
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         ExtrasSingleImageRequest extrasSingleImageRequest = new ExtrasSingleImageRequest(); // ExtrasSingleImageRequest | 
@@ -713,7 +737,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[HTTPBasic](../README.md#HTTPBasic)
 
 ### HTTP request headers
 
@@ -1061,6 +1085,7 @@ Get Cmd Flags
 import team.polytech.automatic.webui.invoker.ApiClient;
 import team.polytech.automatic.webui.invoker.ApiException;
 import team.polytech.automatic.webui.invoker.Configuration;
+import team.polytech.automatic.webui.invoker.auth.*;
 import team.polytech.automatic.webui.invoker.models.*;
 import team.polytech.automatic.webui.api.DefaultApi;
 
@@ -1068,6 +1093,11 @@ public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost");
+        
+        // Configure HTTP basic authorization: HTTPBasic
+        HttpBasicAuth HTTPBasic = (HttpBasicAuth) defaultClient.getAuthentication("HTTPBasic");
+        HTTPBasic.setUsername("YOUR USERNAME");
+        HTTPBasic.setPassword("YOUR PASSWORD");
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
@@ -1094,7 +1124,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[HTTPBasic](../README.md#HTTPBasic)
 
 ### HTTP request headers
 
@@ -1241,6 +1271,7 @@ Get Config
 import team.polytech.automatic.webui.invoker.ApiClient;
 import team.polytech.automatic.webui.invoker.ApiException;
 import team.polytech.automatic.webui.invoker.Configuration;
+import team.polytech.automatic.webui.invoker.auth.*;
 import team.polytech.automatic.webui.invoker.models.*;
 import team.polytech.automatic.webui.api.DefaultApi;
 
@@ -1248,6 +1279,11 @@ public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost");
+        
+        // Configure HTTP basic authorization: HTTPBasic
+        HttpBasicAuth HTTPBasic = (HttpBasicAuth) defaultClient.getAuthentication("HTTPBasic");
+        HTTPBasic.setUsername("YOUR USERNAME");
+        HTTPBasic.setPassword("YOUR PASSWORD");
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
@@ -1274,7 +1310,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[HTTPBasic](../README.md#HTTPBasic)
 
 ### HTTP request headers
 
@@ -1421,6 +1457,7 @@ Get Embeddings
 import team.polytech.automatic.webui.invoker.ApiClient;
 import team.polytech.automatic.webui.invoker.ApiException;
 import team.polytech.automatic.webui.invoker.Configuration;
+import team.polytech.automatic.webui.invoker.auth.*;
 import team.polytech.automatic.webui.invoker.models.*;
 import team.polytech.automatic.webui.api.DefaultApi;
 
@@ -1428,6 +1465,11 @@ public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost");
+        
+        // Configure HTTP basic authorization: HTTPBasic
+        HttpBasicAuth HTTPBasic = (HttpBasicAuth) defaultClient.getAuthentication("HTTPBasic");
+        HTTPBasic.setUsername("YOUR USERNAME");
+        HTTPBasic.setPassword("YOUR PASSWORD");
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
@@ -1454,7 +1496,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[HTTPBasic](../README.md#HTTPBasic)
 
 ### HTTP request headers
 
@@ -1481,6 +1523,7 @@ Get Face Restorers
 import team.polytech.automatic.webui.invoker.ApiClient;
 import team.polytech.automatic.webui.invoker.ApiException;
 import team.polytech.automatic.webui.invoker.Configuration;
+import team.polytech.automatic.webui.invoker.auth.*;
 import team.polytech.automatic.webui.invoker.models.*;
 import team.polytech.automatic.webui.api.DefaultApi;
 
@@ -1488,6 +1531,11 @@ public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost");
+        
+        // Configure HTTP basic authorization: HTTPBasic
+        HttpBasicAuth HTTPBasic = (HttpBasicAuth) defaultClient.getAuthentication("HTTPBasic");
+        HTTPBasic.setUsername("YOUR USERNAME");
+        HTTPBasic.setPassword("YOUR PASSWORD");
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
@@ -1514,7 +1562,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[HTTPBasic](../README.md#HTTPBasic)
 
 ### HTTP request headers
 
@@ -1541,6 +1589,7 @@ Get Hypernetworks
 import team.polytech.automatic.webui.invoker.ApiClient;
 import team.polytech.automatic.webui.invoker.ApiException;
 import team.polytech.automatic.webui.invoker.Configuration;
+import team.polytech.automatic.webui.invoker.auth.*;
 import team.polytech.automatic.webui.invoker.models.*;
 import team.polytech.automatic.webui.api.DefaultApi;
 
@@ -1548,6 +1597,11 @@ public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost");
+        
+        // Configure HTTP basic authorization: HTTPBasic
+        HttpBasicAuth HTTPBasic = (HttpBasicAuth) defaultClient.getAuthentication("HTTPBasic");
+        HTTPBasic.setUsername("YOUR USERNAME");
+        HTTPBasic.setPassword("YOUR PASSWORD");
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
@@ -1574,7 +1628,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[HTTPBasic](../README.md#HTTPBasic)
 
 ### HTTP request headers
 
@@ -1601,6 +1655,7 @@ Get Latent Upscale Modes
 import team.polytech.automatic.webui.invoker.ApiClient;
 import team.polytech.automatic.webui.invoker.ApiException;
 import team.polytech.automatic.webui.invoker.Configuration;
+import team.polytech.automatic.webui.invoker.auth.*;
 import team.polytech.automatic.webui.invoker.models.*;
 import team.polytech.automatic.webui.api.DefaultApi;
 
@@ -1608,6 +1663,11 @@ public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost");
+        
+        // Configure HTTP basic authorization: HTTPBasic
+        HttpBasicAuth HTTPBasic = (HttpBasicAuth) defaultClient.getAuthentication("HTTPBasic");
+        HTTPBasic.setUsername("YOUR USERNAME");
+        HTTPBasic.setPassword("YOUR PASSWORD");
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
@@ -1634,7 +1694,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[HTTPBasic](../README.md#HTTPBasic)
 
 ### HTTP request headers
 
@@ -1721,6 +1781,7 @@ Get Memory
 import team.polytech.automatic.webui.invoker.ApiClient;
 import team.polytech.automatic.webui.invoker.ApiException;
 import team.polytech.automatic.webui.invoker.Configuration;
+import team.polytech.automatic.webui.invoker.auth.*;
 import team.polytech.automatic.webui.invoker.models.*;
 import team.polytech.automatic.webui.api.DefaultApi;
 
@@ -1728,6 +1789,11 @@ public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost");
+        
+        // Configure HTTP basic authorization: HTTPBasic
+        HttpBasicAuth HTTPBasic = (HttpBasicAuth) defaultClient.getAuthentication("HTTPBasic");
+        HTTPBasic.setUsername("YOUR USERNAME");
+        HTTPBasic.setPassword("YOUR PASSWORD");
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
@@ -1754,7 +1820,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[HTTPBasic](../README.md#HTTPBasic)
 
 ### HTTP request headers
 
@@ -1848,6 +1914,7 @@ Get Prompt Styles
 import team.polytech.automatic.webui.invoker.ApiClient;
 import team.polytech.automatic.webui.invoker.ApiException;
 import team.polytech.automatic.webui.invoker.Configuration;
+import team.polytech.automatic.webui.invoker.auth.*;
 import team.polytech.automatic.webui.invoker.models.*;
 import team.polytech.automatic.webui.api.DefaultApi;
 
@@ -1855,6 +1922,11 @@ public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost");
+        
+        // Configure HTTP basic authorization: HTTPBasic
+        HttpBasicAuth HTTPBasic = (HttpBasicAuth) defaultClient.getAuthentication("HTTPBasic");
+        HTTPBasic.setUsername("YOUR USERNAME");
+        HTTPBasic.setPassword("YOUR PASSWORD");
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
@@ -1881,7 +1953,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[HTTPBasic](../README.md#HTTPBasic)
 
 ### HTTP request headers
 
@@ -1968,6 +2040,7 @@ Get Realesrgan Models
 import team.polytech.automatic.webui.invoker.ApiClient;
 import team.polytech.automatic.webui.invoker.ApiException;
 import team.polytech.automatic.webui.invoker.Configuration;
+import team.polytech.automatic.webui.invoker.auth.*;
 import team.polytech.automatic.webui.invoker.models.*;
 import team.polytech.automatic.webui.api.DefaultApi;
 
@@ -1975,6 +2048,11 @@ public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost");
+        
+        // Configure HTTP basic authorization: HTTPBasic
+        HttpBasicAuth HTTPBasic = (HttpBasicAuth) defaultClient.getAuthentication("HTTPBasic");
+        HTTPBasic.setUsername("YOUR USERNAME");
+        HTTPBasic.setPassword("YOUR PASSWORD");
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
@@ -2001,7 +2079,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[HTTPBasic](../README.md#HTTPBasic)
 
 ### HTTP request headers
 
@@ -2028,6 +2106,7 @@ Get Samplers
 import team.polytech.automatic.webui.invoker.ApiClient;
 import team.polytech.automatic.webui.invoker.ApiException;
 import team.polytech.automatic.webui.invoker.Configuration;
+import team.polytech.automatic.webui.invoker.auth.*;
 import team.polytech.automatic.webui.invoker.models.*;
 import team.polytech.automatic.webui.api.DefaultApi;
 
@@ -2035,6 +2114,11 @@ public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost");
+        
+        // Configure HTTP basic authorization: HTTPBasic
+        HttpBasicAuth HTTPBasic = (HttpBasicAuth) defaultClient.getAuthentication("HTTPBasic");
+        HTTPBasic.setUsername("YOUR USERNAME");
+        HTTPBasic.setPassword("YOUR PASSWORD");
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
@@ -2061,7 +2145,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[HTTPBasic](../README.md#HTTPBasic)
 
 ### HTTP request headers
 
@@ -2088,6 +2172,7 @@ Get Script Info
 import team.polytech.automatic.webui.invoker.ApiClient;
 import team.polytech.automatic.webui.invoker.ApiException;
 import team.polytech.automatic.webui.invoker.Configuration;
+import team.polytech.automatic.webui.invoker.auth.*;
 import team.polytech.automatic.webui.invoker.models.*;
 import team.polytech.automatic.webui.api.DefaultApi;
 
@@ -2095,6 +2180,11 @@ public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost");
+        
+        // Configure HTTP basic authorization: HTTPBasic
+        HttpBasicAuth HTTPBasic = (HttpBasicAuth) defaultClient.getAuthentication("HTTPBasic");
+        HTTPBasic.setUsername("YOUR USERNAME");
+        HTTPBasic.setPassword("YOUR PASSWORD");
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
@@ -2121,7 +2211,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[HTTPBasic](../README.md#HTTPBasic)
 
 ### HTTP request headers
 
@@ -2148,6 +2238,7 @@ Get Scripts List
 import team.polytech.automatic.webui.invoker.ApiClient;
 import team.polytech.automatic.webui.invoker.ApiException;
 import team.polytech.automatic.webui.invoker.Configuration;
+import team.polytech.automatic.webui.invoker.auth.*;
 import team.polytech.automatic.webui.invoker.models.*;
 import team.polytech.automatic.webui.api.DefaultApi;
 
@@ -2155,6 +2246,11 @@ public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost");
+        
+        // Configure HTTP basic authorization: HTTPBasic
+        HttpBasicAuth HTTPBasic = (HttpBasicAuth) defaultClient.getAuthentication("HTTPBasic");
+        HTTPBasic.setUsername("YOUR USERNAME");
+        HTTPBasic.setPassword("YOUR PASSWORD");
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
@@ -2181,7 +2277,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[HTTPBasic](../README.md#HTTPBasic)
 
 ### HTTP request headers
 
@@ -2208,6 +2304,7 @@ Get Sd Models
 import team.polytech.automatic.webui.invoker.ApiClient;
 import team.polytech.automatic.webui.invoker.ApiException;
 import team.polytech.automatic.webui.invoker.Configuration;
+import team.polytech.automatic.webui.invoker.auth.*;
 import team.polytech.automatic.webui.invoker.models.*;
 import team.polytech.automatic.webui.api.DefaultApi;
 
@@ -2215,6 +2312,11 @@ public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost");
+        
+        // Configure HTTP basic authorization: HTTPBasic
+        HttpBasicAuth HTTPBasic = (HttpBasicAuth) defaultClient.getAuthentication("HTTPBasic");
+        HTTPBasic.setUsername("YOUR USERNAME");
+        HTTPBasic.setPassword("YOUR PASSWORD");
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
@@ -2241,7 +2343,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[HTTPBasic](../README.md#HTTPBasic)
 
 ### HTTP request headers
 
@@ -2268,6 +2370,7 @@ Get Sd Vaes
 import team.polytech.automatic.webui.invoker.ApiClient;
 import team.polytech.automatic.webui.invoker.ApiException;
 import team.polytech.automatic.webui.invoker.Configuration;
+import team.polytech.automatic.webui.invoker.auth.*;
 import team.polytech.automatic.webui.invoker.models.*;
 import team.polytech.automatic.webui.api.DefaultApi;
 
@@ -2275,6 +2378,11 @@ public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost");
+        
+        // Configure HTTP basic authorization: HTTPBasic
+        HttpBasicAuth HTTPBasic = (HttpBasicAuth) defaultClient.getAuthentication("HTTPBasic");
+        HTTPBasic.setUsername("YOUR USERNAME");
+        HTTPBasic.setPassword("YOUR PASSWORD");
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
@@ -2301,7 +2409,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[HTTPBasic](../README.md#HTTPBasic)
 
 ### HTTP request headers
 
@@ -2517,6 +2625,7 @@ Get Upscalers
 import team.polytech.automatic.webui.invoker.ApiClient;
 import team.polytech.automatic.webui.invoker.ApiException;
 import team.polytech.automatic.webui.invoker.Configuration;
+import team.polytech.automatic.webui.invoker.auth.*;
 import team.polytech.automatic.webui.invoker.models.*;
 import team.polytech.automatic.webui.api.DefaultApi;
 
@@ -2524,6 +2633,11 @@ public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost");
+        
+        // Configure HTTP basic authorization: HTTPBasic
+        HttpBasicAuth HTTPBasic = (HttpBasicAuth) defaultClient.getAuthentication("HTTPBasic");
+        HTTPBasic.setUsername("YOUR USERNAME");
+        HTTPBasic.setPassword("YOUR PASSWORD");
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
@@ -2550,7 +2664,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[HTTPBasic](../README.md#HTTPBasic)
 
 ### HTTP request headers
 
@@ -2577,6 +2691,7 @@ Img2Imgapi
 import team.polytech.automatic.webui.invoker.ApiClient;
 import team.polytech.automatic.webui.invoker.ApiException;
 import team.polytech.automatic.webui.invoker.Configuration;
+import team.polytech.automatic.webui.invoker.auth.*;
 import team.polytech.automatic.webui.invoker.models.*;
 import team.polytech.automatic.webui.api.DefaultApi;
 
@@ -2584,6 +2699,11 @@ public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost");
+        
+        // Configure HTTP basic authorization: HTTPBasic
+        HttpBasicAuth HTTPBasic = (HttpBasicAuth) defaultClient.getAuthentication("HTTPBasic");
+        HTTPBasic.setUsername("YOUR USERNAME");
+        HTTPBasic.setPassword("YOUR PASSWORD");
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         StableDiffusionProcessingImg2Img stableDiffusionProcessingImg2Img = new StableDiffusionProcessingImg2Img(); // StableDiffusionProcessingImg2Img | 
@@ -2614,7 +2734,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[HTTPBasic](../README.md#HTTPBasic)
 
 ### HTTP request headers
 
@@ -2642,6 +2762,7 @@ Interrogateapi
 import team.polytech.automatic.webui.invoker.ApiClient;
 import team.polytech.automatic.webui.invoker.ApiException;
 import team.polytech.automatic.webui.invoker.Configuration;
+import team.polytech.automatic.webui.invoker.auth.*;
 import team.polytech.automatic.webui.invoker.models.*;
 import team.polytech.automatic.webui.api.DefaultApi;
 
@@ -2649,6 +2770,11 @@ public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost");
+        
+        // Configure HTTP basic authorization: HTTPBasic
+        HttpBasicAuth HTTPBasic = (HttpBasicAuth) defaultClient.getAuthentication("HTTPBasic");
+        HTTPBasic.setUsername("YOUR USERNAME");
+        HTTPBasic.setPassword("YOUR PASSWORD");
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         InterrogateRequest interrogateRequest = new InterrogateRequest(); // InterrogateRequest | 
@@ -2679,7 +2805,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[HTTPBasic](../README.md#HTTPBasic)
 
 ### HTTP request headers
 
@@ -2707,6 +2833,7 @@ Interruptapi
 import team.polytech.automatic.webui.invoker.ApiClient;
 import team.polytech.automatic.webui.invoker.ApiException;
 import team.polytech.automatic.webui.invoker.Configuration;
+import team.polytech.automatic.webui.invoker.auth.*;
 import team.polytech.automatic.webui.invoker.models.*;
 import team.polytech.automatic.webui.api.DefaultApi;
 
@@ -2714,6 +2841,11 @@ public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost");
+        
+        // Configure HTTP basic authorization: HTTPBasic
+        HttpBasicAuth HTTPBasic = (HttpBasicAuth) defaultClient.getAuthentication("HTTPBasic");
+        HTTPBasic.setUsername("YOUR USERNAME");
+        HTTPBasic.setPassword("YOUR PASSWORD");
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
@@ -2740,7 +2872,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[HTTPBasic](../README.md#HTTPBasic)
 
 ### HTTP request headers
 
@@ -3337,6 +3469,7 @@ Pnginfoapi
 import team.polytech.automatic.webui.invoker.ApiClient;
 import team.polytech.automatic.webui.invoker.ApiException;
 import team.polytech.automatic.webui.invoker.Configuration;
+import team.polytech.automatic.webui.invoker.auth.*;
 import team.polytech.automatic.webui.invoker.models.*;
 import team.polytech.automatic.webui.api.DefaultApi;
 
@@ -3344,6 +3477,11 @@ public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost");
+        
+        // Configure HTTP basic authorization: HTTPBasic
+        HttpBasicAuth HTTPBasic = (HttpBasicAuth) defaultClient.getAuthentication("HTTPBasic");
+        HTTPBasic.setUsername("YOUR USERNAME");
+        HTTPBasic.setPassword("YOUR PASSWORD");
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         PNGInfoRequest pnGInfoRequest = new PNGInfoRequest(); // PNGInfoRequest | 
@@ -3374,7 +3512,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[HTTPBasic](../README.md#HTTPBasic)
 
 ### HTTP request headers
 
@@ -3670,6 +3808,7 @@ Preprocess
 import team.polytech.automatic.webui.invoker.ApiClient;
 import team.polytech.automatic.webui.invoker.ApiException;
 import team.polytech.automatic.webui.invoker.Configuration;
+import team.polytech.automatic.webui.invoker.auth.*;
 import team.polytech.automatic.webui.invoker.models.*;
 import team.polytech.automatic.webui.api.DefaultApi;
 
@@ -3677,6 +3816,11 @@ public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost");
+        
+        // Configure HTTP basic authorization: HTTPBasic
+        HttpBasicAuth HTTPBasic = (HttpBasicAuth) defaultClient.getAuthentication("HTTPBasic");
+        HTTPBasic.setUsername("YOUR USERNAME");
+        HTTPBasic.setPassword("YOUR PASSWORD");
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         Object body = null; // Object | 
@@ -3707,7 +3851,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[HTTPBasic](../README.md#HTTPBasic)
 
 ### HTTP request headers
 
@@ -3800,6 +3944,7 @@ Progressapi
 import team.polytech.automatic.webui.invoker.ApiClient;
 import team.polytech.automatic.webui.invoker.ApiException;
 import team.polytech.automatic.webui.invoker.Configuration;
+import team.polytech.automatic.webui.invoker.auth.*;
 import team.polytech.automatic.webui.invoker.models.*;
 import team.polytech.automatic.webui.api.DefaultApi;
 
@@ -3807,6 +3952,11 @@ public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost");
+        
+        // Configure HTTP basic authorization: HTTPBasic
+        HttpBasicAuth HTTPBasic = (HttpBasicAuth) defaultClient.getAuthentication("HTTPBasic");
+        HTTPBasic.setUsername("YOUR USERNAME");
+        HTTPBasic.setPassword("YOUR PASSWORD");
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         Boolean skipCurrentImage = false; // Boolean | 
@@ -3837,7 +3987,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[HTTPBasic](../README.md#HTTPBasic)
 
 ### HTTP request headers
 
@@ -3925,6 +4075,7 @@ Refresh Checkpoints
 import team.polytech.automatic.webui.invoker.ApiClient;
 import team.polytech.automatic.webui.invoker.ApiException;
 import team.polytech.automatic.webui.invoker.Configuration;
+import team.polytech.automatic.webui.invoker.auth.*;
 import team.polytech.automatic.webui.invoker.models.*;
 import team.polytech.automatic.webui.api.DefaultApi;
 
@@ -3932,6 +4083,11 @@ public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost");
+        
+        // Configure HTTP basic authorization: HTTPBasic
+        HttpBasicAuth HTTPBasic = (HttpBasicAuth) defaultClient.getAuthentication("HTTPBasic");
+        HTTPBasic.setUsername("YOUR USERNAME");
+        HTTPBasic.setPassword("YOUR PASSWORD");
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
@@ -3958,7 +4114,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[HTTPBasic](../README.md#HTTPBasic)
 
 ### HTTP request headers
 
@@ -4045,6 +4201,7 @@ Refresh Vae
 import team.polytech.automatic.webui.invoker.ApiClient;
 import team.polytech.automatic.webui.invoker.ApiException;
 import team.polytech.automatic.webui.invoker.Configuration;
+import team.polytech.automatic.webui.invoker.auth.*;
 import team.polytech.automatic.webui.invoker.models.*;
 import team.polytech.automatic.webui.api.DefaultApi;
 
@@ -4052,6 +4209,11 @@ public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost");
+        
+        // Configure HTTP basic authorization: HTTPBasic
+        HttpBasicAuth HTTPBasic = (HttpBasicAuth) defaultClient.getAuthentication("HTTPBasic");
+        HTTPBasic.setUsername("YOUR USERNAME");
+        HTTPBasic.setPassword("YOUR PASSWORD");
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
@@ -4078,7 +4240,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[HTTPBasic](../README.md#HTTPBasic)
 
 ### HTTP request headers
 
@@ -4105,6 +4267,7 @@ Reloadapi
 import team.polytech.automatic.webui.invoker.ApiClient;
 import team.polytech.automatic.webui.invoker.ApiException;
 import team.polytech.automatic.webui.invoker.Configuration;
+import team.polytech.automatic.webui.invoker.auth.*;
 import team.polytech.automatic.webui.invoker.models.*;
 import team.polytech.automatic.webui.api.DefaultApi;
 
@@ -4112,6 +4275,11 @@ public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost");
+        
+        // Configure HTTP basic authorization: HTTPBasic
+        HttpBasicAuth HTTPBasic = (HttpBasicAuth) defaultClient.getAuthentication("HTTPBasic");
+        HTTPBasic.setUsername("YOUR USERNAME");
+        HTTPBasic.setPassword("YOUR PASSWORD");
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
@@ -4138,7 +4306,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[HTTPBasic](../README.md#HTTPBasic)
 
 ### HTTP request headers
 
@@ -4485,6 +4653,7 @@ Set Config
 import team.polytech.automatic.webui.invoker.ApiClient;
 import team.polytech.automatic.webui.invoker.ApiException;
 import team.polytech.automatic.webui.invoker.Configuration;
+import team.polytech.automatic.webui.invoker.auth.*;
 import team.polytech.automatic.webui.invoker.models.*;
 import team.polytech.automatic.webui.api.DefaultApi;
 
@@ -4492,6 +4661,11 @@ public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost");
+        
+        // Configure HTTP basic authorization: HTTPBasic
+        HttpBasicAuth HTTPBasic = (HttpBasicAuth) defaultClient.getAuthentication("HTTPBasic");
+        HTTPBasic.setUsername("YOUR USERNAME");
+        HTTPBasic.setPassword("YOUR PASSWORD");
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         Object body = null; // Object | 
@@ -4522,7 +4696,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[HTTPBasic](../README.md#HTTPBasic)
 
 ### HTTP request headers
 
@@ -4550,6 +4724,7 @@ Skip
 import team.polytech.automatic.webui.invoker.ApiClient;
 import team.polytech.automatic.webui.invoker.ApiException;
 import team.polytech.automatic.webui.invoker.Configuration;
+import team.polytech.automatic.webui.invoker.auth.*;
 import team.polytech.automatic.webui.invoker.models.*;
 import team.polytech.automatic.webui.api.DefaultApi;
 
@@ -4557,6 +4732,11 @@ public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost");
+        
+        // Configure HTTP basic authorization: HTTPBasic
+        HttpBasicAuth HTTPBasic = (HttpBasicAuth) defaultClient.getAuthentication("HTTPBasic");
+        HTTPBasic.setUsername("YOUR USERNAME");
+        HTTPBasic.setPassword("YOUR PASSWORD");
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
@@ -4583,7 +4763,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[HTTPBasic](../README.md#HTTPBasic)
 
 ### HTTP request headers
 
@@ -4804,6 +4984,7 @@ Text2Imgapi
 import team.polytech.automatic.webui.invoker.ApiClient;
 import team.polytech.automatic.webui.invoker.ApiException;
 import team.polytech.automatic.webui.invoker.Configuration;
+import team.polytech.automatic.webui.invoker.auth.*;
 import team.polytech.automatic.webui.invoker.models.*;
 import team.polytech.automatic.webui.api.DefaultApi;
 
@@ -4811,6 +4992,11 @@ public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost");
+        
+        // Configure HTTP basic authorization: HTTPBasic
+        HttpBasicAuth HTTPBasic = (HttpBasicAuth) defaultClient.getAuthentication("HTTPBasic");
+        HTTPBasic.setUsername("YOUR USERNAME");
+        HTTPBasic.setPassword("YOUR PASSWORD");
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         StableDiffusionProcessingTxt2Img stableDiffusionProcessingTxt2Img = new StableDiffusionProcessingTxt2Img(); // StableDiffusionProcessingTxt2Img | 
@@ -4841,7 +5027,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[HTTPBasic](../README.md#HTTPBasic)
 
 ### HTTP request headers
 
@@ -4929,6 +5115,7 @@ Train Embedding
 import team.polytech.automatic.webui.invoker.ApiClient;
 import team.polytech.automatic.webui.invoker.ApiException;
 import team.polytech.automatic.webui.invoker.Configuration;
+import team.polytech.automatic.webui.invoker.auth.*;
 import team.polytech.automatic.webui.invoker.models.*;
 import team.polytech.automatic.webui.api.DefaultApi;
 
@@ -4936,6 +5123,11 @@ public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost");
+        
+        // Configure HTTP basic authorization: HTTPBasic
+        HttpBasicAuth HTTPBasic = (HttpBasicAuth) defaultClient.getAuthentication("HTTPBasic");
+        HTTPBasic.setUsername("YOUR USERNAME");
+        HTTPBasic.setPassword("YOUR PASSWORD");
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         Object body = null; // Object | 
@@ -4966,7 +5158,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[HTTPBasic](../README.md#HTTPBasic)
 
 ### HTTP request headers
 
@@ -4994,6 +5186,7 @@ Train Hypernetwork
 import team.polytech.automatic.webui.invoker.ApiClient;
 import team.polytech.automatic.webui.invoker.ApiException;
 import team.polytech.automatic.webui.invoker.Configuration;
+import team.polytech.automatic.webui.invoker.auth.*;
 import team.polytech.automatic.webui.invoker.models.*;
 import team.polytech.automatic.webui.api.DefaultApi;
 
@@ -5001,6 +5194,11 @@ public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost");
+        
+        // Configure HTTP basic authorization: HTTPBasic
+        HttpBasicAuth HTTPBasic = (HttpBasicAuth) defaultClient.getAuthentication("HTTPBasic");
+        HTTPBasic.setUsername("YOUR USERNAME");
+        HTTPBasic.setPassword("YOUR PASSWORD");
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         Object body = null; // Object | 
@@ -5031,7 +5229,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[HTTPBasic](../README.md#HTTPBasic)
 
 ### HTTP request headers
 
@@ -5059,6 +5257,7 @@ Unloadapi
 import team.polytech.automatic.webui.invoker.ApiClient;
 import team.polytech.automatic.webui.invoker.ApiException;
 import team.polytech.automatic.webui.invoker.Configuration;
+import team.polytech.automatic.webui.invoker.auth.*;
 import team.polytech.automatic.webui.invoker.models.*;
 import team.polytech.automatic.webui.api.DefaultApi;
 
@@ -5066,6 +5265,11 @@ public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost");
+        
+        // Configure HTTP basic authorization: HTTPBasic
+        HttpBasicAuth HTTPBasic = (HttpBasicAuth) defaultClient.getAuthentication("HTTPBasic");
+        HTTPBasic.setUsername("YOUR USERNAME");
+        HTTPBasic.setPassword("YOUR PASSWORD");
 
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         try {
@@ -5092,7 +5296,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[HTTPBasic](../README.md#HTTPBasic)
 
 ### HTTP request headers
 

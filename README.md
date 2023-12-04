@@ -265,7 +265,13 @@ Class | Method | HTTP request | Description
 <a id="documentation-for-authorization"></a>
 ## Documentation for Authorization
 
-Endpoints do not require authorization.
+
+Authentication schemes defined for the API:
+<a id="HTTPBasic"></a>
+### HTTPBasic
+
+
+- **Type**: HTTP basic authentication
 
 
 ## Recommendation

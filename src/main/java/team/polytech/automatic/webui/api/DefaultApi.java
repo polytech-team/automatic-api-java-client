@@ -350,7 +350,7 @@ public class DefaultApi {
          };
         final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "HTTPBasic" };
 
         ParameterizedTypeReference<CreateResponse> localReturnType = new ParameterizedTypeReference<CreateResponse>() {};
         return apiClient.invokeAPI("/sdapi/v1/create/embedding", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
@@ -400,7 +400,7 @@ public class DefaultApi {
          };
         final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "HTTPBasic" };
 
         ParameterizedTypeReference<CreateResponse> localReturnType = new ParameterizedTypeReference<CreateResponse>() {};
         return apiClient.invokeAPI("/sdapi/v1/create/hypernetwork", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
@@ -496,7 +496,7 @@ public class DefaultApi {
          };
         final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "HTTPBasic" };
 
         ParameterizedTypeReference<ExtrasBatchImagesResponse> localReturnType = new ParameterizedTypeReference<ExtrasBatchImagesResponse>() {};
         return apiClient.invokeAPI("/sdapi/v1/extra-batch-images", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
@@ -546,7 +546,7 @@ public class DefaultApi {
          };
         final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "HTTPBasic" };
 
         ParameterizedTypeReference<ExtrasSingleImageResponse> localReturnType = new ParameterizedTypeReference<ExtrasSingleImageResponse>() {};
         return apiClient.invokeAPI("/sdapi/v1/extra-single-image", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
@@ -823,7 +823,7 @@ public class DefaultApi {
         final String[] localVarContentTypes = {  };
         final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "HTTPBasic" };
 
         ParameterizedTypeReference<Flags> localReturnType = new ParameterizedTypeReference<Flags>() {};
         return apiClient.invokeAPI("/sdapi/v1/cmd-flags", HttpMethod.GET, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
@@ -940,7 +940,7 @@ public class DefaultApi {
         final String[] localVarContentTypes = {  };
         final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "HTTPBasic" };
 
         ParameterizedTypeReference<Options> localReturnType = new ParameterizedTypeReference<Options>() {};
         return apiClient.invokeAPI("/sdapi/v1/options", HttpMethod.GET, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
@@ -1057,7 +1057,7 @@ public class DefaultApi {
         final String[] localVarContentTypes = {  };
         final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "HTTPBasic" };
 
         ParameterizedTypeReference<EmbeddingsResponse> localReturnType = new ParameterizedTypeReference<EmbeddingsResponse>() {};
         return apiClient.invokeAPI("/sdapi/v1/embeddings", HttpMethod.GET, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
@@ -1096,7 +1096,7 @@ public class DefaultApi {
         final String[] localVarContentTypes = {  };
         final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "HTTPBasic" };
 
         ParameterizedTypeReference<List<FaceRestorerItem>> localReturnType = new ParameterizedTypeReference<List<FaceRestorerItem>>() {};
         return apiClient.invokeAPI("/sdapi/v1/face-restorers", HttpMethod.GET, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
@@ -1135,7 +1135,7 @@ public class DefaultApi {
         final String[] localVarContentTypes = {  };
         final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "HTTPBasic" };
 
         ParameterizedTypeReference<List<HypernetworkItem>> localReturnType = new ParameterizedTypeReference<List<HypernetworkItem>>() {};
         return apiClient.invokeAPI("/sdapi/v1/hypernetworks", HttpMethod.GET, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
@@ -1174,7 +1174,7 @@ public class DefaultApi {
         final String[] localVarContentTypes = {  };
         final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "HTTPBasic" };
 
         ParameterizedTypeReference<List<LatentUpscalerModeItem>> localReturnType = new ParameterizedTypeReference<List<LatentUpscalerModeItem>>() {};
         return apiClient.invokeAPI("/sdapi/v1/latent-upscale-modes", HttpMethod.GET, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
@@ -1252,7 +1252,7 @@ public class DefaultApi {
         final String[] localVarContentTypes = {  };
         final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "HTTPBasic" };
 
         ParameterizedTypeReference<MemoryResponse> localReturnType = new ParameterizedTypeReference<MemoryResponse>() {};
         return apiClient.invokeAPI("/sdapi/v1/memory", HttpMethod.GET, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
@@ -1340,7 +1340,7 @@ public class DefaultApi {
         final String[] localVarContentTypes = {  };
         final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "HTTPBasic" };
 
         ParameterizedTypeReference<List<PromptStyleItem>> localReturnType = new ParameterizedTypeReference<List<PromptStyleItem>>() {};
         return apiClient.invokeAPI("/sdapi/v1/prompt-styles", HttpMethod.GET, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
@@ -1418,7 +1418,7 @@ public class DefaultApi {
         final String[] localVarContentTypes = {  };
         final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "HTTPBasic" };
 
         ParameterizedTypeReference<List<RealesrganItem>> localReturnType = new ParameterizedTypeReference<List<RealesrganItem>>() {};
         return apiClient.invokeAPI("/sdapi/v1/realesrgan-models", HttpMethod.GET, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
@@ -1457,7 +1457,7 @@ public class DefaultApi {
         final String[] localVarContentTypes = {  };
         final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "HTTPBasic" };
 
         ParameterizedTypeReference<List<SamplerItem>> localReturnType = new ParameterizedTypeReference<List<SamplerItem>>() {};
         return apiClient.invokeAPI("/sdapi/v1/samplers", HttpMethod.GET, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
@@ -1496,7 +1496,7 @@ public class DefaultApi {
         final String[] localVarContentTypes = {  };
         final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "HTTPBasic" };
 
         ParameterizedTypeReference<List<ScriptInfo>> localReturnType = new ParameterizedTypeReference<List<ScriptInfo>>() {};
         return apiClient.invokeAPI("/sdapi/v1/script-info", HttpMethod.GET, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
@@ -1535,7 +1535,7 @@ public class DefaultApi {
         final String[] localVarContentTypes = {  };
         final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "HTTPBasic" };
 
         ParameterizedTypeReference<ScriptsList> localReturnType = new ParameterizedTypeReference<ScriptsList>() {};
         return apiClient.invokeAPI("/sdapi/v1/scripts", HttpMethod.GET, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
@@ -1574,7 +1574,7 @@ public class DefaultApi {
         final String[] localVarContentTypes = {  };
         final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "HTTPBasic" };
 
         ParameterizedTypeReference<List<SDModelItem>> localReturnType = new ParameterizedTypeReference<List<SDModelItem>>() {};
         return apiClient.invokeAPI("/sdapi/v1/sd-models", HttpMethod.GET, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
@@ -1613,7 +1613,7 @@ public class DefaultApi {
         final String[] localVarContentTypes = {  };
         final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "HTTPBasic" };
 
         ParameterizedTypeReference<List<SDVaeItem>> localReturnType = new ParameterizedTypeReference<List<SDVaeItem>>() {};
         return apiClient.invokeAPI("/sdapi/v1/sd-vae", HttpMethod.GET, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
@@ -1782,7 +1782,7 @@ public class DefaultApi {
         final String[] localVarContentTypes = {  };
         final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "HTTPBasic" };
 
         ParameterizedTypeReference<List<UpscalerItem>> localReturnType = new ParameterizedTypeReference<List<UpscalerItem>>() {};
         return apiClient.invokeAPI("/sdapi/v1/upscalers", HttpMethod.GET, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
@@ -1832,7 +1832,7 @@ public class DefaultApi {
          };
         final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "HTTPBasic" };
 
         ParameterizedTypeReference<ImageToImageResponse> localReturnType = new ParameterizedTypeReference<ImageToImageResponse>() {};
         return apiClient.invokeAPI("/sdapi/v1/img2img", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
@@ -1882,7 +1882,7 @@ public class DefaultApi {
          };
         final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "HTTPBasic" };
 
         ParameterizedTypeReference<Object> localReturnType = new ParameterizedTypeReference<Object>() {};
         return apiClient.invokeAPI("/sdapi/v1/interrogate", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
@@ -1921,7 +1921,7 @@ public class DefaultApi {
         final String[] localVarContentTypes = {  };
         final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "HTTPBasic" };
 
         ParameterizedTypeReference<Object> localReturnType = new ParameterizedTypeReference<Object>() {};
         return apiClient.invokeAPI("/sdapi/v1/interrupt", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
@@ -2400,7 +2400,7 @@ public class DefaultApi {
          };
         final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "HTTPBasic" };
 
         ParameterizedTypeReference<PNGInfoResponse> localReturnType = new ParameterizedTypeReference<PNGInfoResponse>() {};
         return apiClient.invokeAPI("/sdapi/v1/png-info", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
@@ -2690,7 +2690,7 @@ public class DefaultApi {
          };
         final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "HTTPBasic" };
 
         ParameterizedTypeReference<PreprocessResponse> localReturnType = new ParameterizedTypeReference<PreprocessResponse>() {};
         return apiClient.invokeAPI("/sdapi/v1/preprocess", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
@@ -2786,7 +2786,7 @@ public class DefaultApi {
         final String[] localVarContentTypes = {  };
         final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "HTTPBasic" };
 
         ParameterizedTypeReference<ModulesApiModelsProgressResponse> localReturnType = new ParameterizedTypeReference<ModulesApiModelsProgressResponse>() {};
         return apiClient.invokeAPI("/sdapi/v1/progress", HttpMethod.GET, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
@@ -2864,7 +2864,7 @@ public class DefaultApi {
         final String[] localVarContentTypes = {  };
         final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "HTTPBasic" };
 
         ParameterizedTypeReference<Object> localReturnType = new ParameterizedTypeReference<Object>() {};
         return apiClient.invokeAPI("/sdapi/v1/refresh-checkpoints", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
@@ -2942,7 +2942,7 @@ public class DefaultApi {
         final String[] localVarContentTypes = {  };
         final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "HTTPBasic" };
 
         ParameterizedTypeReference<Object> localReturnType = new ParameterizedTypeReference<Object>() {};
         return apiClient.invokeAPI("/sdapi/v1/refresh-vae", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
@@ -2981,7 +2981,7 @@ public class DefaultApi {
         final String[] localVarContentTypes = {  };
         final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "HTTPBasic" };
 
         ParameterizedTypeReference<Object> localReturnType = new ParameterizedTypeReference<Object>() {};
         return apiClient.invokeAPI("/sdapi/v1/reload-checkpoint", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
@@ -3272,7 +3272,7 @@ public class DefaultApi {
          };
         final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "HTTPBasic" };
 
         ParameterizedTypeReference<Object> localReturnType = new ParameterizedTypeReference<Object>() {};
         return apiClient.invokeAPI("/sdapi/v1/options", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
@@ -3311,7 +3311,7 @@ public class DefaultApi {
         final String[] localVarContentTypes = {  };
         final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "HTTPBasic" };
 
         ParameterizedTypeReference<Object> localReturnType = new ParameterizedTypeReference<Object>() {};
         return apiClient.invokeAPI("/sdapi/v1/skip", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
@@ -3518,7 +3518,7 @@ public class DefaultApi {
          };
         final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "HTTPBasic" };
 
         ParameterizedTypeReference<TextToImageResponse> localReturnType = new ParameterizedTypeReference<TextToImageResponse>() {};
         return apiClient.invokeAPI("/sdapi/v1/txt2img", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
@@ -3607,7 +3607,7 @@ public class DefaultApi {
          };
         final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "HTTPBasic" };
 
         ParameterizedTypeReference<TrainResponse> localReturnType = new ParameterizedTypeReference<TrainResponse>() {};
         return apiClient.invokeAPI("/sdapi/v1/train/embedding", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
@@ -3657,7 +3657,7 @@ public class DefaultApi {
          };
         final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "HTTPBasic" };
 
         ParameterizedTypeReference<TrainResponse> localReturnType = new ParameterizedTypeReference<TrainResponse>() {};
         return apiClient.invokeAPI("/sdapi/v1/train/hypernetwork", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
@@ -3696,7 +3696,7 @@ public class DefaultApi {
         final String[] localVarContentTypes = {  };
         final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "HTTPBasic" };
 
         ParameterizedTypeReference<Object> localReturnType = new ParameterizedTypeReference<Object>() {};
         return apiClient.invokeAPI("/sdapi/v1/unload-checkpoint", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);

@@ -857,6 +857,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
+      security:
+      - HTTPBasic: []
       summary: Text2Imgapi
       x-content-type: application/json
       x-accepts: application/json
@@ -882,6 +884,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
+      security:
+      - HTTPBasic: []
       summary: Img2Imgapi
       x-content-type: application/json
       x-accepts: application/json
@@ -907,6 +911,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
+      security:
+      - HTTPBasic: []
       summary: Extras Single Image Api
       x-content-type: application/json
       x-accepts: application/json
@@ -932,6 +938,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
+      security:
+      - HTTPBasic: []
       summary: Extras Batch Images Api
       x-content-type: application/json
       x-accepts: application/json
@@ -957,6 +965,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
+      security:
+      - HTTPBasic: []
       summary: Pnginfoapi
       x-content-type: application/json
       x-accepts: application/json
@@ -986,6 +996,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
+      security:
+      - HTTPBasic: []
       summary: Progressapi
       x-accepts: application/json
   /sdapi/v1/interrogate:
@@ -1009,6 +1021,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
+      security:
+      - HTTPBasic: []
       summary: Interrogateapi
       x-content-type: application/json
       x-accepts: application/json
@@ -1021,6 +1035,8 @@ paths:
             application/json:
               schema: {}
           description: Successful Response
+      security:
+      - HTTPBasic: []
       summary: Interruptapi
       x-accepts: application/json
   /sdapi/v1/skip:
@@ -1032,6 +1048,8 @@ paths:
             application/json:
               schema: {}
           description: Successful Response
+      security:
+      - HTTPBasic: []
       summary: Skip
       x-accepts: application/json
   /sdapi/v1/options:
@@ -1044,6 +1062,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/Options'
           description: Successful Response
+      security:
+      - HTTPBasic: []
       summary: Get Config
       x-accepts: application/json
     post:
@@ -1067,6 +1087,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
+      security:
+      - HTTPBasic: []
       summary: Set Config
       x-content-type: application/json
       x-accepts: application/json
@@ -1080,6 +1102,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/Flags'
           description: Successful Response
+      security:
+      - HTTPBasic: []
       summary: Get Cmd Flags
       x-accepts: application/json
   /sdapi/v1/samplers:
@@ -1095,6 +1119,8 @@ paths:
                 title: Response Get Samplers Sdapi V1 Samplers Get
                 type: array
           description: Successful Response
+      security:
+      - HTTPBasic: []
       summary: Get Samplers
       x-accepts: application/json
   /sdapi/v1/upscalers:
@@ -1110,6 +1136,8 @@ paths:
                 title: Response Get Upscalers Sdapi V1 Upscalers Get
                 type: array
           description: Successful Response
+      security:
+      - HTTPBasic: []
       summary: Get Upscalers
       x-accepts: application/json
   /sdapi/v1/latent-upscale-modes:
@@ -1126,6 +1154,8 @@ paths:
                   Get
                 type: array
           description: Successful Response
+      security:
+      - HTTPBasic: []
       summary: Get Latent Upscale Modes
       x-accepts: application/json
   /sdapi/v1/sd-models:
@@ -1141,6 +1171,8 @@ paths:
                 title: Response Get Sd Models Sdapi V1 Sd Models Get
                 type: array
           description: Successful Response
+      security:
+      - HTTPBasic: []
       summary: Get Sd Models
       x-accepts: application/json
   /sdapi/v1/sd-vae:
@@ -1156,6 +1188,8 @@ paths:
                 title: Response Get Sd Vaes Sdapi V1 Sd Vae Get
                 type: array
           description: Successful Response
+      security:
+      - HTTPBasic: []
       summary: Get Sd Vaes
       x-accepts: application/json
   /sdapi/v1/hypernetworks:
@@ -1171,6 +1205,8 @@ paths:
                 title: Response Get Hypernetworks Sdapi V1 Hypernetworks Get
                 type: array
           description: Successful Response
+      security:
+      - HTTPBasic: []
       summary: Get Hypernetworks
       x-accepts: application/json
   /sdapi/v1/face-restorers:
@@ -1186,6 +1222,8 @@ paths:
                 title: Response Get Face Restorers Sdapi V1 Face Restorers Get
                 type: array
           description: Successful Response
+      security:
+      - HTTPBasic: []
       summary: Get Face Restorers
       x-accepts: application/json
   /sdapi/v1/realesrgan-models:
@@ -1201,6 +1239,8 @@ paths:
                 title: Response Get Realesrgan Models Sdapi V1 Realesrgan Models Get
                 type: array
           description: Successful Response
+      security:
+      - HTTPBasic: []
       summary: Get Realesrgan Models
       x-accepts: application/json
   /sdapi/v1/prompt-styles:
@@ -1216,6 +1256,8 @@ paths:
                 title: Response Get Prompt Styles Sdapi V1 Prompt Styles Get
                 type: array
           description: Successful Response
+      security:
+      - HTTPBasic: []
       summary: Get Prompt Styles
       x-accepts: application/json
   /sdapi/v1/embeddings:
@@ -1228,6 +1270,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/EmbeddingsResponse'
           description: Successful Response
+      security:
+      - HTTPBasic: []
       summary: Get Embeddings
       x-accepts: application/json
   /sdapi/v1/refresh-checkpoints:
@@ -1239,6 +1283,8 @@ paths:
             application/json:
               schema: {}
           description: Successful Response
+      security:
+      - HTTPBasic: []
       summary: Refresh Checkpoints
       x-accepts: application/json
   /sdapi/v1/refresh-vae:
@@ -1250,6 +1296,8 @@ paths:
             application/json:
               schema: {}
           description: Successful Response
+      security:
+      - HTTPBasic: []
       summary: Refresh Vae
       x-accepts: application/json
   /sdapi/v1/create/embedding:
@@ -1275,6 +1323,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
+      security:
+      - HTTPBasic: []
       summary: Create Embedding
       x-content-type: application/json
       x-accepts: application/json
@@ -1301,6 +1351,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
+      security:
+      - HTTPBasic: []
       summary: Create Hypernetwork
       x-content-type: application/json
       x-accepts: application/json
@@ -1327,6 +1379,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
+      security:
+      - HTTPBasic: []
       summary: Preprocess
       x-content-type: application/json
       x-accepts: application/json
@@ -1353,6 +1407,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
+      security:
+      - HTTPBasic: []
       summary: Train Embedding
       x-content-type: application/json
       x-accepts: application/json
@@ -1379,6 +1435,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
+      security:
+      - HTTPBasic: []
       summary: Train Hypernetwork
       x-content-type: application/json
       x-accepts: application/json
@@ -1392,6 +1450,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/MemoryResponse'
           description: Successful Response
+      security:
+      - HTTPBasic: []
       summary: Get Memory
       x-accepts: application/json
   /sdapi/v1/unload-checkpoint:
@@ -1403,6 +1463,8 @@ paths:
             application/json:
               schema: {}
           description: Successful Response
+      security:
+      - HTTPBasic: []
       summary: Unloadapi
       x-accepts: application/json
   /sdapi/v1/reload-checkpoint:
@@ -1414,6 +1476,8 @@ paths:
             application/json:
               schema: {}
           description: Successful Response
+      security:
+      - HTTPBasic: []
       summary: Reloadapi
       x-accepts: application/json
   /sdapi/v1/scripts:
@@ -1426,6 +1490,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/ScriptsList'
           description: Successful Response
+      security:
+      - HTTPBasic: []
       summary: Get Scripts List
       x-accepts: application/json
   /sdapi/v1/script-info:
@@ -1441,6 +1507,8 @@ paths:
                 title: Response Get Script Info Sdapi V1 Script Info Get
                 type: array
           description: Successful Response
+      security:
+      - HTTPBasic: []
       summary: Get Script Info
       x-accepts: application/json
   /sd_extra_networks/thumb:
@@ -2069,34 +2137,34 @@ components:
       type: object
     Flags:
       example:
-        realesrgan_models_path: D:\stable diffusion\stable-diffusion-webui\models\RealESRGAN
+        realesrgan_models_path: E:\stable-diffusion-webui\models\RealESRGAN
         tls_certfile: tls_certfile
         reinstall_torch: false
         api_auth: api_auth
-        gfpgan_models_path: D:\stable diffusion\stable-diffusion-webui\models\GFPGAN
-        esrgan_models_path: D:\stable diffusion\stable-diffusion-webui\models\ESRGAN
+        gfpgan_models_path: E:\stable-diffusion-webui\models\GFPGAN
+        esrgan_models_path: E:\stable-diffusion-webui\models\ESRGAN
         no_progressbar_hiding: false
         api: false
         opt_sdp_no_mem_attention: false
         freeze_settings: false
-        lora_dir: D:\stable diffusion\stable-diffusion-webui\models\Lora
-        ui_config_file: D:\stable diffusion\stable-diffusion-webui\ui-config.json
+        lora_dir: E:\stable-diffusion-webui\models\Lora
+        ui_config_file: E:\stable-diffusion-webui\ui-config.json
         device_id: device_id
         gradio_auth_path: gradio_auth_path
         always_batch_cond_uncond: false
         no_half: false
-        hypernetwork_dir: D:\stable diffusion\stable-diffusion-webui\models\hypernetworks
+        hypernetwork_dir: E:\stable-diffusion-webui\models\hypernetworks
         disable_model_loading_ram_optimization: false
         opt_sdp_attention: false
-        ui_settings_file: D:\stable diffusion\stable-diffusion-webui\config.json
+        ui_settings_file: E:\stable-diffusion-webui\config.json
         tls_keyfile: tls_keyfile
         sub_quad_kv_chunk_size: sub_quad_kv_chunk_size
         test_server: false
-        ckpt: D:\stable diffusion\stable-diffusion-webui\model.ckpt
+        ckpt: E:\stable-diffusion-webui\model.ckpt
         disable_console_progressbars: false
         add_stop_route: false
-        lyco_dir_backcompat: D:\stable diffusion\stable-diffusion-webui\models\LyCORIS
-        codeformer_models_path: D:\stable diffusion\stable-diffusion-webui\models\Codeformer
+        lyco_dir_backcompat: E:\stable-diffusion-webui\models\LyCORIS
+        codeformer_models_path: E:\stable-diffusion-webui\models\Codeformer
         api_server_stop: false
         ngrok: ngrok
         show_negative_prompt: false
@@ -2106,7 +2174,7 @@ components:
         skip_torch_cuda_test: false
         share: false
         theme: theme
-        styles_file: D:\stable diffusion\stable-diffusion-webui\styles.csv
+        styles_file: E:\stable-diffusion-webui\styles.csv
         enable_insecure_extension_access: false
         xformers_flash_attention: false
         f: false
@@ -2127,7 +2195,7 @@ components:
         no_download_sd_model: false
         disable_safe_unpickle: false
         skip_version_check: false
-        config: D:\stable diffusion\stable-diffusion-webui\configs\v1-inference.yaml
+        config: E:\stable-diffusion-webui\configs\v1-inference.yaml
         gfpgan_model: gfpgan_model
         no_half_vae: false
         xformers: false
@@ -2149,12 +2217,12 @@ components:
         gfpgan_dir: ./GFPGAN
         disable_tls_verify: disable_tls_verify
         gradio_inpaint_tool: gradio_inpaint_tool
-        textual_inversion_templates_dir: D:\stable diffusion\stable-diffusion-webui\textual_inversion_templates
+        textual_inversion_templates_dir: E:\stable-diffusion-webui\textual_inversion_templates
         dump_sysinfo: false
         gradio_img2img_tool: gradio_img2img_tool
         medvram: false
-        bsrgan_models_path: D:\stable diffusion\stable-diffusion-webui\models\BSRGAN
-        embeddings_dir: D:\stable diffusion\stable-diffusion-webui\embeddings
+        bsrgan_models_path: E:\stable-diffusion-webui\models\BSRGAN
+        embeddings_dir: E:\stable-diffusion-webui\embeddings
         sub_quad_q_chunk_size: 6
         port: port
         medvram_sdxl: false
@@ -2166,18 +2234,18 @@ components:
         subpath: subpath
         no_hashing: false
         gradio_auth: gradio_auth
-        ldsr_models_path: D:\stable diffusion\stable-diffusion-webui\models\LDSR
+        ldsr_models_path: E:\stable-diffusion-webui\models\LDSR
         api_log: false
         administrator: false
         nowebui: false
         log_startup: false
         lowram: false
         allow_code: false
-        data_dir: D:\stable diffusion\stable-diffusion-webui
+        data_dir: E:\stable-diffusion-webui
         max_batch_count: 0
-        localizations_dir: D:\stable diffusion\stable-diffusion-webui\localizations
+        localizations_dir: E:\stable-diffusion-webui\localizations
         disable_extra_extensions: false
-        swinir_models_path: D:\stable diffusion\stable-diffusion-webui\models\SwinIR
+        swinir_models_path: E:\stable-diffusion-webui\models\SwinIR
         skip_prepare_environment: false
         vae_path: vae_path
         opt_split_attention_invokeai: false
@@ -2188,7 +2256,7 @@ components:
         opt_split_attention_v1: false
         timeout_keep_alive: 1
         enable_console_prompts: false
-        scunet_models_path: D:\stable diffusion\stable-diffusion-webui\models\ScuNET
+        scunet_models_path: E:\stable-diffusion-webui\models\ScuNET
         opt_split_attention: false
       properties:
         f:
@@ -2267,17 +2335,17 @@ components:
           title: Do Not Download Clip
           type: boolean
         data_dir:
-          default: D:\stable diffusion\stable-diffusion-webui
+          default: E:\stable-diffusion-webui
           description: base path where all user data is stored
           title: Data Dir
           type: string
         config:
-          default: D:\stable diffusion\stable-diffusion-webui\configs\v1-inference.yaml
+          default: E:\stable-diffusion-webui\configs\v1-inference.yaml
           description: path to config which constructs model
           title: Config
           type: string
         ckpt:
-          default: D:\stable diffusion\stable-diffusion-webui\model.ckpt
+          default: E:\stable-diffusion-webui\model.ckpt
           description: "path to checkpoint of stable diffusion model; if specified,\
             \ this checkpoint will be added to the list of checkpoints and loaded"
           title: Ckpt
@@ -2321,22 +2389,22 @@ components:
           title: Max Batch Count
           type: integer
         embeddings_dir:
-          default: D:\stable diffusion\stable-diffusion-webui\embeddings
+          default: E:\stable-diffusion-webui\embeddings
           description: "embeddings directory for textual inversion (default: embeddings)"
           title: Embeddings Dir
           type: string
         textual_inversion_templates_dir:
-          default: D:\stable diffusion\stable-diffusion-webui\textual_inversion_templates
+          default: E:\stable-diffusion-webui\textual_inversion_templates
           description: directory with textual inversion templates
           title: Textual Inversion Templates Dir
           type: string
         hypernetwork_dir:
-          default: D:\stable diffusion\stable-diffusion-webui\models\hypernetworks
+          default: E:\stable-diffusion-webui\models\hypernetworks
           description: hypernetwork directory
           title: Hypernetwork Dir
           type: string
         localizations_dir:
-          default: D:\stable diffusion\stable-diffusion-webui\localizations
+          default: E:\stable-diffusion-webui\localizations
           description: localizations directory
           title: Localizations Dir
           type: string
@@ -2418,27 +2486,27 @@ components:
           title: Enable Insecure Extension Access
           type: boolean
         codeformer_models_path:
-          default: D:\stable diffusion\stable-diffusion-webui\models\Codeformer
+          default: E:\stable-diffusion-webui\models\Codeformer
           description: Path to directory with codeformer model file(s).
           title: Codeformer Models Path
           type: string
         gfpgan_models_path:
-          default: D:\stable diffusion\stable-diffusion-webui\models\GFPGAN
+          default: E:\stable-diffusion-webui\models\GFPGAN
           description: Path to directory with GFPGAN model file(s).
           title: Gfpgan Models Path
           type: string
         esrgan_models_path:
-          default: D:\stable diffusion\stable-diffusion-webui\models\ESRGAN
+          default: E:\stable-diffusion-webui\models\ESRGAN
           description: Path to directory with ESRGAN model file(s).
           title: Esrgan Models Path
           type: string
         bsrgan_models_path:
-          default: D:\stable diffusion\stable-diffusion-webui\models\BSRGAN
+          default: E:\stable-diffusion-webui\models\BSRGAN
           description: Path to directory with BSRGAN model file(s).
           title: Bsrgan Models Path
           type: string
         realesrgan_models_path:
-          default: D:\stable diffusion\stable-diffusion-webui\models\RealESRGAN
+          default: E:\stable-diffusion-webui\models\RealESRGAN
           description: Path to directory with RealESRGAN model file(s).
           title: Realesrgan Models Path
           type: string
@@ -2563,7 +2631,7 @@ components:
           title: Show Negative Prompt
           type: boolean
         ui_config_file:
-          default: D:\stable diffusion\stable-diffusion-webui\ui-config.json
+          default: E:\stable-diffusion-webui\ui-config.json
           description: filename to use for ui configuration
           title: Ui Config File
           type: string
@@ -2578,7 +2646,7 @@ components:
           title: Freeze Settings
           type: boolean
         ui_settings_file:
-          default: D:\stable diffusion\stable-diffusion-webui\config.json
+          default: E:\stable-diffusion-webui\config.json
           description: filename to use for ui settings
           title: Ui Settings File
           type: string
@@ -2607,7 +2675,7 @@ components:
           type: string
         gradio_allowed_path:
           default:
-          - D:\stable diffusion\stable-diffusion-webui
+          - E:\stable-diffusion-webui
           description: "add path to gradio's allowed_paths, make it possible to serve\
             \ files from it"
           items: {}
@@ -2619,7 +2687,7 @@ components:
           title: Opt Channelslast
           type: boolean
         styles_file:
-          default: D:\stable diffusion\stable-diffusion-webui\styles.csv
+          default: E:\stable-diffusion-webui\styles.csv
           description: filename to use for styles
           title: Styles File
           type: string
@@ -2777,28 +2845,28 @@ components:
           title: Disable Extra Extensions
           type: boolean
         ldsr_models_path:
-          default: D:\stable diffusion\stable-diffusion-webui\models\LDSR
+          default: E:\stable-diffusion-webui\models\LDSR
           description: Path to directory with LDSR model file(s).
           title: Ldsr Models Path
           type: string
         lora_dir:
-          default: D:\stable diffusion\stable-diffusion-webui\models\Lora
+          default: E:\stable-diffusion-webui\models\Lora
           description: Path to directory with Lora networks.
           title: Lora Dir
           type: string
         lyco_dir_backcompat:
-          default: D:\stable diffusion\stable-diffusion-webui\models\LyCORIS
+          default: E:\stable-diffusion-webui\models\LyCORIS
           description: Path to directory with LyCORIS networks (for backawards compatibility;
             can also use --lyco-dir).
           title: Lyco Dir Backcompat
           type: string
         scunet_models_path:
-          default: D:\stable diffusion\stable-diffusion-webui\models\ScuNET
+          default: E:\stable-diffusion-webui\models\ScuNET
           description: Path to directory with ScuNET model file(s).
           title: Scunet Models Path
           type: string
         swinir_models_path:
-          default: D:\stable diffusion\stable-diffusion-webui\models\SwinIR
+          default: E:\stable-diffusion-webui\models\SwinIR
           description: Path to directory with SwinIR model file(s).
           title: Swinir Models Path
           type: string
@@ -5351,4 +5419,8 @@ components:
       anyOf:
       - type: string
       - type: integer
+  securitySchemes:
+    HTTPBasic:
+      scheme: basic
+      type: http
 
