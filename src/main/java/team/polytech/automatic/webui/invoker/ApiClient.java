@@ -1,7 +1,11 @@
 package team.polytech.automatic.webui.invoker;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.cfg.CoercionAction;
+import com.fasterxml.jackson.databind.cfg.CoercionInputShape;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.openapitools.jackson.nullable.JsonNullable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpHeaders;
@@ -17,6 +21,14 @@ import org.springframework.http.client.BufferingClientHttpRequestFactory;
 import org.springframework.http.client.ClientHttpRequestExecution;
 import org.springframework.http.client.ClientHttpRequestInterceptor;
 import org.springframework.http.client.ClientHttpResponse;
+import org.springframework.http.converter.ByteArrayHttpMessageConverter;
+import org.springframework.http.converter.HttpMessageConverter;
+import org.springframework.http.converter.ResourceHttpMessageConverter;
+import org.springframework.http.converter.StringHttpMessageConverter;
+import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
+import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
+import org.springframework.http.converter.support.AllEncompassingFormHttpMessageConverter;
+import org.springframework.http.converter.xml.Jaxb2RootElementHttpMessageConverter;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.LinkedMultiValueMap;
@@ -674,7 +686,15 @@ public class ApiClient extends JavaTimeFormatter {
      * @return RestTemplate
      */
     protected RestTemplate buildRestTemplate() {
-        RestTemplate restTemplate = new RestTemplate();
+        List<HttpMessageConverter<?>> converters = new ArrayList<>(6);
+        converters.add(new ByteArrayHttpMessageConverter());
+        converters.add(new StringHttpMessageConverter());
+        converters.add(new ResourceHttpMessageConverter(false));
+        converters.add(new Jaxb2RootElementHttpMessageConverter());
+        ObjectMapper mapper = Jackson2ObjectMapperBuilder.json().build();
+        mapper.coercionConfigFor(JsonNullable.class).setCoercion(CoercionInputShape.EmptyString, CoercionAction.AsNull);
+        converters.add(new MappingJackson2HttpMessageConverter(mapper));
+        RestTemplate restTemplate = new RestTemplate(converters);
         // This allows us to read the response more than once - Necessary for debugging.
         restTemplate.setRequestFactory(new BufferingClientHttpRequestFactory(restTemplate.getRequestFactory()));
 
@@ -682,6 +702,7 @@ public class ApiClient extends JavaTimeFormatter {
         DefaultUriBuilderFactory uriBuilderFactory = new DefaultUriBuilderFactory();
         uriBuilderFactory.setEncodingMode(DefaultUriBuilderFactory.EncodingMode.VALUES_ONLY);
         restTemplate.setUriTemplateHandler(uriBuilderFactory);
+        restTemplate.setMessageConverters(converters);
         return restTemplate;
     }
 

@@ -12,7 +12,6 @@ import team.polytech.automatic.webui.model.ExtrasSingleImageResponse;
 import team.polytech.automatic.webui.model.FaceRestorerItem;
 import java.io.File;
 import team.polytech.automatic.webui.model.Flags;
-import team.polytech.automatic.webui.model.HTTPValidationError;
 import team.polytech.automatic.webui.model.HypernetworkItem;
 import team.polytech.automatic.webui.model.ImageToImageResponse;
 import team.polytech.automatic.webui.model.InterrogateRequest;
@@ -20,7 +19,6 @@ import team.polytech.automatic.webui.model.LatentUpscalerModeItem;
 import team.polytech.automatic.webui.model.MemoryResponse;
 import team.polytech.automatic.webui.model.ModulesApiModelsProgressResponse;
 import team.polytech.automatic.webui.model.ModulesProgressProgressResponse;
-import team.polytech.automatic.webui.model.Options;
 import team.polytech.automatic.webui.model.PNGInfoRequest;
 import team.polytech.automatic.webui.model.PNGInfoResponse;
 import team.polytech.automatic.webui.model.PredictBody;
@@ -44,7 +42,6 @@ import team.polytech.automatic.webui.model.UpscalerItem;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Locale;
 import java.util.Map;
 import java.util.stream.Collectors;
 
@@ -908,12 +905,13 @@ public class DefaultApi {
     }
     /**
      * Get Config
-     * 
+     *
      * <p><b>200</b> - Successful Response
+     *
      * @return Options
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public Options getConfigSdapiV1OptionsGet() throws RestClientException {
+    public Map<String, Object> getConfigSdapiV1OptionsGet() throws RestClientException {
         return getConfigSdapiV1OptionsGetWithHttpInfo().getBody();
     }
 
@@ -924,7 +922,7 @@ public class DefaultApi {
      * @return ResponseEntity&lt;Options&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<Options> getConfigSdapiV1OptionsGetWithHttpInfo() throws RestClientException {
+    public ResponseEntity<Map<String, Object>> getConfigSdapiV1OptionsGetWithHttpInfo() throws RestClientException {
         Object localVarPostBody = null;
         
 
@@ -942,7 +940,7 @@ public class DefaultApi {
 
         String[] localVarAuthNames = new String[] { "HTTPBasic" };
 
-        ParameterizedTypeReference<Options> localReturnType = new ParameterizedTypeReference<Options>() {};
+        ParameterizedTypeReference<Map<String, Object>> localReturnType = new ParameterizedTypeReference<Map<String, Object>>() {};
         return apiClient.invokeAPI("/sdapi/v1/options", HttpMethod.GET, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**

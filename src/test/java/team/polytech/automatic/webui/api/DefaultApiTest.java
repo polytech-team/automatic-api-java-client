@@ -362,7 +362,7 @@ public class DefaultApiTest {
      */
     @Test
     public void getConfigSdapiV1OptionsGetTest() {
-        Options response = api.getConfigSdapiV1OptionsGet();
+        Map<String, Object> response = api.getConfigSdapiV1OptionsGet();
 
         // TODO: test validations
     }
